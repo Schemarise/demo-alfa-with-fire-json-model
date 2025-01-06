@@ -10,12 +10,42 @@
     <name>${project.artifactId}</name>
 
     <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <alfa.version>3.4.1</alfa.version>
     </properties>
 
     <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <id>test</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>${basedir}/target/generated-sources/java</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.schemarise.alfa.runtime</groupId>
+            <artifactId>alfa-runtime-java</artifactId>
+            <version>${alfa.version}</version>
+        </dependency>
+    </dependencies>
     <profiles>
         <profile>
             <id>import-fire-schema</id>

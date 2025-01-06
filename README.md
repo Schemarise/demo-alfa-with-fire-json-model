@@ -23,12 +23,14 @@ cd ..\..
 
 **Linux/Mac instructions:**
 ```
-mkdir -p model/imported
-cd model/imported
+mkdir -p target/imported
+cd target/imported
 git clone https://github.com/SuadeLabs/fire.git
-mv fire/v1-dev fire-models
-rm -rf fire
 cd ../..
+mkdir -p src/main/resources/fire/
+mv target/imported/fire/v1-dev src/main/resources/fire/models
+mv target/imported/fire/examples src/main/resources/fire/examples
+rm -rf target/imported
 ```
 
 2. Browse from VSCode into model/fire-in-alfa
