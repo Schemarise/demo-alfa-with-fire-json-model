@@ -1,0 +1,14 @@
+
+namespace fire.model
+
+
+/#
+ The type of the encumbrance causing the encumbrance_amount.
+ #/
+enum loan_encumbrance_type {
+    abs 
+    cb_funding 
+    covered_bond 
+}
+
+         

@@ -1,0 +1,27 @@
+
+namespace fire.model
+
+
+/#
+ This is the type of the derivative with regards to common regulatory classifications.
+ #/
+enum derivative_type {
+    cap_floor 
+    ccds 
+    cds 
+    forward 
+    fra 
+    `future` 
+    mtm_swap 
+    ndf 
+    nds 
+    ois 
+    option 
+    spot 
+    swaption 
+    vanilla_swap 
+    variance_swap 
+    xccy 
+}
+
+         

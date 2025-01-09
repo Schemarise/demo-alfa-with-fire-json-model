@@ -1,0 +1,16 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+record loan_customers {
+  /# The unique identifier for the customer/s within the financial institution. #/
+  id : string
+  
+  
+  /# The reference income used for the customer(s) for this loan. Monetary type represented as an integer number of cents/pence. #/
+  income_amount : int( 0, * )
+  
+  
+}
+
+         

@@ -1,0 +1,14 @@
+
+namespace fire.model
+
+
+/#
+ The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the financial product.
+ #/
+enum derivative_base_rate {
+    FDTR 
+    UKBRBASE 
+    ZERO 
+}
+
+         

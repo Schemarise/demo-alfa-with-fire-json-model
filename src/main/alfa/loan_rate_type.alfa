@@ -1,0 +1,15 @@
+
+namespace fire.model
+
+
+/#
+ Describes the type of interest rate applied to the loan.
+ #/
+enum loan_rate_type {
+    combined( "combined" ) 
+    `fixed`( "fixed" ) 
+    tracker( "tracker" ) 
+    variable( "variable" ) 
+}
+
+         

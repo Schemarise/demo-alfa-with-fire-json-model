@@ -1,0 +1,15 @@
+
+namespace fire.model
+
+
+/#
+ Grade calculated using the Basel Standardised Credit Risk Assessment
+ #/
+enum customer_scra {
+    a 
+    a_plus 
+    b 
+    c 
+}
+
+         

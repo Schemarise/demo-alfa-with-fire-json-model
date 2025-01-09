@@ -1,0 +1,24 @@
+
+namespace fire.model
+
+
+/#
+ The type of impact on the balance of the loan.
+ #/
+enum loan_transaction_type {
+    acquisition 
+    advance 
+    capital_repayment 
+    capitalisation 
+    due 
+    further_advance 
+    interest 
+    interest_repayment 
+    other 
+    received 
+    sale 
+    securitisation 
+    write_off 
+}
+
+         

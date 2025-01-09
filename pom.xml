@@ -12,7 +12,7 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <alfa.version>3.4.1</alfa.version>
+        <alfa.version>3.4.2-SNAPSHOT</alfa.version>
     </properties>
 
     <build>
@@ -36,6 +36,32 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>com.schemarise.alfa.utils</groupId>
+                <artifactId>alfa-maven-plugin</artifactId>
+                <version>${alfa.version}</version>
+                <executions>
+                    <execution>
+                        <id>alfa-gen</id>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>package</goal>
+                        </goals>
+                        <configuration>
+                            <srcPath>${basedir}/src/main/alfa</srcPath>
+                            <exportSettings>
+                                <exportSetting>
+                                    <exportType>java</exportType>
+                                </exportSetting>
+                                <exportSetting>
+                                    <exportType>markdown</exportType>
+                                </exportSetting>
+                            </exportSettings>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -46,6 +72,7 @@
             <version>${alfa.version}</version>
         </dependency>
     </dependencies>
+
     <profiles>
         <profile>
             <id>import-fire-schema</id>
@@ -65,11 +92,11 @@
                                     <goal>compile</goal>
                                 </goals>
                                 <configuration>
-                                    <srcPath>${basedir}/model/imported/fire-models</srcPath>
+                                    <srcPath>${basedir}/src/main/resources/fire/v1-dev</srcPath>
                                     <importSettings>
                                         <importSetting>
                                             <importType>jsonschema</importType>
-                                            <outputDir>${basedir}/target/generated-sources/alfa</outputDir>
+                                            <outputDir>${basedir}/src/main/alfa</outputDir>
                                             <config>
                                                 <namespace>fire.model</namespace>
                                             </config>
@@ -82,39 +109,5 @@
                 </plugins>
             </build>
         </profile>
-            
-        <profile>
-            <id>gen-java</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>com.schemarise.alfa.utils</groupId>
-                        <artifactId>alfa-maven-plugin</artifactId>
-                        <version>${alfa.version}</version>
-                        <executions>
-                            <execution>
-                                <id>alfa-gen-java</id>
-                                <goals>
-                                    <goal>compile</goal>
-                                    <goal>package</goal>
-                                </goals>
-                                <configuration>
-                                    <srcPath>${basedir}/target/generated-sources/alfa</srcPath>
-                                    <exportSettings>
-                                        <exportSetting>
-                                            <exportType>java</exportType>
-                                        </exportSetting>
-                                    </exportSettings>
-                                </configuration>
-                            </execution>                            
-                        </executions>                            
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    
     </profiles>
 </project>

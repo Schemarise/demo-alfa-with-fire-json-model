@@ -1,0 +1,40 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+/#
+    An Exchange Rate represents the conversion rate between two currencies.
+ #/
+
+record exchange_rate {
+  /# The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  `date` : datetime
+  
+  
+  /# The amount of the quote currency received in exchange for 1 unit of the base currency. #/
+  quote : double
+  
+  
+  /# The unique identifier for the record within the firm. #/
+  id : string
+  
+  
+  /# The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2 #/
+  source : string ?
+  
+  
+  /# The version identifier of the data such as the firm's internal batch identifier. #/
+  version_id : string ?
+  
+  
+  /# The base currency in accordance with ISO 4217 standards. #/
+  base_currency_code : currency_code
+  
+  
+  /# The quoted currency in accordance with ISO 4217 standards. #/
+  quote_currency_code : currency_code
+  
+  
+}
+
+         

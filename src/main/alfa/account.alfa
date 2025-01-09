@@ -1,0 +1,288 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+/#
+    An Account represents a financial account that describes the funds that a customer has entrusted to a financial institution in the form of deposits or credit balances.
+ #/
+
+record account {
+  /# The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  `date` : datetime
+  
+  
+  /# The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015. #/
+  risk_weight_std : double ?
+  
+  
+  accounting_treatment : accounting_treatment ?
+  
+  impairment_status : impairment_status ?
+  
+  ccf : double( 0.0, * ) ?
+  
+  /# The impairment amount is the allowance set aside by the firm that accounts for the event that the asset becomes impaired in the future. #/
+  impairment_amount : int( 0, * ) ?
+  
+  
+  /# The name of the reporting legal entity for display purposes. #/
+  reporting_entity_name : string ?
+  
+  
+  /# The credit score of the customer at origination of the product using a commercially available credit bureau score. #/
+  orig_credit_score : int ?
+  
+  
+  /# The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2 #/
+  source : string ?
+  
+  
+  /# The standardised methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value. #/
+  day_count_convention : day_count_convention ?
+  
+  
+  /# This is the type of the account with regards to common regulatory classifications. #/
+  type : account_type ?
+  
+  
+  /# The balance of the capital amount that is considered to be in arrears (for overdrafts/credit cards). Monetary type represented as a naturally positive integer number of cents/pence. #/
+  arrears_balance : int ?
+  
+  
+  /# The internal ledger code or line item name. #/
+  ledger_code : string ?
+  
+  
+  /# The contractual balance on the date and in the currency given. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  balance : int ?
+  
+  
+  /# The minimum balance the customer can go overdrawn in their account. #/
+  limit_amount : int ?
+  
+  
+  /# The unique identifier for the record within the firm. #/
+  id : string
+  
+  
+  /# This is the penalty incurred by the customer for an early withdrawal on this account. An early withdrawal is defined as a withdrawal prior to the next_withdrawal_date. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  withdrawal_penalty : int ?
+  
+  
+  /# The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations. #/
+  lgd_floored : double( 0.0, 1.0 ) ?
+  
+  
+  /# Dates where this contract can be called (by the customer). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  call_dates : list< datetime >(1,*) ?
+  
+  
+  /# Month to date interest added to account as a naturally positive integer number of cents/pence. #/
+  mtd_interest_paid : int ?
+  
+  
+  /# Describes the number of accounts aggregated into a single row. #/
+  count : int( 1, * ) ?
+  
+  
+  /# The final payment date for interest payments, often coincides with end_date. #/
+  last_payment_date : datetime ?
+  
+  
+  /# The name of the product as given by the financial institution to be used for display and reference purposes. #/
+  product_name : string ?
+  
+  
+  /# Two-letter country code for account location/jurisdiction. In accordance with ISO 3166-1. #/
+  country_code : country_code ?
+  
+  
+  /# The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the account. #/
+  base_rate : account_base_rate ?
+  
+  
+  asset_liability : asset_liability ?
+  
+  /# The first payment date for interest payments. #/
+  first_payment_date : datetime ?
+  
+  
+  /# The last date on which a drawdown was made on this account (overdraft). #/
+  last_drawdown_date : datetime ?
+  
+  
+  /# The organizational unit or sub-unit to which costs/profits are booked. #/
+  cost_center_code : string ?
+  
+  
+  /# Describes if the Account is active or been cancelled. #/
+  status : account_status ?
+  
+  
+  /# The end or maturity date of the account. Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601 #/
+  end_date : datetime ?
+  
+  
+  /# The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
+  pd_irb : double( 0.0, 1.0 ) ?
+  
+  
+  /# The purpose for which the account was created or is being used. #/
+  purpose : account_purpose ?
+  
+  
+  /# Two-letter country code describing where the risk for the account resides. In accordance with ISO 3166-1 #/
+  risk_country_code : country_code ?
+  
+  
+  /# Fair value hierarchy category according to IFRS 13.93 (b) #/
+  fvh_level : int( 1, 3 ) ?
+  
+  
+  /# A particular predetermined date at which an account is rolled-over. #/
+  rollover_date : datetime ?
+  
+  
+  /# The type of the encumbrance causing the encumbrance_amount. #/
+  encumbrance_type : account_encumbrance_type ?
+  
+  
+  /# Repayment frequency of the interest. #/
+  interest_repayment_frequency : account_interest_repayment_frequency ?
+  
+  
+  /# Month to date amount withdrawn from the account as a naturally positive integer number of cents/pence. #/
+  mtd_withdrawals : int ?
+  
+  
+  regulatory_book : regulatory_book ?
+  
+  /# The unique identifier for the behavioral curve used by the financial institution. #/
+  behavioral_curve_id : string ?
+  
+  
+  /# Actual currency of the Account in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts. #/
+  currency_code : currency_code ?
+  
+  
+  /# The next date at which interest will be paid or accrued_interest balance returned to zero. #/
+  next_payment_date : datetime ?
+  
+  
+  /# Describes the type of interest rate applied to the account. #/
+  rate_type : account_rate_type ?
+  
+  
+  /# Indicates the minimum balance of each account within the aggregate. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  minimum_balance : int ?
+  
+  
+  /# Is the account or deposit reported on the balance sheet of the financial institution? #/
+  on_balance_sheet : boolean ?
+  
+  
+  /# The full interest rate applied to the account balance in percentage terms. Note that this therefore includes the base_rate (ie. not the spread). #/
+  rate : double ?
+  
+  
+  /# The insolvency ranking as per the national legal framework of the reporting institution. #/
+  insolvency_rank : int( 1, * ) ?
+  
+  
+  /# The capital tiers based on own funds requirements. #/
+  capital_tier : account_capital_tier ?
+  
+  
+  /# Specifies the approved credit risk rwa calculation approach to be applied to the exposure. #/
+  cr_approach : cr_approach ?
+  
+  
+  /# The amount of the account that is guaranteed under a Government Deposit Guarantee Scheme. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  guarantee_amount : int( 0, * ) ?
+  
+  
+  /# The most recent previous date at which interest was paid or accrued_interest balance returned to zero. #/
+  prev_payment_date : datetime ?
+  
+  
+  /# The date on which the first forbearance measure was granted to this product.  Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601 #/
+  forbearance_date : datetime ?
+  
+  
+  /# The amount of the account that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  encumbrance_amount : int( 0, * ) ?
+  
+  
+  /# Dates where this contract can be broken (by either party). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  break_dates : list< datetime >(1,*) ?
+  
+  
+  /# The timestamp that the trade or financial product commences. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  start_date : datetime ?
+  
+  
+  /# The Government Deposit Scheme scheme under which the guarantee_amount is guaranteed. #/
+  guarantee_scheme : account_guarantee_scheme ?
+  
+  
+  impairment_type : impairment_type ?
+  
+  /# Month to date amount deposited within the account as a naturally positive integer number of cents/pence. #/
+  mtd_deposits : int ?
+  
+  
+  /# The date upon which the product became considered impaired. Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601 #/
+  impairment_date : datetime ?
+  
+  
+  /# Funding type calculated according to BIPRU 12.5/12.6 #/
+  uk_funding_type : account_uk_funding_type ?
+  
+  
+  /# The internal ID for the legal entity under which the account is being reported. #/
+  reporting_id : string ?
+  
+  
+  /# The version identifier of the data such as the firm's internal batch identifier. #/
+  version_id : string ?
+  
+  
+  /# The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  trade_date : datetime ?
+  
+  
+  /# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
+  lgd_irb : double( 0.0, 1.0 ) ?
+  
+  
+  /# Indicates the minimum balance, in Euros, of each account within the aggregate. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  minimum_balance_eur : int ?
+  
+  
+  /# The first date on which this account was in arrears. #/
+  first_arrears_date : datetime ?
+  
+  
+  /# The next date at which customer is allowed to withdraw money from this account. #/
+  next_withdrawal_date : datetime ?
+  
+  
+  /# Accumulated change in fair value before taxes. #/
+  acc_fv_change_before_taxes : int ?
+  
+  
+  /# The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  accrued_interest : int ?
+  
+  
+  /# The unique identifier used by the financial institution to identify the customer that owns the account. #/
+  customer_id : string ?
+  
+  
+  /# The date on which the interest rate of the account will be re-calculated. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  next_repricing_date : datetime ?
+  
+  
+}
+
+         

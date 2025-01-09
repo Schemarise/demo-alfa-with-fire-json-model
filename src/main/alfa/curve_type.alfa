@@ -1,0 +1,14 @@
+
+namespace fire.model
+
+
+/#
+ The curve type.
+ #/
+enum curve_type {
+    behavioral 
+    rate 
+    volatility 
+}
+
+         

@@ -1,0 +1,15 @@
+
+namespace fire.model
+
+
+/#
+ The method by which the loan shall be repaid
+ #/
+enum loan_servicing {
+    business 
+    pension 
+    rent 
+    salary 
+}
+
+         

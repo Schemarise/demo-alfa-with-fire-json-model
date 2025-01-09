@@ -1,0 +1,16 @@
+
+namespace fire.model
+
+
+/#
+ Describes the type of interest rate applied to the account.
+ #/
+enum account_rate_type {
+    combined( "combined" ) 
+    `fixed`( "fixed" ) 
+    preferential( "preferential" ) 
+    tracker( "tracker" ) 
+    variable( "variable" ) 
+}
+
+         

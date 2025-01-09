@@ -1,0 +1,60 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+record adjustment {
+  /# The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  `date` : datetime ?
+  
+  
+  /# The column of the report that this adjustment relates to. #/
+  col : string ?
+  
+  
+  /# The name of the reporting legal entity for display purposes. #/
+  reporting_entity_name : string ?
+  
+  
+  /# The report that this adjustment relates to. #/
+  report_type : string ?
+  
+  
+  /# The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2 #/
+  source : string ?
+  
+  
+  /# The version identifier of the data such as the firm's internal batch identifier. #/
+  version_id : string ?
+  
+  
+  /# The currency of the contribution_amount in accordance with ISO 4217 standards. #/
+  currency_code : currency_code ?
+  
+  
+  /# The description or commentary around the adjustment. #/
+  comment : string ?
+  
+  
+  /# The unique identifier for the record within the firm. #/
+  id : string ?
+  
+  
+  /# The page of the report that this adjustment relates to. #/
+  page : string ?
+  
+  
+  /# The row of the report that this adjustment relates to. #/
+  row : string ?
+  
+  
+  /# The text to use for the adjustment where the reported cell is not a monetary value. #/
+  contribution_text : string ?
+  
+  
+  /# The contribution amount this adjustment should make to the specified report cell. A positive/negative number in minor units (cents/pence). #/
+  contribution_amount : int ?
+  
+  
+}
+
+         

@@ -1,17 +1,21 @@
-Demo ALFA Fire (JSON Schema) Model integration Project
+Demo ALFA Fire (JSON Schema) Model Integration Project
 ======================================================
 
 This project shows how easy it is to:
-- import a JSON Schema data model into ALFA
-- extend with validations beyond what Fire/JSON Schema offers
-- perform transformation other models
+- Write type-safe Java code against JSON Schema imported into ALFA
+- Validate and create clean JSON conforming to the model
+- Import newer versions of JSON Schema to update ALFA models
+- Quickly see model changes between versions 
 
-Steps to import the current version of Fire
--------------------------------------------
+Suade Fire (github.com/SuadeLabs/fire) is used as the example JSON Schema model.  
+
+Steps refresh to version of ALFA models based on the current Fire models
+------------------------------------------------------------------------
 
 1. Open a terminal and run the following commands
 
-**Windows instructions:**
+**Windows instructions:** 
+REVIEW
 ```
 mkdir -P model\imported
 cd model\imported
@@ -26,10 +30,14 @@ cd ..\..
 mkdir -p target/imported
 cd target/imported
 git clone https://github.com/SuadeLabs/fire.git
-cd ../..
+#can be a tag instead of master
+cd fire
+git checkout tags/v24.10
+cd ../../..
+rm -rf src/main/resources/fire/
 mkdir -p src/main/resources/fire/
-mv target/imported/fire/v1-dev src/main/resources/fire/models
-mv target/imported/fire/examples src/main/resources/fire/examples
+mv target/imported/fire/v1-dev src/main/resources/fire/
+mv target/imported/fire/examples src/main/resources/fire/
 rm -rf target/imported
 ```
 

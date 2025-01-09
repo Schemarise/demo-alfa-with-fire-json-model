@@ -1,0 +1,38 @@
+
+namespace fire.model
+
+
+/#
+ The asset class to which the derivative belongs.
+ #/
+enum asset_class {
+    agri 
+    co 
+    co_other 
+    coal 
+    coffee 
+    corn 
+    cr 
+    cr_index 
+    cr_single 
+    electricity 
+    energy 
+    eq 
+    eq_index 
+    eq_single 
+    fx 
+    gas 
+    gold 
+    inflation 
+    ir 
+    metals 
+    oil 
+    other 
+    palladium 
+    platinum 
+    precious_metals 
+    silver 
+    sugar 
+}
+
+         

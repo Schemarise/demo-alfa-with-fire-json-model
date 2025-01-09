@@ -1,0 +1,14 @@
+
+namespace fire.model
+
+
+/#
+ The type of financial institution that acted as the originator of the loan product.
+ #/
+enum loan_originator_type {
+    mortgage_lender 
+    other 
+    spv 
+}
+
+         

@@ -1,0 +1,16 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+record security_index_composition {
+  /# The reference security id for the weight. #/
+  reference_id : string
+  
+  
+  /# The proportion of the reference in the index. It is recorded in decimal format. #/
+  weight : double( 0.0, 1.0 )
+  
+  
+}
+
+         

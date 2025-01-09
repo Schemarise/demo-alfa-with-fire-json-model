@@ -1,0 +1,84 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+/#
+    An agreement represents the standard terms agreed between two parties.
+ #/
+
+record agreement {
+  /# The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  `date` : datetime
+  
+  
+  /# The unique identifier used by the financial institution to identify the guarantor of the transactions covered by this agreement. #/
+  guarantor_id : string ?
+  
+  
+  /# populated only if any netting restriction applies, in relation to the nature of the agreement or the enforceability of netting in the jurisdiction of the counterparty, preventing the recognition of the agreement as risk-reducing, pursuant to CRR Articles 295 to 298 #/
+  netting_restriction : agreement_netting_restriction ?
+  
+  
+  /# Smallest amount of collateral that can be transferred. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  minimum_transfer_amount : int ?
+  
+  
+  /# Indicates the number of disputes threshold to be used in the margin period of risk #/
+  number_of_disputes : int ?
+  
+  
+  /# Margin period of risk estimated for the transactions covered by the [CSA] agreement #/
+  margin_period_of_risk : int ?
+  
+  
+  /# Amount below which collateral is not required. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  threshold : int ?
+  
+  
+  /# The source where this data originated. #/
+  source : string ?
+  
+  
+  /# The version identifier of the data such as the firm's internal batch identifier. #/
+  version_id : string ?
+  
+  
+  /# The type of the master agreement. #/
+  type : agreement_type ?
+  
+  
+  /# The country code for the governing law of the agreement. Two-letter country code as defined according to ISO 3166-1. #/
+  country_code : country_code ?
+  
+  
+  /# Indicates whether a stay protocol has been signed by one or both parties to the agreement. #/
+  stay_protocol : agreement_stay_protocol ?
+  
+  
+  /# The type of credit support document #/
+  credit_support_type : agreement_credit_support_type ?
+  
+  
+  /# The unique identifier for the record within the firm. #/
+  id : string
+  
+  
+  /# Indicates the periodic timescale at which variation margin is exchanged. Cleared derivatives which are daily settled can be flagged as daily_settled. #/
+  margin_frequency : agreement_margin_frequency ?
+  
+  
+  /# The unique identifier used by the financial institution to identify the counterparty to this agreement. #/
+  customer_id : string ?
+  
+  
+  /# Currency in accordance with ISO 4217. It should be consistent with minimum transfer amount and threshold. #/
+  base_currency_code : currency_code ?
+  
+  
+  /# The timestamp that the agreement commences. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  start_date : datetime ?
+  
+  
+}
+
+         

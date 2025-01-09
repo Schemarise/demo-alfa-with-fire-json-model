@@ -1,0 +1,20 @@
+
+namespace fire.model
+
+
+/#
+ Specifies the approved credit risk rwa calculation approach to be applied to the exposure.
+ #/
+enum cr_approach {
+    airb 
+    eif_fb 
+    eif_lt 
+    eif_mba 
+    firb 
+    sec_erba 
+    sec_sa 
+    sec_sa_lt 
+    std 
+}
+
+         

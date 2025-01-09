@@ -1,0 +1,12 @@
+
+namespace fire.model
+
+
+/#
+ The status of the relationship with the customer from the firm's point of view.
+ #/
+enum customer_status {
+    established 
+}
+
+         

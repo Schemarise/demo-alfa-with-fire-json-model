@@ -1,0 +1,232 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+record customer {
+  /# The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  `date` : datetime
+  
+  
+  /# Flag to indicate that this should be considered an intra-group entity. #/
+  intra_group : boolean ?
+  
+  
+  /# North American Industry Classification System - NAICS Code #/
+  naics_code : int( 10, 999999 ) ?
+  
+  
+  /# The credit quality step for internal ratings based approach. #/
+  cqs_irb : int( 1, 12 ) ?
+  
+  
+  /# The number of full time staff. #/
+  headcount : int ?
+  
+  
+  /# The annual balance sheet total of the entity as at the last accounting reference date. #/
+  total_assets : int ?
+  
+  
+  /# The number of active products/trades this customer has with the firm. #/
+  product_count : int( 0, * ) ?
+  
+  
+  /# The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2 #/
+  source : string ?
+  
+  
+  /# The designated financial or legal entity category this person or legal entity falls under #/
+  type : customer_type ?
+  
+  
+  /# Fitch long term credit ratings #/
+  fitch_lt : customer_fitch_lt ?
+  
+  
+  /# The EU NACE economic activity classification. #/
+  nace_code : customer_nace_code ?
+  
+  
+  /# KBRA short term credit ratings #/
+  kbra_st : customer_kbra_st ?
+  
+  
+  /# Moodys short term credit ratings #/
+  moodys_st : customer_moodys_st ?
+  
+  
+  /# Flag to determine if the entity credit quality is impaired. #/
+  credit_impaired : boolean ?
+  
+  
+  /# S&P short term credit ratings #/
+  snp_st : customer_snp_st ?
+  
+  
+  /# Unique identifier established by the national reporting system #/
+  national_reporting_code : string ?
+  
+  
+  /# The unique identifier for the record within the firm. #/
+  id : string
+  
+  
+  /# The evaluation of the customer's willingness and/or capacity to take on financial risk. #/
+  risk_profile : int( 1, 10 ) ?
+  
+  
+  /# Describes the number of entities represented by this record. eg. joint customers should have a count > 1. #/
+  count : int( 1, * ) ?
+  
+  
+  /# Bank of England industry code. #/
+  boe_industry_code : string ?
+  
+  
+  /# Moody's long term credit ratings #/
+  moodys_lt : customer_moodys_lt ?
+  
+  
+  /# Hypothetical capital of the QCCP in accordance with Article 50c of Regulation (EU) No 648/2012 #/
+  k_ccp : int ?
+  
+  
+  /# The secondary identifier for the secondary group representing a single risk entity where no relationship of control exists #/
+  risk_group_id_2 : string ?
+  
+  
+  /# DBRS long term credit ratings #/
+  dbrs_lt : customer_dbrs_lt ?
+  
+  
+  /# The person or entity country of residence. Two-letter country code as defined according to ISO 3166-1. #/
+  country_code : country_code ?
+  
+  
+  /# The annual debit turnover in the business account of the entity. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  annual_debit_turnover : int( 0, * ) ?
+  
+  
+  /# Fitch short term credit ratings #/
+  fitch_st : customer_fitch_st ?
+  
+  
+  /# The unique identifier for the ultimate parent of the person or legal entity. #/
+  parent_id : string ?
+  
+  
+  /# The name of the person or legal entity to be used for display and reference purposes. #/
+  name : string ?
+  
+  
+  /# The pre-funded financial resources of the CCP in accordance with Article 50c of Regulation (EU) No 648/2012 #/
+  df_ccp : int ?
+  
+  
+  /# The Singaporean standard industry and sector classification. #/
+  ssic_code : int( 0, 99999 ) ?
+  
+  
+  /# The status of the relationship with the customer from the firm's point of view. #/
+  status : customer_status ?
+  
+  
+  /# The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
+  pd_irb : double( 0.0, 1.0 ) ?
+  
+  
+  /# Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1 #/
+  risk_country_code : country_code ?
+  
+  
+  /# Categorization of unrated exposure #/
+  internal_rating : customer_internal_rating ?
+  
+  
+  /# DBRS short term credit ratings #/
+  dbrs_st : customer_dbrs_st ?
+  
+  
+  /# KBRA long term credit ratings #/
+  kbra_lt : customer_kbra_lt ?
+  
+  
+  /# Grade calculated using the Basel Standardised Credit Risk Assessment #/
+  scra : customer_scra ?
+  
+  
+  /# Currency in accordance with ISO 4217. It should be consistent with the figures for turnover and total assets. #/
+  currency_code : currency_code ?
+  
+  
+  /# The LEI code for the legal entity (for corporates). #/
+  lei_code : string( 20, 20 ) ?
+  
+  
+  /# The credit quality step for standardised approach. #/
+  cqs_standardised : int( 1, 17 ) ?
+  
+  
+  /# Relationship to parent. #/
+  relationship : customer_relationship ?
+  
+  
+  /# The annual turnover of the entity as at the last accounting reference date. #/
+  turnover : int ?
+  
+  
+  /# Bank of England sector code. #/
+  boe_sector_code : string ?
+  
+  
+  /# The date that the customer first became a customer. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  start_date : datetime ?
+  
+  
+  /# Status of the clearing threshold as defined in EMIR #/
+  clearing_threshold : customer_clearing_threshold ?
+  
+  
+  /# The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds. #/
+  incurred_cva : int ?
+  
+  
+  /# The version identifier of the data such as the firm's internal batch identifier. #/
+  version_id : string ?
+  
+  
+  /# S&P long term credit ratings #/
+  snp_lt : customer_snp_lt ?
+  
+  
+  /# City, town or village. #/
+  address_city : string ?
+  
+  
+  /# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
+  lgd_irb : double( 0.0, 1.0 ) ?
+  
+  
+  /# The UK SIC 2007 standard industry and sector classification. #/
+  sic_code : int( 0, 99999 ) ?
+  
+  
+  /# Relationship to reporting entity. See: relationship. #/
+  reporting_relationship : customer_reporting_relationship ?
+  
+  
+  /# The sum of pre-funded contributions of all clearing members of the QCCP in accordance with Article 50c of Regulation (EU) No 648/2012. #/
+  df_cm : int ?
+  
+  
+  /# The unique identifier for the group representing a single risk entity where no relationship of control exists #/
+  risk_group_id : string ?
+  
+  
+  /# The official legal name of the entity. #/
+  legal_entity_name : string ?
+  
+  
+}
+
+         

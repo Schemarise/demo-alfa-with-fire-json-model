@@ -1,0 +1,16 @@
+
+namespace fire.model
+
+
+/#
+ Excess spread
+ #/
+enum security_excess_spread_type {
+    `fixed`( "fixed" ) 
+    fixed_trapped( "fixed_trapped" ) 
+    `none`( "none" ) 
+    variable( "variable" ) 
+    variable_trapped( "variable_trapped" ) 
+}
+
+         

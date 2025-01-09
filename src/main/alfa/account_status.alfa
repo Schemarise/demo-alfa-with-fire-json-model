@@ -1,0 +1,19 @@
+
+namespace fire.model
+
+
+/#
+ Describes if the Account is active or been cancelled.
+ #/
+enum account_status {
+    active 
+    audited 
+    cancelled 
+    cancelled_payout_agreed 
+    other 
+    pending 
+    transactional 
+    unaudited 
+}
+
+         

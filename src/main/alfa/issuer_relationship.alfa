@@ -1,0 +1,19 @@
+
+namespace fire.model
+
+
+/#
+ Relationship to parent.
+ #/
+enum issuer_relationship {
+    branch 
+    head_office 
+    jv 
+    parent 
+    parent_branch 
+    parent_subsidiary 
+    participation 
+    subsidiary 
+}
+
+         

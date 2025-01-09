@@ -1,0 +1,22 @@
+
+namespace fire.model
+
+
+/#
+ Repayment frequency of the interest.
+ #/
+enum security_interest_repayment_frequency {
+    daily 
+    weekly 
+    bi_weekly 
+    monthly 
+    bi_monthly 
+    quarterly 
+    semi_annually 
+    annually 
+    at_maturity 
+    biennially 
+    sesquiennially 
+}
+
+         

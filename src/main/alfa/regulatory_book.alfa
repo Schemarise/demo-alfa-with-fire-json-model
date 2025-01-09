@@ -1,0 +1,13 @@
+
+namespace fire.model
+
+
+/#
+ The type of portfolio in which the instrument is held.
+ #/
+enum regulatory_book {
+    banking_book 
+    trading_book 
+}
+
+         

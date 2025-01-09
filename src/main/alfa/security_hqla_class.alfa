@@ -1,0 +1,20 @@
+
+namespace fire.model
+
+
+/#
+ What is the HQLA classification of this security?
+ #/
+enum security_hqla_class {
+    exclude 
+    i 
+    i_non_op 
+    iia 
+    iia_non_op 
+    iib 
+    iib_non_op 
+    ineligible 
+    ineligible_non_op 
+}
+
+         

@@ -1,0 +1,13 @@
+
+namespace fire.model
+
+
+/#
+ Status of the clearing threshold as defined in EMIR
+ #/
+enum customer_clearing_threshold {
+    above 
+    below 
+}
+
+         

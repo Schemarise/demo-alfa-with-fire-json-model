@@ -1,0 +1,418 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+/#
+    A security represents a tradable financial instrument held or financed by an institution for investment or collateral.
+ #/
+
+record security {
+  accounting_treatment : accounting_treatment ?
+  
+  ccf : double( 0.0, * ) ?
+  
+  /# The impairment amount for a security is the allowance set aside by the firm for losses. #/
+  impairment_amount : int( 0, * ) ?
+  
+  
+  /# The name of the reporting legal entity for display purposes. #/
+  reporting_entity_name : string ?
+  
+  
+  /# The standardised methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value. #/
+  day_count_convention : day_count_convention ?
+  
+  
+  /# This is the type of the security with regards to common regulatory classifications. #/
+  type : security_type ?
+  
+  
+  /# Moodys short term credit ratings #/
+  moodys_st : security_moodys_st ?
+  
+  
+  /# Outstanding amount including accrued interest. Monetary integer number of cents/pence. #/
+  balance : int ?
+  
+  
+  /# S&P short term credit ratings #/
+  snp_st : security_snp_st ?
+  
+  
+  /# The unique identifier for the record within the firm. #/
+  id : string
+  
+  
+  /# The unique identifier used by the financial institution to identify the deal for this product that links it to other products of the same or different type. #/
+  deal_id : string ?
+  
+  
+  /# Can the security be rehypothecated by the borrower? #/
+  rehypothecation : boolean ?
+  
+  
+  /# The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations. #/
+  lgd_floored : double( 0.0, 1.0 ) ?
+  
+  
+  /# Dates where this contract can be called (by the customer). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  call_dates : list< datetime >(1,*) ?
+  
+  
+  /# The unique identifier used by the financial institution to identify the originator of the security or securitisation. #/
+  originator_id : string ?
+  
+  
+  /# Moody's long term credit ratings #/
+  moodys_lt : security_moodys_lt ?
+  
+  
+  /# DBRS long term credit ratings #/
+  dbrs_lt : security_dbrs_lt ?
+  
+  
+  /# The threshold at which losses within the pool of underlying exposures would start to be allocated to the relevant securitisation position. #/
+  attachment_point : double( 0.0, 1.0 ) ?
+  
+  
+  /# The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the financial product. #/
+  base_rate : security_base_rate ?
+  
+  
+  /# Is the security (valued at either amortised cost or fair value) an asset or a liability on the firm's balance sheet. #/
+  asset_liability : asset_liability ?
+  
+  
+  /# The timestamp that indicates the end of an initial period where the 'rate' is applied to a security. After this the interest is calculated using the 'reversion_rate'. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  reversion_date : datetime ?
+  
+  
+  /# The organizational unit or sub-unit to which costs/profits are booked. #/
+  cost_center_code : string ?
+  
+  
+  /# What is the HQLA classification of this security? #/
+  hqla_class : security_hqla_class ?
+  
+  
+  /# Provides additional information regarding the status of the security. #/
+  status : security_status ?
+  
+  
+  /# YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601 #/
+  end_date : datetime ?
+  
+  
+  mic_code : string( 4, 4 ) ?
+  
+  /# The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
+  pd_irb : double( 0.0, 1.0 ) ?
+  
+  
+  /# KBRA long term credit ratings #/
+  kbra_lt : security_kbra_lt ?
+  
+  
+  /# Repayment frequency of the interest. #/
+  interest_repayment_frequency : security_interest_repayment_frequency ?
+  
+  
+  /# The notional value is the total amount of a security's underlying asset at its spot price. Monetary number of cents. #/
+  notional_amount : int ?
+  
+  
+  regulatory_book : regulatory_book ?
+  
+  /# The first day the security became guaranteed by the guarantor. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601 #/
+  guarantee_start_date : datetime ?
+  
+  
+  /# The internal risk weight represented as a decimal/float such that 1.5% is 0.015. #/
+  risk_weight_irb : double ?
+  
+  
+  /# Actual currency of the security in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts. #/
+  currency_code : currency_code ?
+  
+  
+  /# The repayment or amortisation mechanism of the security or securitisation. #/
+  repayment_type : security_repayment_type ?
+  
+  
+  /# Is the security reported on the balance sheet of the financial institution? #/
+  on_balance_sheet : boolean ?
+  
+  
+  /# The date on which the security is issued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  issue_date : datetime ?
+  
+  
+  /# The insolvency ranking as per the national legal fraamework of the reporting institution. #/
+  insolvency_rank : int( 1, * ) ?
+  
+  
+  /# Specifies the approved credit risk rwa calculation approach to be applied to the exposure. #/
+  cr_approach : cr_approach ?
+  
+  
+  /# The unique identifier of the credit support annex this security falls under. Typically where used as derivatives collateral. #/
+  csa_id : string ?
+  
+  
+  /# Constituents and their proportion in an index. #/
+  index_composition : set< security_index_composition >(1,*) ?
+  
+  
+  /# The credit quality step for standardised approach. #/
+  cqs_standardised : int( 1, 17 ) ?
+  
+  
+  /# The date on which the first forbearance measure was granted to this product.  Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601 #/
+  forbearance_date : datetime ?
+  
+  
+  /# The threshold at which losses within the pool of underlying exposures would result in a complete loss of principal for the tranche containing the relevant securitisation position. #/
+  detachment_point : double( 0.0, 1.0 ) ?
+  
+  
+  /# The timestamp that the trade or financial product commences. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  start_date : datetime ?
+  
+  
+  /# The date upon which the product became considered impaired. Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601 #/
+  impairment_date : datetime ?
+  
+  
+  /# The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  trade_date : datetime ?
+  
+  
+  /# The unique identifier for the issuer within the financial institution. #/
+  issuer_id : string ?
+  
+  
+  /# The balance of the assets that are held in the cover pool #/
+  cover_pool_balance : int( 0, * ) ?
+  
+  
+  /# The haircut as determined by the firm's central bank #/
+  cb_haircut : double( 0.0, 1.0 ) ?
+  
+  
+  /# The first date on which this security was in arrears. #/
+  first_arrears_date : datetime ?
+  
+  
+  /# The accrued interest since the last payment date and due at the next payment date. Monetary type represented as an integer number of cents/pence. #/
+  accrued_interest : int ?
+  
+  
+  /# The unique identifier used by the financial institution to identify the customer for this product. #/
+  customer_id : string ?
+  
+  
+  /# The movement parameter describes how the security arrived to the firm. #/
+  movement : security_movement ?
+  
+  
+  /# The seniority of the security in the event of sale or bankruptcy of the issuer. #/
+  seniority : security_seniority ?
+  
+  
+  /# The sft_type parameter defines the transaction mechanism conducted for the SFT for this security product. #/
+  sft_type : security_sft_type ?
+  
+  
+  /# The timestamp that the trade or financial product was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  value_date : datetime ?
+  
+  
+  /# The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  `date` : datetime
+  
+  
+  /# The credit quality step for internal ratings based approach. #/
+  cqs_irb : int( 1, 12 ) ?
+  
+  
+  /# The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015. #/
+  risk_weight_std : double ?
+  
+  
+  /# The type of securitisation with regards to common regulatory classifications. #/
+  securitisation_type : security_securitisation_type ?
+  
+  
+  /# The mark-to-market value of the security excluding interest. Monetary number of cents/pence. #/
+  mtm_clean : int ?
+  
+  
+  impairment_status : impairment_status ?
+  
+  /# Can the security be transferred between parties or negotiated on the capital market? #/
+  transferable : boolean ?
+  
+  
+  /# The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2 #/
+  source : string ?
+  
+  
+  /# Fitch long term credit ratings #/
+  fitch_lt : security_fitch_lt ?
+  
+  
+  /# KBRA short term credit ratings #/
+  kbra_st : security_kbra_st ?
+  
+  
+  /# The internal ledger code or line item name. #/
+  ledger_code : string ?
+  
+  
+  /# The unique International Securities Identification Number for the security according to ISO 6166. #/
+  isin_code : string( 12, 12 ) ?
+  
+  
+  /# The size of the issue denominated in the original currency of the security #/
+  issue_size : int ?
+  
+  
+  /# The evaluation of the financial risk associated to the portfolio #/
+  risk_profile : int( 1, 10 ) ?
+  
+  
+  /# The final payment date for interest payments, often coincides with end_date or the maturity date #/
+  last_payment_date : datetime ?
+  
+  
+  /# The name of the product as given by the financial institution to be used for display and reference purposes. #/
+  product_name : string ?
+  
+  
+  /# Excess spread #/
+  excess_spread_type : security_excess_spread_type ?
+  
+  
+  /# The repayment or amortisation mechanism of the security or securitisation. #/
+  retention_type : security_retention_type ?
+  
+  
+  /# Two-letter country code for security location/jurisdiction. In accordance with ISO 3166-1. #/
+  country_code : country_code ?
+  
+  
+  /# Fitch short term credit ratings #/
+  fitch_st : security_fitch_st ?
+  
+  
+  /# The first payment date for interest payments. #/
+  first_payment_date : datetime ?
+  
+  
+  /# The unique identifier for the guarantor within the financial institution. #/
+  guarantor_id : string ?
+  
+  
+  /# The rate to which the security will revert after the reversion date. Percentages represented as a decimal/float, so 1.5 implies 1.5%. #/
+  reversion_rate : double ?
+  
+  
+  /# The level of variation on the security's price or haircut or during a 30 day calendar market stress period in percentage terms #/
+  stress_change : double( 0.0, * ) ?
+  
+  
+  /# The purpose for which the security is being held. #/
+  purpose : security_purpose ?
+  
+  
+  /# Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1 #/
+  risk_country_code : country_code ?
+  
+  
+  /# DBRS short term credit ratings #/
+  dbrs_st : security_dbrs_st ?
+  
+  
+  /# Fair value hierarchy category according to IFRS 13.93 (b) #/
+  fvh_level : int( 1, 3 ) ?
+  
+  
+  /# The date on which the principal repayment of the security is due. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  maturity_date : datetime ?
+  
+  
+  /# The percentage of the issuance retained by the issuer. e.g. 0.05 is 5%. #/
+  retention_pct : double ?
+  
+  
+  /# The next date at which interest will be paid or accrued_interest balance returned to zero. #/
+  next_payment_date : datetime ?
+  
+  
+  /# The full interest rate applied to the security notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread). #/
+  rate : double ?
+  
+  
+  /# The capital tiers based on own funds requirements. #/
+  capital_tier : security_capital_tier ?
+  
+  
+  /# Specifies the approved counterparty credit risk methodology for calculating exposures. #/
+  ccr_approach : security_ccr_approach ?
+  
+  
+  /# The most recent previous date at which interest was paid or accrued_interest balance returned to zero. #/
+  prev_payment_date : datetime ?
+  
+  
+  /# The amount of the security that is encumbered by potential future commitments or legal liabilities such as within a repo pool. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  encumbrance_amount : int( 0, * ) ?
+  
+  
+  /# Dates where this contract can be broken (by either party). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  break_dates : list< datetime >(1,*) ?
+  
+  
+  /# The call mechanism, if present, for the issuance. For securitisations and other callable securities. #/
+  call_type : security_call_type ?
+  
+  
+  /# The unique identifier of the Master Netting Agreement this security falls under. Typically where used as derivatives collateral. #/
+  mna_id : string ?
+  
+  
+  /# The internal ID for the legal entity under which the account is being reported. #/
+  reporting_id : string ?
+  
+  
+  /# The version identifier of the data such as the firm's internal batch identifier. #/
+  version_id : string ?
+  
+  
+  /# S&P long term credit ratings #/
+  snp_lt : security_snp_lt ?
+  
+  
+  /# Accumulated changes in fair value due to credit risk. #/
+  acc_fv_change_credit_risk : int ?
+  
+  
+  /# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
+  lgd_irb : double( 0.0, 1.0 ) ?
+  
+  
+  /# The mark-to-market value of the security including interest. Monetary number of cents/pence. #/
+  mtm_dirty : int ?
+  
+  
+  /# Accumulated change in fair value before taxes. #/
+  acc_fv_change_before_taxes : int ?
+  
+  
+  /# The date on which the interest rate of the security will be re-calculated. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  next_repricing_date : datetime ?
+  
+  
+}
+
+         

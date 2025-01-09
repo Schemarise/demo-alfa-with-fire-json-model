@@ -1,0 +1,16 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+record curve_values {
+  /# The reference item for the value. (x-axis) #/
+  reference : curve_values_reference
+  
+  
+  /# The reference value for this rate. (y-axis) #/
+  value : double
+  
+  
+}
+
+         

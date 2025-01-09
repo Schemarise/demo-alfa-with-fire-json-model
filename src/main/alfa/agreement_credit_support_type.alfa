@@ -1,0 +1,15 @@
+
+namespace fire.model
+
+
+/#
+ The type of credit support document
+ #/
+enum agreement_credit_support_type {
+    csa_isda_1994 
+    csa_isda_1995 
+    csd_isda_1995 
+    scsa_isda_2013 
+}
+
+         

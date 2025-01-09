@@ -1,0 +1,12 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+record batch_links {
+  rel : batch_links_rel
+  
+  href : string
+  
+}
+
+         

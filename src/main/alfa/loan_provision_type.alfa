@@ -1,0 +1,13 @@
+
+namespace fire.model
+
+
+/#
+ The provision type parameter details the provisions the issuing firm has allocated to cover potential losses from issuing a loan.
+ #/
+enum loan_provision_type {
+    `none` 
+    other 
+}
+
+         

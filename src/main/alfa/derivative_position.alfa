@@ -1,0 +1,13 @@
+
+namespace fire.model
+
+
+/#
+ Specifies the market position, i.e. long or short, of the derivative leg
+ #/
+enum derivative_position {
+    `long`( "long" ) 
+    `short`( "short" ) 
+}
+
+         

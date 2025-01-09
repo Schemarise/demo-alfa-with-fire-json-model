@@ -1,0 +1,17 @@
+
+namespace fire.model
+
+
+/#
+ Describes if the loan is active or been cancelled.
+ #/
+enum loan_status {
+    actual 
+    cancellable 
+    cancelled 
+    committed 
+    defaulted 
+    revolving 
+}
+
+         
