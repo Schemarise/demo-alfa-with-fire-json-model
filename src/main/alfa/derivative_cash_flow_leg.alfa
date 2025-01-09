@@ -1,0 +1,13 @@
+
+namespace fire.model
+
+
+/#
+ The type of the payment leg.
+ #/
+enum derivative_cash_flow_leg {
+    pay 
+    receive 
+}
+
+         

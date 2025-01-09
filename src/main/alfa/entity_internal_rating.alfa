@@ -1,0 +1,13 @@
+
+namespace fire.model
+
+
+/#
+ Categorization of unrated exposure
+ #/
+enum entity_internal_rating {
+    investment 
+    non_investment 
+}
+
+         

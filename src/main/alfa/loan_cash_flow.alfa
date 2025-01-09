@@ -1,0 +1,46 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+/#
+    A loan cash flow represents the future movement of cash as part of contractually agreed payments for an existing loan.
+ #/
+
+record loan_cash_flow {
+  /# The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  `date` : datetime
+  
+  
+  /# The size of the cash flow. Monetary type represented as a naturally positive integer number of cents/pence denominated in the currency code. #/
+  amount : int
+  
+  
+  /# The unique identifier for the record within the firm. #/
+  id : string
+  
+  
+  /# The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2 #/
+  source : string ?
+  
+  
+  /# The version identifier of the data such as the firm's internal batch identifier. #/
+  version_id : string ?
+  
+  
+  /# The type of the payment, signifying whether interest or principal is being paid. #/
+  type : loan_cash_flow_type
+  
+  
+  currency_code : currency_code
+  
+  /# The timestamp that the cash flow will occur or was paid. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  payment_date : datetime
+  
+  
+  /# The unique identifier for the affected loan/s within the financial institution. #/
+  loan_id : string
+  
+  
+}
+
+         

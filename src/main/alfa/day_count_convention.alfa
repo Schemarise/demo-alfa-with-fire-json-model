@@ -1,0 +1,16 @@
+
+namespace fire.model
+
+
+/#
+ The methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.
+ #/
+enum day_count_convention {
+    act_360 
+    act_365 
+    act_act 
+    std_30_360 
+    std_30_365 
+}
+
+         

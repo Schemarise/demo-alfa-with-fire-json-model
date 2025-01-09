@@ -1,0 +1,13 @@
+
+namespace fire.model
+
+
+enum batch_links_rel {
+    self 
+    prev 
+    next 
+    first 
+    last 
+}
+
+         

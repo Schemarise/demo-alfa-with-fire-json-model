@@ -1,0 +1,13 @@
+
+namespace fire.model
+
+
+/#
+ The type of settlement for the contract.
+ #/
+enum derivative_cash_flow_settlement_type {
+    cash 
+    physical 
+}
+
+         

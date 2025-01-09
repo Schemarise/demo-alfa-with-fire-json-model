@@ -1,0 +1,16 @@
+
+namespace fire.model
+
+
+/#
+ The type of the encumbrance causing the encumbrance_amount.
+ #/
+enum account_encumbrance_type {
+    covered_bond 
+    derivative 
+    `none` 
+    other 
+    repo 
+}
+
+         

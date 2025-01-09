@@ -1,0 +1,17 @@
+
+namespace fire.model
+
+
+/#
+ Provides additional information regarding the status of the security.
+ #/
+enum security_status {
+    bankruptcy_remote 
+    called_up 
+    free_deliveries 
+    non_operational 
+    paid_up 
+    unsettled 
+}
+
+         

@@ -1,0 +1,13 @@
+
+namespace fire.model
+
+
+/#
+ The type of the payment, signifying whether interest or principal is being paid.
+ #/
+enum loan_cash_flow_type {
+    interest 
+    principal 
+}
+
+         

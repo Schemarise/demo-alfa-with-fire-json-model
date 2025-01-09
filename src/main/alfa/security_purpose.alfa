@@ -1,0 +1,30 @@
+
+namespace fire.model
+
+
+/#
+ The purpose for which the security is being held.
+ #/
+enum security_purpose {
+    aircraft_finance 
+    back_to_back 
+    collateral 
+    custody 
+    default_fund 
+    derivative_collateral 
+    independent_collateral_amount 
+    insurance 
+    investment 
+    investment_advice 
+    non_controlling 
+    ocir 
+    other 
+    portfolio_management 
+    reference 
+    share_capital 
+    single_collateral_pool 
+    trade_finance 
+    variation_margin 
+}
+
+         

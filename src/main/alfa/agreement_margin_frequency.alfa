@@ -1,0 +1,16 @@
+
+namespace fire.model
+
+
+/#
+ Indicates the periodic timescale at which variation margin is exchanged. Cleared derivatives which are daily settled can be flagged as daily_settled.
+ #/
+enum agreement_margin_frequency {
+    daily 
+    daily_settled 
+    weekly 
+    bi_weekly 
+    monthly 
+}
+
+         

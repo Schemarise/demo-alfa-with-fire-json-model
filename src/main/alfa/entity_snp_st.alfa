@@ -1,0 +1,17 @@
+
+namespace fire.model
+
+
+/#
+ S&P short term credit ratings
+ #/
+enum entity_snp_st {
+    a1 
+    a2 
+    a3 
+    b 
+    c 
+    d 
+}
+
+         

@@ -1,0 +1,15 @@
+
+namespace fire.model
+
+
+/#
+ Was the loan assessed against a single or joint incomes?
+ #/
+enum loan_income_assessment {
+    joint 
+    joint_not_evidenced 
+    single 
+    single_not_evidenced 
+}
+
+         

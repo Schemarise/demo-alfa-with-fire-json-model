@@ -1,0 +1,17 @@
+
+namespace fire.model
+
+
+/#
+ The type of securitisation with regards to common regulatory classifications.
+ #/
+enum security_securitisation_type {
+    pass_through 
+    sts 
+    sts_synthetic 
+    sts_traditional 
+    synthetic 
+    traditional 
+}
+
+         

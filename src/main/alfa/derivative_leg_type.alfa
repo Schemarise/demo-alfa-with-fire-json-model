@@ -1,0 +1,16 @@
+
+namespace fire.model
+
+
+/#
+ Describe the payoff type of the derivative leg.
+ #/
+enum derivative_leg_type {
+    call( "call" ) 
+    `fixed`( "fixed" ) 
+    floating( "floating" ) 
+    indexed( "indexed" ) 
+    put( "put" ) 
+}
+
+         

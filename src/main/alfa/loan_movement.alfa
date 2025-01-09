@@ -1,0 +1,18 @@
+
+namespace fire.model
+
+
+/#
+ The movement parameter describes how the loan arrived to the firm.
+ #/
+enum loan_movement {
+    acquired 
+    acquired_impaired 
+    other 
+    securitised 
+    sold 
+    syndicated 
+    syndicated_lead 
+}
+
+         

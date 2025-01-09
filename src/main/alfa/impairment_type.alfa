@@ -1,0 +1,14 @@
+
+namespace fire.model
+
+
+/#
+ The loss event resulting in the impairment of the loan.
+ #/
+enum impairment_type {
+    collective 
+    individual 
+    write_off 
+}
+
+         

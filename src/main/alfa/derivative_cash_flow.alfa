@@ -1,0 +1,124 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+/#
+    A derivative cash flow where two parties exchange cash flows (or assets) derived from an underlying reference index, security or financial instrument.
+ #/
+
+record derivative_cash_flow {
+  /# The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  `date` : datetime
+  
+  
+  /# The mark-to-market value of the derivative cash flow excluding interest/premium/coupons. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  mtm_clean : int ?
+  
+  
+  /# The purpose for which the derivative cash flow is calculated #/
+  purpose : derivative_cash_flow_purpose ?
+  
+  
+  /# The name of the reporting legal entity for display purposes. #/
+  reporting_entity_name : string ?
+  
+  
+  /# The notional value is the total value with regard to a derivative's underlying index, security or asset at its spot price in accordance with the specifications (i.e. leverage) of the derivative product. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  notional_amount : int ?
+  
+  
+  regulatory_book : regulatory_book ?
+  
+  /# The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2 #/
+  source : string ?
+  
+  
+  /# Actual currency of the security in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts. #/
+  currency_code : currency_code ?
+  
+  
+  /# The type of the payment leg. #/
+  leg : derivative_cash_flow_leg ?
+  
+  
+  /# Date on which a variable cash flow amount is set. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  reset_date : datetime ?
+  
+  
+  /# Is the financial product reported on the balance sheet of the financial institution? #/
+  on_balance_sheet : boolean ?
+  
+  
+  /# The contractual balance due on the payment date in the currency given. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  balance : int ?
+  
+  
+  /# Unique identifier to the derivative to which this cash flow relates #/
+  derivative_id : string ?
+  
+  
+  /# The unique identifier of the credit support annex for this derivative cash flow #/
+  csa_id : string ?
+  
+  
+  /# The unique identifier for the record within the firm. #/
+  id : string
+  
+  
+  /# The timestamp that the cash flow will occur or was paid. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  payment_date : datetime ?
+  
+  
+  /# The unique identifier of the Master Netting Agreement for this derivative cash flow. #/
+  mna_id : string ?
+  
+  
+  asset_class : asset_class ?
+  
+  /# The internal ID for the legal entity under which the account is being reported. #/
+  reporting_id : string ?
+  
+  
+  /# The version identifier of the data such as the firm's internal batch identifier. #/
+  version_id : string ?
+  
+  
+  /# The name of the product as given by the financial institution to be used for display and reference purposes. #/
+  product_name : string ?
+  
+  
+  /# The date that the derivative cash flow terms were agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  trade_date : datetime ?
+  
+  
+  /# Rate used to set a variable cash flow on the reset_date #/
+  forward_rate : double ?
+  
+  
+  /# The mark-to-market value of the derivative cash flow including interest/premium/coupons. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  mtm_dirty : int ?
+  
+  
+  /# A derivative cash flow exchange that results in a net positive value after the transaction is an asset on the firm's balance sheet. A derivative cash flow exchange that results in a net negative value after the transaction is a liability on the firm's balance sheet. #/
+  asset_liability : asset_liability ?
+  
+  
+  /# The accrued interest/premium due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  accrued_interest : int ?
+  
+  
+  /# Counterparty to the cash flow #/
+  customer_id : string ?
+  
+  
+  /# The type of settlement for the contract. #/
+  settlement_type : derivative_cash_flow_settlement_type ?
+  
+  
+  /# The timestamp that the cash flow was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  value_date : datetime ?
+  
+  
+}
+
+         

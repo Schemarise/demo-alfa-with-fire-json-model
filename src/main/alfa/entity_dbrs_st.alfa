@@ -1,0 +1,21 @@
+
+namespace fire.model
+
+
+/#
+ DBRS short term credit ratings
+ #/
+enum entity_dbrs_st {
+    r1_h 
+    r1_m 
+    r1_l 
+    r2_h 
+    r2_m 
+    r2_l 
+    r3 
+    r4 
+    r5 
+    d 
+}
+
+         

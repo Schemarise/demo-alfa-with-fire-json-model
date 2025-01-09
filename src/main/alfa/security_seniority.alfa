@@ -1,0 +1,16 @@
+
+namespace fire.model
+
+
+/#
+ The seniority of the security in the event of sale or bankruptcy of the issuer.
+ #/
+enum security_seniority {
+    first_loss_secured 
+    senior_secured 
+    senior_unsecured 
+    subordinated_secured 
+    subordinated_unsecured 
+}
+
+         

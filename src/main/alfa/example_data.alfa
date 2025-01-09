@@ -1,0 +1,36 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+record example_data {
+  loan : set< loan >(1,*) ?
+  
+  agreement : set< agreement >(1,*) ?
+  
+  exchange_rate : set< exchange_rate >(1,*) ?
+  
+  curve : set< curve >(1,*) ?
+  
+  derivative_cash_flow : set< derivative_cash_flow >(1,*) ?
+  
+  derivative : set< derivative >(1,*) ?
+  
+  guarantor : set< guarantor >(1,*) ?
+  
+  issuer : set< issuer >(1,*) ?
+  
+  security : set< security >(1,*) ?
+  
+  adjustment : set< adjustment >(1,*) ?
+  
+  collateral : set< collateral >(1,*) ?
+  
+  account : set< account >(1,*) ?
+  
+  customer : set< customer >(1,*) ?
+  
+  loan_transaction : set< loan_transaction >(1,*) ?
+  
+}
+
+         

@@ -1,0 +1,21 @@
+
+namespace fire.model
+
+
+/#
+ The sft_type parameter defines the transaction mechanism conducted for the SFT for this security product.
+ #/
+enum security_sft_type {
+    bond_borrow 
+    bond_loan 
+    buy_sell_back 
+    margin_loan 
+    repo 
+    rev_repo 
+    sell_buy_back 
+    stock_borrow 
+    stock_loan 
+    term_funding_scheme 
+}
+
+         

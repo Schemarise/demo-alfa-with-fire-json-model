@@ -1,0 +1,19 @@
+
+namespace fire.model
+
+
+/#
+ Relationship to reporting entity. See: relationship.
+ #/
+enum customer_reporting_relationship {
+    branch 
+    head_office 
+    jv 
+    parent 
+    parent_branch 
+    parent_subsidiary 
+    participation 
+    subsidiary 
+}
+
+         

@@ -1,0 +1,16 @@
+
+namespace fire.model
+
+
+/#
+ The purpose for which the derivative is being held.
+ #/
+enum derivative_purpose {
+    back_to_back 
+    client_execution 
+    client_transmission 
+    cva_hedge 
+    reference 
+}
+
+         

@@ -1,0 +1,15 @@
+
+namespace fire.model
+
+
+/#
+ Specifies the approved counterparty credit risk methodology for calculating exposures.
+ #/
+enum derivative_ccr_approach {
+    imm 
+    oem 
+    sa 
+    ssa 
+}
+
+         

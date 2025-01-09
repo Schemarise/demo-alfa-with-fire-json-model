@@ -1,0 +1,13 @@
+
+namespace fire.model
+
+
+/#
+ How the loan was administered by the lender.
+ #/
+enum loan_administration {
+    other 
+    principal 
+}
+
+         

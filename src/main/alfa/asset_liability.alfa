@@ -1,0 +1,15 @@
+
+namespace fire.model
+
+
+/#
+ Is the data an asset, a liability, or equity on the firm's balance sheet?
+ #/
+enum asset_liability {
+    asset 
+    equity 
+    liability 
+    pnl 
+}
+
+         

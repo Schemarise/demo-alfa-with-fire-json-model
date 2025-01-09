@@ -1,0 +1,12 @@
+
+namespace fire.model
+
+fragment record adjustment {
+    assert Validateadjustment0 {
+
+        if (! ( ((isSome(`date`) && isSome(col) && isSome(id) && isSome(report_type) && isSome(row) && isSome(contribution_amount) && !( isSome(`date`) && isSome(col) && isSome(id) && isSome(report_type) && isSome(row) && isSome(contribution_text) )) || (isSome(`date`) && isSome(col) && isSome(id) && isSome(report_type) && isSome(row) && isSome(contribution_text) && !( isSome(`date`) && isSome(col) && isSome(id) && isSome(report_type) && isSome(row) && isSome(contribution_amount) ))) ) )
+            raise error(Completeness, "Required field/combination is not set -   `date` and col and id and report_type and row and contribution_amount and !  `date` and col and id and report_type and row and contribution_text   or  `date` and col and id and report_type and row and contribution_text and !  `date` and col and id and report_type and row and contribution_amount   ")
+               
+    }
+}
+       

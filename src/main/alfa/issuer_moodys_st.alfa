@@ -1,0 +1,15 @@
+
+namespace fire.model
+
+
+/#
+ Moodys short term credit ratings
+ #/
+enum issuer_moodys_st {
+    p1 
+    p2 
+    p3 
+    np 
+}
+
+         

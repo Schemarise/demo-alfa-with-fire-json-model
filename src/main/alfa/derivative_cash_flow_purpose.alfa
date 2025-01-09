@@ -1,0 +1,14 @@
+
+namespace fire.model
+
+
+/#
+ The purpose for which the derivative cash flow is calculated
+ #/
+enum derivative_cash_flow_purpose {
+    interest 
+    principal 
+    reference 
+}
+
+         

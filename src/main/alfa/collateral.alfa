@@ -1,0 +1,88 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+/#
+    Data schema to define collateral (currently can reference loans or accounts).
+ #/
+
+record collateral {
+  /# The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  `date` : datetime
+  
+  
+  /# The end date for recognition of the collateral #/
+  end_date : datetime ?
+  
+  
+  /# The unique identifier/s for the account/s within the financial institution. #/
+  account_ids : list< string >(1,*) ?
+  
+  
+  /# Lender charge on collateral, 1 indicates first charge, 2 second and so on. 0 indicates a combination of charge levels. #/
+  charge : int( 0, * ) ?
+  
+  
+  /# The valuation as used by the bank for the collateral at the origination of the related loan or line of credit. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  orig_value : int ?
+  
+  
+  /# The type of the encumbrance causing the encumbrance_amount. #/
+  encumbrance_type : collateral_encumbrance_type ?
+  
+  
+  regulatory_book : regulatory_book ?
+  
+  /# The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2 #/
+  source : string ?
+  
+  
+  /# The version identifier of the data such as the firm's internal batch identifier. #/
+  version_id : string ?
+  
+  
+  /# The collateral type defines the form of the collateral provided #/
+  type : collateral_type ?
+  
+  
+  currency_code : currency_code ?
+  
+  /# The volatility adjustment appropriate to currency mismatch. #/
+  vol_adj_fx : double ?
+  
+  
+  /# The unique identifiers for the loans within the financial institution. #/
+  loan_ids : list< string >(1,*) ?
+  
+  
+  /# The unique identifier for the record within the firm. #/
+  id : string
+  
+  
+  /# The amount of the collateral that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  encumbrance_amount : int ?
+  
+  
+  /# The volatility adjustment appropriate to the collateral. #/
+  vol_adj : double ?
+  
+  
+  /# The valuation as used by the bank for the collateral on the value_date. Monetary type represented as a naturally positive integer number of cents/pence. #/
+  value : int
+  
+  
+  /# The unique identifier used by the financial institution to identify the security representing collateral. #/
+  security_id : string ?
+  
+  
+  /# The start date for recognition of the collateral #/
+  start_date : datetime ?
+  
+  
+  /# The timestamp that the collateral was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  value_date : datetime ?
+  
+  
+}
+
+         

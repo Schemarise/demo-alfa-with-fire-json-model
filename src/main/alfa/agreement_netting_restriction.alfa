@@ -1,0 +1,13 @@
+
+namespace fire.model
+
+
+/#
+ populated only if any netting restriction applies, in relation to the nature of the agreement or the enforceability of netting in the jurisdiction of the counterparty, preventing the recognition of the agreement as risk-reducing, pursuant to CRR Articles 295 to 298
+ #/
+enum agreement_netting_restriction {
+    national_supervision 
+    restrictive_covenant 
+}
+
+         

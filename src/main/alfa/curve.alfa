@@ -1,0 +1,44 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+/#
+    A Curve represents a series of points on a plot. Typically, interest rates, volatility or forward prices.
+ #/
+
+record curve {
+  /# The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  `date` : datetime
+  
+  
+  /# The list of values for this curve. #/
+  values : set< curve_values >(1,*)
+  
+  
+  /# The internal name of the curve. #/
+  name : string ?
+  
+  
+  /# The unique identifier for the record within the firm. #/
+  id : string
+  
+  
+  /# The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2 #/
+  source : string ?
+  
+  
+  /# The version identifier of the data such as the firm's internal batch identifier. #/
+  version_id : string ?
+  
+  
+  /# The curve type. #/
+  type : curve_type ?
+  
+  
+  /# The currency reference code in accordance with ISO 4217 standards. #/
+  currency_code : currency_code ?
+  
+  
+}
+
+         

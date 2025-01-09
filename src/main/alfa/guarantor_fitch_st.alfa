@@ -1,0 +1,19 @@
+
+namespace fire.model
+
+
+/#
+ Fitch short term credit ratings
+ #/
+enum guarantor_fitch_st {
+    f1_plus 
+    f1 
+    f2 
+    f3 
+    b 
+    c 
+    rd 
+    d 
+}
+
+         

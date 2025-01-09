@@ -1,0 +1,24 @@
+
+namespace fire.model
+
+
+/#
+    FIRE schema for representing and validating FIRE examples
+ #/
+
+record example {
+  /# An object of FIRE data lists, with data types as keys #/
+  data : example_data
+  
+  
+  /# Additional comments describing the FIRE example #/
+  comment : string
+  
+  
+  /# Title of the FIRE product example #/
+  title : string
+  
+  
+}
+
+         
