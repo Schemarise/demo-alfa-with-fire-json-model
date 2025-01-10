@@ -113,6 +113,16 @@
       "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
     },
+    "credit_process": {
+      "description": "Identifier for how a loan is credit assessed during the underwriting process",
+      "type": "string",
+      "enum": [
+        "delinquency_managed",
+        "graded",
+        "rated",
+        "scored"
+      ]
+    },
     "cum_recoveries": {
       "description": "The total amount recovered since the date of default of the instrument.",
       "type": "integer",
@@ -261,7 +271,9 @@
       "type": "string",
       "enum": [
         "joint",
-        "single"
+        "joint_not_evidenced",
+        "single",
+        "single_not_evidenced"
       ]
     },
     "interest_repayment_frequency": {
@@ -444,8 +456,11 @@
         "commodities_finance",
         "construction",
         "consumer_buy_to_let",
+        "econ_loss_retail",
+        "econ_loss_wholesale",
         "first_time_buyer",
         "first_time_buyer_cstr",
+        "fraud_loss_retail",
         "further_advance",
         "further_advance_cstr",
         "house_purchase",
@@ -601,10 +616,10 @@
       "type": "string",
       "enum": [
         "auto",
+        "cd",
         "charge_card",
         "commercial",
         "commercial_property",
-        "commercial_property_hr",
         "corporate_card",
         "credit_card",
         "credit_facility",
@@ -615,13 +630,14 @@
         "mortgage",
         "mortgage_charter",
         "multiccy_facility",
+        "new_auto",
         "nostro",
         "other",
         "personal",
         "q_reverse_mortgage",
-        "res_property_hr",
         "reverse_mortgage",
-        "trade_finance"
+        "trade_finance",
+        "used_auto"
       ]
     },
     "version_id": {
