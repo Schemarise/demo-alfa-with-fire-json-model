@@ -6,20 +6,19 @@ namespace fire.model
  The collateral type defines the form of the collateral provided
  #/
 enum collateral_type {
-    `auto`( "auto" ) 
-    cash( "cash" ) 
-    commercial_property( "commercial_property" ) 
-    commercial_property_hr( "commercial_property_hr" ) 
-    debenture( "debenture" ) 
-    farm( "farm" ) 
-    guarantee( "guarantee" ) 
-    immovable_property( "immovable_property" ) 
-    life_policy( "life_policy" ) 
-    multifamily( "multifamily" ) 
-    other( "other" ) 
-    res_property_hr( "res_property_hr" ) 
-    residential_property( "residential_property" ) 
-    security( "security" ) 
+    cash 
+    commercial_property 
+    commercial_property_hr 
+    debenture 
+    farm 
+    guarantee 
+    immovable_property 
+    life_policy 
+    multifamily 
+    other 
+    res_property_hr 
+    residential_property 
+    security 
 }
 
          

@@ -359,10 +359,6 @@ record loan {
   encumbrance_amount : int( 0, * ) ?
   
   
-  /# Identifier for how a loan is credit assessed during the underwriting process #/
-  credit_process : loan_credit_process ?
-  
-  
   impairment_type : impairment_type ?
   
   /# The total amount of non-recourse funding linked to the loan. Monetary type represented as a naturally positive integer number of cents/pence. #/
