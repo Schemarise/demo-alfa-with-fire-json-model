@@ -151,10 +151,6 @@ record customer {
   kbra_lt : customer_kbra_lt ?
   
   
-  /# Grade calculated using the Basel Standardised Credit Risk Assessment #/
-  scra : customer_scra ?
-  
-  
   /# Currency in accordance with ISO 4217. It should be consistent with the figures for turnover and total assets. #/
   currency_code : currency_code ?
   
@@ -204,7 +200,7 @@ record customer {
   
   
   /# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
-  lgd_irb : double( 0.0, 1.0 ) ?
+  lgd_irb : double ?
   
   
   /# The UK SIC 2007 standard industry and sector classification. #/

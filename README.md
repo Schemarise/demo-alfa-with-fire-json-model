@@ -48,7 +48,7 @@ git clone https://github.com/SuadeLabs/fire.git
 cd fire
 
 # can be a tag instead of master
-git checkout tags/v24.10
+git checkout tags/v24.04
 
 cd ../../..
 rm -rf src/main/resources/fire/

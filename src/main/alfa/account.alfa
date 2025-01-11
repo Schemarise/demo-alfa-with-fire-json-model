@@ -29,10 +29,6 @@ record account {
   reporting_entity_name : string ?
   
   
-  /# The credit score of the customer at origination of the product using a commercially available credit bureau score. #/
-  orig_credit_score : int ?
-  
-  
   /# The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2 #/
   source : string ?
   
@@ -67,10 +63,6 @@ record account {
   
   /# This is the penalty incurred by the customer for an early withdrawal on this account. An early withdrawal is defined as a withdrawal prior to the next_withdrawal_date. Monetary type represented as a naturally positive integer number of cents/pence. #/
   withdrawal_penalty : int ?
-  
-  
-  /# The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations. #/
-  lgd_floored : double( 0.0, 1.0 ) ?
   
   
   /# Dates where this contract can be called (by the customer). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
@@ -123,10 +115,6 @@ record account {
   end_date : datetime ?
   
   
-  /# The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
-  pd_irb : double( 0.0, 1.0 ) ?
-  
-  
   /# The purpose for which the account was created or is being used. #/
   purpose : account_purpose ?
   
@@ -171,10 +159,6 @@ record account {
   
   /# Describes the type of interest rate applied to the account. #/
   rate_type : account_rate_type ?
-  
-  
-  /# Indicates the minimum balance of each account within the aggregate. Monetary type represented as a naturally positive integer number of cents/pence. #/
-  minimum_balance : int ?
   
   
   /# Is the account or deposit reported on the balance sheet of the financial institution? #/
@@ -249,10 +233,6 @@ record account {
   
   /# The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
   trade_date : datetime ?
-  
-  
-  /# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
-  lgd_irb : double( 0.0, 1.0 ) ?
   
   
   /# Indicates the minimum balance, in Euros, of each account within the aggregate. Monetary type represented as a naturally positive integer number of cents/pence. #/

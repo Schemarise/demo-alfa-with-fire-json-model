@@ -13,7 +13,6 @@ enum accounting_treatment {
     fv_oci 
     fv_thru_pnl 
     held_for_hedge 
-    held_for_sale 
     held_for_trading 
     held_to_maturity 
     loans_and_recs 

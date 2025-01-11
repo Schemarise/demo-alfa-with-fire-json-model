@@ -11,7 +11,6 @@ enum account_status {
     cancelled 
     cancelled_payout_agreed 
     other 
-    pending 
     transactional 
     unaudited 
 }

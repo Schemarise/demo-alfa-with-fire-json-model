@@ -25,7 +25,6 @@ enum security_type {
     cash_ratio_deposit 
     cb_facility 
     cb_reserve 
-    cb_restricted_reserve 
     cd 
     cmbs 
     cmbs_income 
@@ -43,7 +42,6 @@ enum security_type {
     index 
     index_linked 
     letter_of_credit 
-    main_index_equity 
     mbs 
     mtn 
     nha_mbs 

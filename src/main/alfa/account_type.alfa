@@ -6,7 +6,6 @@ namespace fire.model
  This is the type of the account with regards to common regulatory classifications.
  #/
 enum account_type {
-    accruals 
     amortisation 
     bonds 
     call 
@@ -33,7 +32,6 @@ enum account_type {
     non_product 
     other 
     prepaid_card 
-    prepayments 
     provision 
     reserve 
     retail_bonds 
