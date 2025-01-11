@@ -10,9 +10,12 @@
     <name>${project.artifactId}</name>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <alfa.version>3.4.2-SNAPSHOT</alfa.version>
+
+        <!-- Used for comparing current vs last released version /-->
+        <lastReleasedVersion>v24.10</lastReleasedVersion>
     </properties>
 
     <build>
@@ -54,9 +57,6 @@
                                 <exportSetting>
                                     <exportType>java</exportType>
                                 </exportSetting>
-                                <exportSetting>
-                                    <exportType>markdown</exportType>
-                                </exportSetting>
                             </exportSettings>
                         </configuration>
                     </execution>
@@ -71,6 +71,13 @@
             <artifactId>alfa-runtime-java</artifactId>
             <version>${alfa.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.11.3</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <profiles>
@@ -91,6 +98,7 @@
                                 <goals>
                                     <goal>compile</goal>
                                 </goals>
+                                <phase>generate-resources</phase>
                                 <configuration>
                                     <srcPath>${basedir}/src/main/resources/fire/v1-dev</srcPath>
                                     <importSettings>
@@ -105,6 +113,46 @@
                                 </configuration>
                             </execution>
                         </executions>                        
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>gen-docs</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.schemarise.alfa.utils</groupId>
+                        <artifactId>alfa-maven-plugin</artifactId>
+                        <version>${alfa.version}</version>
+                        <executions>
+                            <execution>
+                                <id>alfa-gen</id>
+                                <goals>
+                                    <goal>compile</goal>
+                                    <goal>package</goal>
+                                </goals>
+                                <configuration>
+                                    <srcPath>${basedir}/src/main/alfa</srcPath>
+                                    <exportSettings>
+                                        <exportSetting>
+                                            <exportType>markdown</exportType>
+                                        </exportSetting>
+                                        <exportSetting>
+                                            <exportType>changeanalyzer</exportType>
+                                            <config>
+                                                <startVersion>${lastReleasedVersion}</startVersion>
+                                                <baseDir>${basedir}</baseDir>
+                                            </config>
+                                        </exportSetting>
+                                    </exportSettings>
+                                </configuration>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>
