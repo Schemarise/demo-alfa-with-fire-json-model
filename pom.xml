@@ -55,6 +55,13 @@
                             <srcPath>${basedir}/src/main/alfa</srcPath>
                             <exportSettings>
                                 <exportSetting>
+                                    <exportType>changeanalyzer</exportType>
+                                    <config>
+                                        <startVersion>v24.10</startVersion>
+                                        <baseDir>${basedir}</baseDir>
+                                    </config>
+                                </exportSetting>
+                                <exportSetting>
                                     <exportType>java</exportType>
                                 </exportSetting>
                             </exportSettings>
