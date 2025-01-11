@@ -136,12 +136,12 @@
                         <groupId>com.schemarise.alfa.utils</groupId>
                         <artifactId>alfa-maven-plugin</artifactId>
                         <version>${alfa.version}</version>
+
                         <executions>
                             <execution>
-                                <id>alfa-gen</id>
+                                <id>md</id>
                                 <goals>
                                     <goal>compile</goal>
-                                    <goal>package</goal>
                                 </goals>
                                 <configuration>
                                     <srcPath>${basedir}/src/main/alfa</srcPath>
@@ -149,6 +149,18 @@
                                         <exportSetting>
                                             <exportType>markdown</exportType>
                                         </exportSetting>
+                                    </exportSettings>
+                                </configuration>
+                            </execution>
+
+                            <execution>
+                                <id>ca</id>
+                                <goals>
+                                    <goal>compile</goal>
+                                </goals>
+                                <configuration>
+                                    <srcPath>${basedir}/src/main/alfa</srcPath>
+                                    <exportSettings>
                                         <exportSetting>
                                             <exportType>changeanalyzer</exportType>
                                             <config>
@@ -159,6 +171,7 @@
                                     </exportSettings>
                                 </configuration>
                             </execution>
+
                         </executions>
                     </plugin>
                 </plugins>
