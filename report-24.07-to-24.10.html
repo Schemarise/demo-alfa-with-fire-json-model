@@ -24,8 +24,8 @@
     <img src="https://alfa-lang.io/_images/AlfaLogo4c4c4c.svg" alt="ALFA" width="88" style="vertical-align:baseline"/>
     Impact Analysis Report
 </h1>
-<p>Created: <span class="text-monospace">Sun Jan 12 13:51:35 UTC 2025</span></p>
-<h5>Between branch/tag version <span class="text-monospace text-secondary">v24.04</span> and <span class="text-monospace text-secondary">v24.10</span> </h5>
+<p>Created: <span class="text-monospace">Sun Jan 12 19:52:15 UTC 2025</span></p>
+<h5>Between branch/tag version <span class="text-monospace text-secondary">v24.07</span> and <span class="text-monospace text-secondary">v24.10</span> </h5>
 <br/>
       
 
@@ -35,11 +35,9 @@
 
 
 
+
     <div class="progress-bar" role="progressbar" style="width:1px; background-color:White;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-             <div class="progress-bar" role="progressbar" style="width:1%; background-color:OrangeRed;" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100">1%</div>
-         
-    <div class="progress-bar" role="progressbar" style="width:1px; background-color:White;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-             <div class="progress-bar" role="progressbar" style="width:41%; background-color:MediumSeaGreen;" aria-valuenow="41" aria-valuemin="0" aria-valuemax="100">41%</div>
+             <div class="progress-bar" role="progressbar" style="width:42%; background-color:MediumSeaGreen;" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100">42%</div>
          
 
 
@@ -88,17 +86,17 @@
        
 
     <tr>
-      <td ><a href="#BreakingDataStructureChange">Breaking Data Structure Changes</a></td> 
-      <td >1</td>
-      <td >1%</td>
-      <td style="width:12px; background-color:OrangeRed;"></td>
+      <td  class="text-secondary" >Breaking Data Structure Changes</a></td> 
+      <td  class="text-secondary" >0</td>
+      <td  class="text-secondary" >0%</td>
+      <td style="width:12px; background-color:White;"></td>
     </tr>
        
 
     <tr>
       <td ><a href="#DataStructureUpsert">Non-breaking Data Structure Changes</a></td> 
-      <td >49</td>
-      <td >41%</td>
+      <td >41</td>
+      <td >42%</td>
       <td style="width:12px; background-color:MediumSeaGreen;"></td>
     </tr>
        
@@ -129,7 +127,7 @@
 
     <tr>
       <td ><a href="#IndirectBreakingDataStructureChange">Indirect impact from other changes</a></td> 
-      <td >69</td>
+      <td >57</td>
       <td >58%</td>
       <td style="width:12px; background-color:Coral;"></td>
     </tr>
@@ -144,7 +142,7 @@
        
     <tr>
       <td></td>
-      <td><b>119</b></td>
+      <td><b>98</b></td>
       <td></td>
       <td></td>
     </tr>
@@ -159,39 +157,11 @@
 
 
 
-<button class="btn btn-light position-relative"  style="background-color:#f2f2f2">
-  <a name="BreakingDataStructureChange"><b>Breaking Data Structure Changes</b></a>
-  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning" >
-    1
-  </span>
-</button>
-<div class="card" style="background-color:#f2f2f2; border:0px; width: 90%;">
-  <div class="card-body">
-
-<ul class="list-group">
-
-<li class="list-group-item">
-<b>1.</b> 
-Enum <code>fire.model.loan_credit_process</code> removed
-
-
-       
-         </li>
-</ul>
-
-  </div>
-</div>
-
-    
-<br/>
-<br/>
-      
-
 
 <button class="btn btn-light position-relative"  style="background-color:#f2f2f2">
   <a name="DataStructureUpsert"><b>Non-breaking Data Structure Changes</b></a>
   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning" >
-    49
+    41
   </span>
 </button>
 <div class="card" style="background-color:#f2f2f2; border:0px; width: 90%;">
@@ -201,25 +171,6 @@ Enum <code>fire.model.loan_credit_process</code> removed
 
 <li class="list-group-item">
 <b>1.</b> 
-Record <code>fire.model.account</code>
-Field <code>lgd_floored</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations.  #/
-lgd_floored : double( 0.0, 1.0 ) ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>2.</b> 
 Record <code>fire.model.account</code>
 Field <code>lgd_irb</code> added
 
@@ -238,17 +189,17 @@ lgd_irb : double( 0.0, 1.0 ) ?
          </li><br/>
 
 <li class="list-group-item">
-<b>3.</b> 
+<b>2.</b> 
 Record <code>fire.model.account</code>
-Field <code>orig_credit_score</code> added
+Field <code>lgd_floored</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>/# The credit score of the customer at origination of the product using a commercially available credit bureau score.  #/
-orig_credit_score : int ?
+        <span class="text-monospace"><pre>/# The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations.  #/
+lgd_floored : double( 0.0, 1.0 ) ?
 </pre></span>
       </div>
     </div>
@@ -257,7 +208,7 @@ orig_credit_score : int ?
          </li><br/>
 
 <li class="list-group-item">
-<b>4.</b> 
+<b>3.</b> 
 Record <code>fire.model.account</code>
 Field <code>pd_irb</code> added
 
@@ -276,17 +227,17 @@ pd_irb : double( 0.0, 1.0 ) ?
          </li><br/>
 
 <li class="list-group-item">
-<b>5.</b> 
+<b>4.</b> 
 Record <code>fire.model.account</code>
-Field <code>minimum_balance</code> added
+Field <code>orig_credit_score</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>/# Indicates the minimum balance of each account within the aggregate. Monetary type represented as a naturally positive integer number of cents/pence.  #/
-minimum_balance : int ?
+        <span class="text-monospace"><pre>/# The credit score of the customer at origination of the product using a commercially available credit bureau score.  #/
+orig_credit_score : int ?
 </pre></span>
       </div>
     </div>
@@ -295,58 +246,7 @@ minimum_balance : int ?
          </li><br/>
 
 <li class="list-group-item">
-<b>6.</b> 
-Enum <code>fire.model.account_type</code>
-Field <code>prepayments</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>prepayments</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>7.</b> 
-Enum <code>fire.model.account_type</code>
-Field <code>accruals</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>accruals</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>8.</b> 
-Enum <code>fire.model.accounting_treatment</code>
-Field <code>held_for_sale</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>held_for_sale</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>9.</b> 
+<b>5.</b> 
 Record <code>fire.model.collateral</code>
 Field <code>orig_value</code> added
 
@@ -365,7 +265,7 @@ orig_value : int ?
          </li><br/>
 
 <li class="list-group-item">
-<b>10.</b> 
+<b>6.</b> 
 Enum <code>fire.model.collateral_type</code>
 Field <code>res_property_hr</code> added
 
@@ -382,26 +282,7 @@ Field <code>res_property_hr</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>11.</b> 
-Record <code>fire.model.customer</code>
-Field <code>scra</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# Grade calculated using the Basel Standardised Credit Risk Assessment  #/
-scra : fire.model.customer_scra ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>12.</b> 
+<b>7.</b> 
 Record <code>fire.model.customer</code>
 Field <code>lgd_irb</code> updated
 
@@ -432,17 +313,17 @@ Field <code>lgd_irb</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>13.</b> 
-Record <code>fire.model.derivative</code>
-Field <code>pd_irb</code> added
+<b>8.</b> 
+Record <code>fire.model.customer</code>
+Field <code>scra</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>/# The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/
-pd_irb : double( 0.0, 1.0 ) ?
+        <span class="text-monospace"><pre>/# Grade calculated using the Basel Standardised Credit Risk Assessment  #/
+scra : fire.model.customer_scra ?
 </pre></span>
       </div>
     </div>
@@ -451,26 +332,7 @@ pd_irb : double( 0.0, 1.0 ) ?
          </li><br/>
 
 <li class="list-group-item">
-<b>14.</b> 
-Record <code>fire.model.derivative</code>
-Field <code>lgd_irb</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/
-lgd_irb : double( 0.0, 1.0 ) ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>15.</b> 
+<b>9.</b> 
 Record <code>fire.model.derivative</code>
 Field <code>lgd_floored</code> added
 
@@ -489,7 +351,45 @@ lgd_floored : double( 0.0, 1.0 ) ?
          </li><br/>
 
 <li class="list-group-item">
-<b>16.</b> 
+<b>10.</b> 
+Record <code>fire.model.derivative</code>
+Field <code>lgd_irb</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/
+lgd_irb : double( 0.0, 1.0 ) ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>11.</b> 
+Record <code>fire.model.derivative</code>
+Field <code>pd_irb</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/
+pd_irb : double( 0.0, 1.0 ) ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>12.</b> 
 Record <code>fire.model.entity</code>
 Field <code>scra</code> added
 
@@ -508,8 +408,108 @@ scra : fire.model.entity_scra ?
          </li><br/>
 
 <li class="list-group-item">
-<b>17.</b> 
+<b>13.</b> 
 Record <code>fire.model.entity</code>
+Field <code>lgd_irb</code> updated
+
+<div class="ml-3"><font style="font-size:90%">
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="background-color:#ffe6e6;">
+      <div class="card-body" style="padding:2px">
+        <b>Before</b>
+        <br/>
+        <span class="text-monospace"><pre>/# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/<br/>lgd_irb : double ?</pre></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body"  style="padding:2px">
+        <b>After</b>
+        <br/>
+        <span class="text-monospace"><pre>/# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/<br/>lgd_irb : double<span style="background-color: #45EA85">(</span><span style="background-color: #45EA85"> </span><span style="background-color: #45EA85">0</span><span style="background-color: #45EA85">.</span><span style="background-color: #45EA85">0</span><span style="background-color: #45EA85">,</span> <span style="background-color: #45EA85">1</span><span style="background-color: #45EA85">.</span><span style="background-color: #45EA85">0</span><span style="background-color: #45EA85"> </span><span style="background-color: #45EA85">)</span><span style="background-color: #45EA85"> </span>?</pre></span>
+      </div>
+    </div>
+  </div>
+</div>
+    </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>14.</b> 
+Record <code>fire.model.guarantor</code>
+Field <code>scra</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# Grade calculated using the Basel Standardised Credit Risk Assessment  #/
+scra : fire.model.guarantor_scra ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>15.</b> 
+Record <code>fire.model.guarantor</code>
+Field <code>lgd_irb</code> updated
+
+<div class="ml-3"><font style="font-size:90%">
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="background-color:#ffe6e6;">
+      <div class="card-body" style="padding:2px">
+        <b>Before</b>
+        <br/>
+        <span class="text-monospace"><pre>/# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/<br/>lgd_irb : double ?</pre></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body"  style="padding:2px">
+        <b>After</b>
+        <br/>
+        <span class="text-monospace"><pre>/# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/<br/>lgd_irb : double<span style="background-color: #45EA85">(</span><span style="background-color: #45EA85"> </span><span style="background-color: #45EA85">0</span><span style="background-color: #45EA85">.</span><span style="background-color: #45EA85">0</span><span style="background-color: #45EA85">,</span> <span style="background-color: #45EA85">1</span><span style="background-color: #45EA85">.</span><span style="background-color: #45EA85">0</span><span style="background-color: #45EA85"> </span><span style="background-color: #45EA85">)</span><span style="background-color: #45EA85"> </span>?</pre></span>
+      </div>
+    </div>
+  </div>
+</div>
+    </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>16.</b> 
+Record <code>fire.model.issuer</code>
+Field <code>scra</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# Grade calculated using the Basel Standardised Credit Risk Assessment  #/
+scra : fire.model.issuer_scra ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>17.</b> 
+Record <code>fire.model.issuer</code>
 Field <code>lgd_irb</code> updated
 
 <div class="ml-3"><font style="font-size:90%">
@@ -540,106 +540,6 @@ Field <code>lgd_irb</code> updated
 
 <li class="list-group-item">
 <b>18.</b> 
-Record <code>fire.model.guarantor</code>
-Field <code>lgd_irb</code> updated
-
-<div class="ml-3"><font style="font-size:90%">
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card" style="background-color:#ffe6e6;">
-      <div class="card-body" style="padding:2px">
-        <b>Before</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/<br/>lgd_irb : double ?</pre></span>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body"  style="padding:2px">
-        <b>After</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/<br/>lgd_irb : double<span style="background-color: #45EA85">(</span><span style="background-color: #45EA85"> </span><span style="background-color: #45EA85">0</span><span style="background-color: #45EA85">.</span><span style="background-color: #45EA85">0</span><span style="background-color: #45EA85">,</span> <span style="background-color: #45EA85">1</span><span style="background-color: #45EA85">.</span><span style="background-color: #45EA85">0</span><span style="background-color: #45EA85"> </span><span style="background-color: #45EA85">)</span><span style="background-color: #45EA85"> </span>?</pre></span>
-      </div>
-    </div>
-  </div>
-</div>
-    </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>19.</b> 
-Record <code>fire.model.guarantor</code>
-Field <code>scra</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# Grade calculated using the Basel Standardised Credit Risk Assessment  #/
-scra : fire.model.guarantor_scra ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>20.</b> 
-Record <code>fire.model.issuer</code>
-Field <code>lgd_irb</code> updated
-
-<div class="ml-3"><font style="font-size:90%">
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card" style="background-color:#ffe6e6;">
-      <div class="card-body" style="padding:2px">
-        <b>Before</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/<br/>lgd_irb : double ?</pre></span>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body"  style="padding:2px">
-        <b>After</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/<br/>lgd_irb : double<span style="background-color: #45EA85">(</span><span style="background-color: #45EA85"> </span><span style="background-color: #45EA85">0</span><span style="background-color: #45EA85">.</span><span style="background-color: #45EA85">0</span><span style="background-color: #45EA85">,</span> <span style="background-color: #45EA85">1</span><span style="background-color: #45EA85">.</span><span style="background-color: #45EA85">0</span><span style="background-color: #45EA85"> </span><span style="background-color: #45EA85">)</span><span style="background-color: #45EA85"> </span>?</pre></span>
-      </div>
-    </div>
-  </div>
-</div>
-    </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>21.</b> 
-Record <code>fire.model.issuer</code>
-Field <code>scra</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# Grade calculated using the Basel Standardised Credit Risk Assessment  #/
-scra : fire.model.issuer_scra ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>22.</b> 
 Record <code>fire.model.loan</code>
 Field <code>servicing_currency_code</code> added
 
@@ -658,121 +558,7 @@ servicing_currency_code : fire.model.currency_code ?
          </li><br/>
 
 <li class="list-group-item">
-<b>23.</b> 
-Record <code>fire.model.loan</code>
-Field <code>cum_write_offs</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The portion of the loan which has been written off.  #/
-cum_write_offs : int( 0, * ) ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>24.</b> 
-Record <code>fire.model.loan</code>
-Field <code>servicing</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The method by which the loan shall be repaid  #/
-servicing : fire.model.loan_servicing ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>25.</b> 
-Record <code>fire.model.loan</code>
-Field <code>orig_notional</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The notional of the loan at origination.  #/
-orig_notional : int ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>26.</b> 
-Record <code>fire.model.loan</code>
-Field <code>deferred_fees</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# Deferred fees are deferred payments subject to prepayment risk and not included in the balance.  #/
-deferred_fees : int ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>27.</b> 
-Record <code>fire.model.loan</code>
-Field <code>orig_credit_score</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The credit score of the customer at origination of the product using a commercially available credit bureau score.  #/
-orig_credit_score : int ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>28.</b> 
-Record <code>fire.model.loan</code>
-Field <code>minimum_balance</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# Indicates the minimum balance of each loan within the aggregate.  #/
-minimum_balance : int ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>29.</b> 
+<b>19.</b> 
 Record <code>fire.model.loan</code>
 Field <code>orig_limit_amount</code> added
 
@@ -791,16 +577,18 @@ orig_limit_amount : int ?
          </li><br/>
 
 <li class="list-group-item">
-<b>30.</b> 
-Enum <code>fire.model.loan_purpose</code>
-Field <code>first_time_buyer_cstr</code> added
+<b>20.</b> 
+Record <code>fire.model.loan</code>
+Field <code>servicing</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>first_time_buyer_cstr</pre></span>
+        <span class="text-monospace"><pre>/# The method by which the loan shall be repaid  #/
+servicing : fire.model.loan_servicing ?
+</pre></span>
       </div>
     </div>
          </font></div>
@@ -808,16 +596,18 @@ Field <code>first_time_buyer_cstr</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>31.</b> 
-Enum <code>fire.model.loan_purpose</code>
-Field <code>remortgage_othr_cstr</code> added
+<b>21.</b> 
+Record <code>fire.model.loan</code>
+Field <code>deferred_fees</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>remortgage_othr_cstr</pre></span>
+        <span class="text-monospace"><pre>/# Deferred fees are deferred payments subject to prepayment risk and not included in the balance.  #/
+deferred_fees : int ?
+</pre></span>
       </div>
     </div>
          </font></div>
@@ -825,16 +615,18 @@ Field <code>remortgage_othr_cstr</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>32.</b> 
-Enum <code>fire.model.loan_purpose</code>
-Field <code>remortgage_construct</code> added
+<b>22.</b> 
+Record <code>fire.model.loan</code>
+Field <code>orig_credit_score</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>remortgage_construct</pre></span>
+        <span class="text-monospace"><pre>/# The credit score of the customer at origination of the product using a commercially available credit bureau score.  #/
+orig_credit_score : int ?
+</pre></span>
       </div>
     </div>
          </font></div>
@@ -842,16 +634,18 @@ Field <code>remortgage_construct</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>33.</b> 
-Enum <code>fire.model.loan_purpose</code>
-Field <code>further_advance_cstr</code> added
+<b>23.</b> 
+Record <code>fire.model.loan</code>
+Field <code>orig_notional</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>further_advance_cstr</pre></span>
+        <span class="text-monospace"><pre>/# The notional of the loan at origination.  #/
+orig_notional : int ?
+</pre></span>
       </div>
     </div>
          </font></div>
@@ -859,24 +653,7 @@ Field <code>further_advance_cstr</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>34.</b> 
-Enum <code>fire.model.loan_purpose</code>
-Field <code>house_purchase_cstr</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>house_purchase_cstr</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>35.</b> 
+<b>24.</b> 
 Enum <code>fire.model.loan_purpose</code>
 Field <code>object_finance_hq</code> added
 
@@ -893,7 +670,92 @@ Field <code>object_finance_hq</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>36.</b> 
+<b>25.</b> 
+Enum <code>fire.model.loan_purpose</code>
+Field <code>further_advance_cstr</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>further_advance_cstr</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>26.</b> 
+Enum <code>fire.model.loan_purpose</code>
+Field <code>first_time_buyer_cstr</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>first_time_buyer_cstr</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>27.</b> 
+Enum <code>fire.model.loan_purpose</code>
+Field <code>remortgage_construct</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>remortgage_construct</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>28.</b> 
+Enum <code>fire.model.loan_purpose</code>
+Field <code>remortgage_othr_cstr</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>remortgage_othr_cstr</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>29.</b> 
+Enum <code>fire.model.loan_purpose</code>
+Field <code>house_purchase_cstr</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>house_purchase_cstr</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>30.</b> 
 Enum <code>fire.model.loan_status</code>
 Field <code>revolving</code> added
 
@@ -910,24 +772,7 @@ Field <code>revolving</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>37.</b> 
-Enum <code>fire.model.loan_transaction_type</code>
-Field <code>securitisation</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>securitisation</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>38.</b> 
+<b>31.</b> 
 Enum <code>fire.model.loan_transaction_type</code>
 Field <code>acquisition</code> added
 
@@ -944,16 +789,16 @@ Field <code>acquisition</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>39.</b> 
-Enum <code>fire.model.loan_type</code>
-Field <code>commercial_property_hr</code> added
+<b>32.</b> 
+Enum <code>fire.model.loan_transaction_type</code>
+Field <code>securitisation</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>commercial_property_hr( "commercial_property_hr" )</pre></span>
+        <span class="text-monospace"><pre>securitisation</pre></span>
       </div>
     </div>
          </font></div>
@@ -961,41 +806,7 @@ Field <code>commercial_property_hr</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>40.</b> 
-Enum <code>fire.model.loan_type</code>
-Field <code>corporate_card</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>corporate_card( "corporate_card" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>41.</b> 
-Enum <code>fire.model.loan_type</code>
-Field <code>education</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>education( "education" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>42.</b> 
+<b>33.</b> 
 Enum <code>fire.model.loan_type</code>
 Field <code>charge_card</code> added
 
@@ -1012,7 +823,58 @@ Field <code>charge_card</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>43.</b> 
+<b>34.</b> 
+Enum <code>fire.model.loan_type</code>
+Field <code>education</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>education( "education" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>35.</b> 
+Enum <code>fire.model.loan_type</code>
+Field <code>corporate_card</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>corporate_card( "corporate_card" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>36.</b> 
+Enum <code>fire.model.loan_type</code>
+Field <code>commercial_property_hr</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>commercial_property_hr( "commercial_property_hr" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>37.</b> 
 Enum <code>fire.model.loan_type</code>
 Field <code>res_property_hr</code> added
 
@@ -1029,7 +891,7 @@ Field <code>res_property_hr</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>44.</b> 
+<b>38.</b> 
 Record <code>fire.model.security</code>
 Field <code>lgd_irb</code> added
 
@@ -1048,26 +910,7 @@ lgd_irb : double( 0.0, 1.0 ) ?
          </li><br/>
 
 <li class="list-group-item">
-<b>45.</b> 
-Record <code>fire.model.security</code>
-Field <code>pd_irb</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/
-pd_irb : double( 0.0, 1.0 ) ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>46.</b> 
+<b>39.</b> 
 Record <code>fire.model.security</code>
 Field <code>lgd_floored</code> added
 
@@ -1086,16 +929,18 @@ lgd_floored : double( 0.0, 1.0 ) ?
          </li><br/>
 
 <li class="list-group-item">
-<b>47.</b> 
-Enum <code>fire.model.security_hqla_class</code>
-Field <code>ineligible_non_op</code> added
+<b>40.</b> 
+Record <code>fire.model.security</code>
+Field <code>pd_irb</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>ineligible_non_op</pre></span>
+        <span class="text-monospace"><pre>/# The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/
+pd_irb : double( 0.0, 1.0 ) ?
+</pre></span>
       </div>
     </div>
          </font></div>
@@ -1103,7 +948,7 @@ Field <code>ineligible_non_op</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>48.</b> 
+<b>41.</b> 
 Enum <code>fire.model.security_type</code>
 Field <code>cb_restricted_reserve</code> added
 
@@ -1113,23 +958,6 @@ Field <code>cb_restricted_reserve</code> added
         <b>Added snippet:</b>
         <br/>
         <span class="text-monospace"><pre>cb_restricted_reserve</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>49.</b> 
-Enum <code>fire.model.security_type</code>
-Field <code>main_index_equity</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>main_index_equity</pre></span>
       </div>
     </div>
          </font></div>
@@ -1152,7 +980,7 @@ Field <code>main_index_equity</code> added
 <button class="btn btn-light position-relative"  style="background-color:#f2f2f2">
   <a name="IndirectBreakingDataStructureChange"><b>Indirect impact from other changes</b></a>
   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning" >
-    69
+    57
   </span>
 </button>
 <div class="card" style="background-color:#f2f2f2; border:0px; width: 90%;">
@@ -1166,7 +994,7 @@ Record <code>fire.model.batch</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
       <div class="card-body"  style="padding:2px">
-        fire.model.batch > fire.model.loan > fire.model.accounting_treatment > fire.model.batch > fire.model.derivative > fire.model.accounting_treatment > fire.model.batch > fire.model.security > fire.model.accounting_treatment > fire.model.batch > fire.model.account > fire.model.accounting_treatment > fire.model.batch > fire.model.batch__data1 > fire.model.security > fire.model.accounting_treatment > fire.model.batch > fire.model.batch__data1 > fire.model.loan > fire.model.accounting_treatment > fire.model.batch > fire.model.batch__data1 > fire.model.account > fire.model.accounting_treatment > fire.model.batch > fire.model.batch__data1 > fire.model.derivative > fire.model.accounting_treatment
+        fire.model.batch > fire.model.security > fire.model.security_type > fire.model.batch > fire.model.batch__data1 > fire.model.security > fire.model.security_type
     </div>
   </div>
      
@@ -1180,7 +1008,7 @@ Record <code>fire.model.batch</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
       <div class="card-body"  style="padding:2px">
-        fire.model.batch > fire.model.security > fire.model.security_type > fire.model.batch > fire.model.batch__data1 > fire.model.security > fire.model.security_type
+        fire.model.batch > fire.model.derivative > fire.model.batch > fire.model.batch__data1 > fire.model.derivative
     </div>
   </div>
      
@@ -1194,7 +1022,7 @@ Record <code>fire.model.batch</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
       <div class="card-body"  style="padding:2px">
-        fire.model.batch > fire.model.derivative > fire.model.batch > fire.model.batch__data1 > fire.model.derivative
+        fire.model.batch > fire.model.security > fire.model.batch > fire.model.batch__data1 > fire.model.security
     </div>
   </div>
      
@@ -1208,7 +1036,7 @@ Record <code>fire.model.batch</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
       <div class="card-body"  style="padding:2px">
-        fire.model.batch > fire.model.security > fire.model.batch > fire.model.batch__data1 > fire.model.security
+        fire.model.batch > fire.model.loan > fire.model.loan_type > fire.model.batch > fire.model.batch__data1 > fire.model.loan > fire.model.loan_type
     </div>
   </div>
      
@@ -1222,7 +1050,7 @@ Record <code>fire.model.batch</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
       <div class="card-body"  style="padding:2px">
-        fire.model.batch > fire.model.loan > fire.model.loan_type > fire.model.batch > fire.model.batch__data1 > fire.model.loan > fire.model.loan_type
+        fire.model.batch > fire.model.guarantor > fire.model.batch > fire.model.batch__data1 > fire.model.guarantor
     </div>
   </div>
      
@@ -1236,7 +1064,7 @@ Record <code>fire.model.batch</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
       <div class="card-body"  style="padding:2px">
-        fire.model.batch > fire.model.guarantor > fire.model.batch > fire.model.batch__data1 > fire.model.guarantor
+        fire.model.batch > fire.model.issuer > fire.model.batch > fire.model.batch__data1 > fire.model.issuer
     </div>
   </div>
      
@@ -1250,7 +1078,7 @@ Record <code>fire.model.batch</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
       <div class="card-body"  style="padding:2px">
-        fire.model.batch > fire.model.security > fire.model.security_hqla_class > fire.model.batch > fire.model.batch__data1 > fire.model.security > fire.model.security_hqla_class
+        fire.model.batch > fire.model.collateral > fire.model.collateral_type > fire.model.batch > fire.model.batch__data1 > fire.model.collateral > fire.model.collateral_type
     </div>
   </div>
      
@@ -1264,7 +1092,7 @@ Record <code>fire.model.batch</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
       <div class="card-body"  style="padding:2px">
-        fire.model.batch > fire.model.issuer > fire.model.batch > fire.model.batch__data1 > fire.model.issuer
+        fire.model.batch > fire.model.collateral > fire.model.batch > fire.model.batch__data1 > fire.model.collateral
     </div>
   </div>
      
@@ -1278,7 +1106,7 @@ Record <code>fire.model.batch</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
       <div class="card-body"  style="padding:2px">
-        fire.model.batch > fire.model.collateral > fire.model.collateral_type > fire.model.batch > fire.model.batch__data1 > fire.model.collateral > fire.model.collateral_type
+        fire.model.batch > fire.model.account > fire.model.batch > fire.model.batch__data1 > fire.model.account
     </div>
   </div>
      
@@ -1292,7 +1120,7 @@ Record <code>fire.model.batch</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
       <div class="card-body"  style="padding:2px">
-        fire.model.batch > fire.model.collateral > fire.model.batch > fire.model.batch__data1 > fire.model.collateral
+        fire.model.batch > fire.model.loan_transaction > fire.model.loan_transaction_type > fire.model.batch > fire.model.batch__data1 > fire.model.loan_transaction > fire.model.loan_transaction_type
     </div>
   </div>
      
@@ -1306,7 +1134,7 @@ Record <code>fire.model.batch</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
       <div class="card-body"  style="padding:2px">
-        fire.model.batch > fire.model.account > fire.model.batch > fire.model.batch__data1 > fire.model.account
+        fire.model.batch > fire.model.loan > fire.model.loan_status > fire.model.batch > fire.model.batch__data1 > fire.model.loan > fire.model.loan_status
     </div>
   </div>
      
@@ -1320,7 +1148,7 @@ Record <code>fire.model.batch</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
       <div class="card-body"  style="padding:2px">
-        fire.model.batch > fire.model.loan_transaction > fire.model.loan_transaction_type > fire.model.batch > fire.model.batch__data1 > fire.model.loan_transaction > fire.model.loan_transaction_type
+        fire.model.batch > fire.model.loan > fire.model.batch > fire.model.batch__data1 > fire.model.loan
     </div>
   </div>
      
@@ -1334,7 +1162,7 @@ Record <code>fire.model.batch</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
       <div class="card-body"  style="padding:2px">
-        fire.model.batch > fire.model.loan > fire.model.loan_status > fire.model.batch > fire.model.batch__data1 > fire.model.loan > fire.model.loan_status
+        fire.model.batch > fire.model.customer > fire.model.batch > fire.model.batch__data1 > fire.model.customer
     </div>
   </div>
      
@@ -1348,48 +1176,6 @@ Record <code>fire.model.batch</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
       <div class="card-body"  style="padding:2px">
-        fire.model.batch > fire.model.loan > fire.model.batch > fire.model.batch__data1 > fire.model.loan
-    </div>
-  </div>
-     
-
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>15.</b> 
-Record <code>fire.model.batch</code> updated
-<br/>
-    <div class="card ml-3" style="background-color:#ffffe6;">
-      <div class="card-body"  style="padding:2px">
-        fire.model.batch > fire.model.account > fire.model.account_type > fire.model.batch > fire.model.batch__data1 > fire.model.account > fire.model.account_type
-    </div>
-  </div>
-     
-
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>16.</b> 
-Record <code>fire.model.batch</code> updated
-<br/>
-    <div class="card ml-3" style="background-color:#ffffe6;">
-      <div class="card-body"  style="padding:2px">
-        fire.model.batch > fire.model.customer > fire.model.batch > fire.model.batch__data1 > fire.model.customer
-    </div>
-  </div>
-     
-
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>17.</b> 
-Record <code>fire.model.batch</code> updated
-<br/>
-    <div class="card ml-3" style="background-color:#ffffe6;">
-      <div class="card-body"  style="padding:2px">
         fire.model.batch > fire.model.loan > fire.model.loan_purpose > fire.model.batch > fire.model.batch__data1 > fire.model.loan > fire.model.loan_purpose
     </div>
   </div>
@@ -1399,21 +1185,7 @@ Record <code>fire.model.batch</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>18.</b> 
-Record <code>fire.model.batch__data1</code> updated
-<br/>
-    <div class="card ml-3" style="background-color:#ffffe6;">
-      <div class="card-body"  style="padding:2px">
-        fire.model.batch__data1 > fire.model.loan > fire.model.accounting_treatment > fire.model.batch__data1 > fire.model.derivative > fire.model.accounting_treatment > fire.model.batch__data1 > fire.model.account > fire.model.accounting_treatment > fire.model.batch__data1 > fire.model.security > fire.model.accounting_treatment
-    </div>
-  </div>
-     
-
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>19.</b> 
+<b>15.</b> 
 Record <code>fire.model.batch__data1</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1427,7 +1199,7 @@ Record <code>fire.model.batch__data1</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>20.</b> 
+<b>16.</b> 
 Record <code>fire.model.batch__data1</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1441,7 +1213,7 @@ Record <code>fire.model.batch__data1</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>21.</b> 
+<b>17.</b> 
 Record <code>fire.model.batch__data1</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1455,7 +1227,7 @@ Record <code>fire.model.batch__data1</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>22.</b> 
+<b>18.</b> 
 Record <code>fire.model.batch__data1</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1469,7 +1241,7 @@ Record <code>fire.model.batch__data1</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>23.</b> 
+<b>19.</b> 
 Record <code>fire.model.batch__data1</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1483,21 +1255,7 @@ Record <code>fire.model.batch__data1</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>24.</b> 
-Record <code>fire.model.batch__data1</code> updated
-<br/>
-    <div class="card ml-3" style="background-color:#ffffe6;">
-      <div class="card-body"  style="padding:2px">
-        fire.model.batch__data1 > fire.model.security > fire.model.security_hqla_class
-    </div>
-  </div>
-     
-
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>25.</b> 
+<b>20.</b> 
 Record <code>fire.model.batch__data1</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1511,7 +1269,7 @@ Record <code>fire.model.batch__data1</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>26.</b> 
+<b>21.</b> 
 Record <code>fire.model.batch__data1</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1525,7 +1283,7 @@ Record <code>fire.model.batch__data1</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>27.</b> 
+<b>22.</b> 
 Record <code>fire.model.batch__data1</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1539,7 +1297,7 @@ Record <code>fire.model.batch__data1</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>28.</b> 
+<b>23.</b> 
 Record <code>fire.model.batch__data1</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1553,7 +1311,7 @@ Record <code>fire.model.batch__data1</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>29.</b> 
+<b>24.</b> 
 Record <code>fire.model.batch__data1</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1567,7 +1325,7 @@ Record <code>fire.model.batch__data1</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>30.</b> 
+<b>25.</b> 
 Record <code>fire.model.batch__data1</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1581,7 +1339,7 @@ Record <code>fire.model.batch__data1</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>31.</b> 
+<b>26.</b> 
 Record <code>fire.model.batch__data1</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1595,21 +1353,7 @@ Record <code>fire.model.batch__data1</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>32.</b> 
-Record <code>fire.model.batch__data1</code> updated
-<br/>
-    <div class="card ml-3" style="background-color:#ffffe6;">
-      <div class="card-body"  style="padding:2px">
-        fire.model.batch__data1 > fire.model.account > fire.model.account_type
-    </div>
-  </div>
-     
-
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>33.</b> 
+<b>27.</b> 
 Record <code>fire.model.batch__data1</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1623,7 +1367,7 @@ Record <code>fire.model.batch__data1</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>34.</b> 
+<b>28.</b> 
 Record <code>fire.model.batch__data1</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1637,21 +1381,7 @@ Record <code>fire.model.batch__data1</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>35.</b> 
-Record <code>fire.model.example</code> updated
-<br/>
-    <div class="card ml-3" style="background-color:#ffffe6;">
-      <div class="card-body"  style="padding:2px">
-        fire.model.example > fire.model.example_data > fire.model.loan > fire.model.accounting_treatment > fire.model.example > fire.model.example_data > fire.model.derivative > fire.model.accounting_treatment > fire.model.example > fire.model.example_data > fire.model.security > fire.model.accounting_treatment > fire.model.example > fire.model.example_data > fire.model.account > fire.model.accounting_treatment
-    </div>
-  </div>
-     
-
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>36.</b> 
+<b>29.</b> 
 Record <code>fire.model.example</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1665,7 +1395,7 @@ Record <code>fire.model.example</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>37.</b> 
+<b>30.</b> 
 Record <code>fire.model.example</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1679,7 +1409,7 @@ Record <code>fire.model.example</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>38.</b> 
+<b>31.</b> 
 Record <code>fire.model.example</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1693,7 +1423,7 @@ Record <code>fire.model.example</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>39.</b> 
+<b>32.</b> 
 Record <code>fire.model.example</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1707,7 +1437,7 @@ Record <code>fire.model.example</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>40.</b> 
+<b>33.</b> 
 Record <code>fire.model.example</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1721,21 +1451,7 @@ Record <code>fire.model.example</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>41.</b> 
-Record <code>fire.model.example</code> updated
-<br/>
-    <div class="card ml-3" style="background-color:#ffffe6;">
-      <div class="card-body"  style="padding:2px">
-        fire.model.example > fire.model.example_data > fire.model.security > fire.model.security_hqla_class
-    </div>
-  </div>
-     
-
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>42.</b> 
+<b>34.</b> 
 Record <code>fire.model.example</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1749,7 +1465,7 @@ Record <code>fire.model.example</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>43.</b> 
+<b>35.</b> 
 Record <code>fire.model.example</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1763,7 +1479,7 @@ Record <code>fire.model.example</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>44.</b> 
+<b>36.</b> 
 Record <code>fire.model.example</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1777,7 +1493,7 @@ Record <code>fire.model.example</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>45.</b> 
+<b>37.</b> 
 Record <code>fire.model.example</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1791,7 +1507,7 @@ Record <code>fire.model.example</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>46.</b> 
+<b>38.</b> 
 Record <code>fire.model.example</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1805,7 +1521,7 @@ Record <code>fire.model.example</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>47.</b> 
+<b>39.</b> 
 Record <code>fire.model.example</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1819,7 +1535,7 @@ Record <code>fire.model.example</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>48.</b> 
+<b>40.</b> 
 Record <code>fire.model.example</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1833,21 +1549,7 @@ Record <code>fire.model.example</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>49.</b> 
-Record <code>fire.model.example</code> updated
-<br/>
-    <div class="card ml-3" style="background-color:#ffffe6;">
-      <div class="card-body"  style="padding:2px">
-        fire.model.example > fire.model.example_data > fire.model.account > fire.model.account_type
-    </div>
-  </div>
-     
-
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>50.</b> 
+<b>41.</b> 
 Record <code>fire.model.example</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1861,7 +1563,7 @@ Record <code>fire.model.example</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>51.</b> 
+<b>42.</b> 
 Record <code>fire.model.example</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1875,21 +1577,7 @@ Record <code>fire.model.example</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>52.</b> 
-Record <code>fire.model.example_data</code> updated
-<br/>
-    <div class="card ml-3" style="background-color:#ffffe6;">
-      <div class="card-body"  style="padding:2px">
-        fire.model.example_data > fire.model.loan > fire.model.accounting_treatment > fire.model.example_data > fire.model.derivative > fire.model.accounting_treatment > fire.model.example_data > fire.model.security > fire.model.accounting_treatment > fire.model.example_data > fire.model.account > fire.model.accounting_treatment
-    </div>
-  </div>
-     
-
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>53.</b> 
+<b>43.</b> 
 Record <code>fire.model.example_data</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1903,7 +1591,7 @@ Record <code>fire.model.example_data</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>54.</b> 
+<b>44.</b> 
 Record <code>fire.model.example_data</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1917,7 +1605,7 @@ Record <code>fire.model.example_data</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>55.</b> 
+<b>45.</b> 
 Record <code>fire.model.example_data</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1931,7 +1619,7 @@ Record <code>fire.model.example_data</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>56.</b> 
+<b>46.</b> 
 Record <code>fire.model.example_data</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1945,7 +1633,7 @@ Record <code>fire.model.example_data</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>57.</b> 
+<b>47.</b> 
 Record <code>fire.model.example_data</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1959,21 +1647,7 @@ Record <code>fire.model.example_data</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>58.</b> 
-Record <code>fire.model.example_data</code> updated
-<br/>
-    <div class="card ml-3" style="background-color:#ffffe6;">
-      <div class="card-body"  style="padding:2px">
-        fire.model.example_data > fire.model.security > fire.model.security_hqla_class
-    </div>
-  </div>
-     
-
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>59.</b> 
+<b>48.</b> 
 Record <code>fire.model.example_data</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -1987,7 +1661,7 @@ Record <code>fire.model.example_data</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>60.</b> 
+<b>49.</b> 
 Record <code>fire.model.example_data</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -2001,7 +1675,7 @@ Record <code>fire.model.example_data</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>61.</b> 
+<b>50.</b> 
 Record <code>fire.model.example_data</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -2015,7 +1689,7 @@ Record <code>fire.model.example_data</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>62.</b> 
+<b>51.</b> 
 Record <code>fire.model.example_data</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -2029,7 +1703,7 @@ Record <code>fire.model.example_data</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>63.</b> 
+<b>52.</b> 
 Record <code>fire.model.example_data</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -2043,7 +1717,7 @@ Record <code>fire.model.example_data</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>64.</b> 
+<b>53.</b> 
 Record <code>fire.model.example_data</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -2057,7 +1731,7 @@ Record <code>fire.model.example_data</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>65.</b> 
+<b>54.</b> 
 Record <code>fire.model.example_data</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -2071,21 +1745,7 @@ Record <code>fire.model.example_data</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>66.</b> 
-Record <code>fire.model.example_data</code> updated
-<br/>
-    <div class="card ml-3" style="background-color:#ffffe6;">
-      <div class="card-body"  style="padding:2px">
-        fire.model.example_data > fire.model.account > fire.model.account_type
-    </div>
-  </div>
-     
-
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>67.</b> 
+<b>55.</b> 
 Record <code>fire.model.example_data</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -2099,7 +1759,7 @@ Record <code>fire.model.example_data</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>68.</b> 
+<b>56.</b> 
 Record <code>fire.model.example_data</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
@@ -2113,7 +1773,7 @@ Record <code>fire.model.example_data</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>69.</b> 
+<b>57.</b> 
 Record <code>fire.model.loan_transaction</code> updated
 <br/>
     <div class="card ml-3" style="background-color:#ffffe6;">
