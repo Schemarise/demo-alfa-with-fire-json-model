@@ -162,7 +162,28 @@
                             </execution>
 
                             <execution>
-                                <id>change-analysis-24.04-to-24.10</id>
+                                <id>change-analysis-24.01-to-24.04</id>
+                                <goals>
+                                    <goal>compile</goal>
+                                </goals>
+                                <configuration>
+                                    <srcPath>${basedir}/src/main/alfa</srcPath>
+                                    <exportSettings>
+                                        <exportSetting>
+                                            <exportType>changeanalyzer</exportType>
+                                            <config>
+                                                <startVersion>v24.01</startVersion>
+                                                <endVersion>v24.04</endVersion>
+                                                <reportFile>report-24.01-to-24.04</reportFile>
+                                                <baseDir>${basedir}</baseDir>
+                                            </config>
+                                        </exportSetting>
+                                    </exportSettings>
+                                </configuration>
+                            </execution>
+
+                            <execution>
+                                <id>change-analysis-24.04-to-24.07</id>
                                 <goals>
                                     <goal>compile</goal>
                                 </goals>
@@ -173,14 +194,37 @@
                                             <exportType>changeanalyzer</exportType>
                                             <config>
                                                 <startVersion>v24.04</startVersion>
-                                                <endVersion>v24.10</endVersion>
-                                                <reportFile>report-24.04-to-24.10</reportFile>
+                                                <endVersion>v24.07</endVersion>
+                                                <reportFile>report-24.04-to-24.07</reportFile>
                                                 <baseDir>${basedir}</baseDir>
                                             </config>
                                         </exportSetting>
                                     </exportSettings>
                                 </configuration>
                             </execution>
+
+
+                            <execution>
+                                <id>change-analysis-24.07-to-24.10</id>
+                                <goals>
+                                    <goal>compile</goal>
+                                </goals>
+                                <configuration>
+                                    <srcPath>${basedir}/src/main/alfa</srcPath>
+                                    <exportSettings>
+                                        <exportSetting>
+                                            <exportType>changeanalyzer</exportType>
+                                            <config>
+                                                <startVersion>v24.07</startVersion>
+                                                <endVersion>v24.10</endVersion>
+                                                <reportFile>report-24.07-to-24.10</reportFile>
+                                                <baseDir>${basedir}</baseDir>
+                                            </config>
+                                        </exportSetting>
+                                    </exportSettings>
+                                </configuration>
+                            </execution>
+
                         </executions>
                     </plugin>
 
