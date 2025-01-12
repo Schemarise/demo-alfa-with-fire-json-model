@@ -1,0 +1,22 @@
+<sub>&lt;&nbsp; [Namespace](index.md)</sub>
+# <img src='images/enumType-lg.svg'/> fire.model.guarantor_scra
+>  
+>Grade calculated using the Basel Standardised Credit Risk Assessment
+> 
+<img src='images/fire.model.guarantor_scra.svg'/>
+
+
+## Local Fields
+
+
+| Name        | Description |
+| ----------- | ----------- |
+| a |   |
+| a_plus |   |
+| b |   |
+| c |   |
+
+<br/>
+
+### Referenced from fields in:
+- <img src='images/recordType.svg'/> [fire.model.guarantor](UDT-fire.model.guarantor.md)
