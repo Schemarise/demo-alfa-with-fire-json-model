@@ -12,7 +12,7 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <alfa.version>3.4.2-SNAPSHOT</alfa.version>
+        <alfa.version>3.4.3</alfa.version>
     </properties>
 
     <build>
