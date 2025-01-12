@@ -19,7 +19,7 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class JsonReaderTest {
+public class JsonDataProcessingTest {
 
     /**
      * Test that we can read a Fire JSON file and validate its contents

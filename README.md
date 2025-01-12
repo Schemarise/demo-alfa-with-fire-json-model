@@ -15,13 +15,15 @@ Details
 -------
 
 - `src/main/alfa` contains ALFA definitions imported from Fire models
+- `JsonDataProcessingTest.java` contains example of reading JSON in Java and validating/processing.
 - Branches of this project exist corresponding to Fire github project release tags - e.g. v24.10. 
 - ALFA Change Analyzer report is configured to run against the last release tag.
 - Once `mvn clean install` is run on this project.
   - `target/generated-sources/changeanalyzer` - contains report of changes between the last release and current
   - `target/generated-sources/java`- contains Java generated code, conforming to the ALFA model 
   - `target/generated-sources/markdown` - contains Markdown documentation for the model, and deployed to < site >
-
+- Running `mvn install -P gen-docs`, generates documentation and change analysis reports
+- `src/main/resources/fire` contains the JSON models and test JSON file snapshot from `github.com/SuadeLabs/fire` used to build ALFA models
 
 Steps to update ALFA models based on the current Fire models
 ------------------------------------------------------------

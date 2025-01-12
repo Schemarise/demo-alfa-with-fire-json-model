@@ -7,6 +7,7 @@ namespace fire.model
  #/
 enum agreement_netting_restriction {
     national_supervision 
+    no_right_to_offset 
     restrictive_covenant 
 }
 
