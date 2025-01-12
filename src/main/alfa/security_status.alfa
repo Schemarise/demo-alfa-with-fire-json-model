@@ -8,7 +8,6 @@ namespace fire.model
 enum security_status {
     bankruptcy_remote 
     called_up 
-    free_deliveries 
     non_operational 
     paid_up 
     unsettled 

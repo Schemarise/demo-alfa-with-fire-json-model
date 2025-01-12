@@ -21,10 +21,6 @@ enum derivative_underlying_index_tenor {
     `8m` 
     `9m` 
     `12m` 
-    `24m` 
-    `60m` 
-    `120m` 
-    `360m` 
 }
 
          

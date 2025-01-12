@@ -11,10 +11,6 @@ record guarantor {
   intra_group : boolean ?
   
   
-  /# North American Industry Classification System - NAICS Code #/
-  naics_code : int( 10, 999999 ) ?
-  
-  
   /# The credit quality step for internal ratings based approach. #/
   cqs_irb : int( 1, 12 ) ?
   
@@ -45,10 +41,6 @@ record guarantor {
   
   /# KBRA long term credit ratings #/
   kbra_lt : guarantor_kbra_lt ?
-  
-  
-  /# Grade calculated using the Basel Standardised Credit Risk Assessment #/
-  scra : guarantor_scra ?
   
   
   /# The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2 #/
@@ -152,7 +144,7 @@ record guarantor {
   
   
   /# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
-  lgd_irb : double( 0.0, 1.0 ) ?
+  lgd_irb : double ?
   
   
   /# The UK SIC 2007 standard industry and sector classification. #/

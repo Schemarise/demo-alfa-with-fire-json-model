@@ -14,7 +14,6 @@ enum security_hqla_class {
     iib 
     iib_non_op 
     ineligible 
-    ineligible_non_op 
 }
 
          

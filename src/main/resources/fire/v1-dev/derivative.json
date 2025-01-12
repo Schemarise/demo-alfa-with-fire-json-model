@@ -59,11 +59,6 @@
         "format": "date-time"
       }
     },
-    "ccr_approach": {
-      "description": "Specifies the approved counterparty credit risk methodology for calculating exposures.",
-      "type": "string",
-      "enum": ["imm", "oem", "sa", "ssa"]
-    },
     "cost_center_code": {
       "description": "The organizational unit or sub-unit to which costs/profits are booked.",
       "type": "string"
@@ -75,7 +70,7 @@
     "cr_approach": {
       "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
-    }, 
+    },
     "csa_id": {
       "description": "The unique identifier of the credit support annex for this derivative",
       "type": "string"
@@ -164,18 +159,6 @@
         "put"
       ]
     },
-    "lgd_floored": {
-      "description": "The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations.",
-      "type": "number",
-      "minimum": 0.0,
-      "maximum": 1.0
-    },
-    "lgd_irb": {
-      "description": "The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.",
-      "type": "number",
-      "minimum": 0.0,
-      "maximum": 1.0
-    },
     "mic_code": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/mic_code"
     },
@@ -231,12 +214,6 @@
     "on_balance_sheet": {
       "description": "Is the derivative reported on the balance sheet of the financial institution?",
       "type": "boolean"
-    },
-    "pd_irb": {
-      "description": "The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.",
-      "type": "number",
-      "minimum": 0.0,
-      "maximum": 1.0
     },
     "position": {
       "description": "Specifies the market position, i.e. long or short, of the derivative leg",
@@ -318,7 +295,6 @@
       "description": "Provides additional information regarding the status of the derivative.",
       "type": "string",
       "enum": [
-        "free_deliveries",
         "unsettled"
       ]
     },
@@ -391,11 +367,7 @@
         "7m",
         "8m",
         "9m",
-        "12m",
-	"24m",
-	"60m",
-	"120m",
-	"360m"
+        "12m"
       ]
     },
     "underlying_issuer_id": {

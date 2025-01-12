@@ -7,28 +7,22 @@ namespace fire.model
  #/
 enum loan_type {
     `auto`( "auto" ) 
-    cd( "cd" ) 
-    charge_card( "charge_card" ) 
     commercial( "commercial" ) 
     commercial_property( "commercial_property" ) 
-    corporate_card( "corporate_card" ) 
     credit_card( "credit_card" ) 
     credit_facility( "credit_facility" ) 
-    education( "education" ) 
     financial_lease( "financial_lease" ) 
     heloc( "heloc" ) 
     liquidity_facility( "liquidity_facility" ) 
     mortgage( "mortgage" ) 
     mortgage_charter( "mortgage_charter" ) 
     multiccy_facility( "multiccy_facility" ) 
-    new_auto( "new_auto" ) 
     nostro( "nostro" ) 
     other( "other" ) 
     personal( "personal" ) 
     q_reverse_mortgage( "q_reverse_mortgage" ) 
     reverse_mortgage( "reverse_mortgage" ) 
     trade_finance( "trade_finance" ) 
-    used_auto( "used_auto" ) 
 }
 
          

@@ -8,7 +8,6 @@ namespace fire.model
 enum account_guarantee_scheme {
     be_pf 
     bg_dif 
-    ca_cdic 
     cy_dps 
     cz_dif 
     de_edb 

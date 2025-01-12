@@ -8,16 +8,9 @@ namespace fire.model
 enum security_type {
     abs 
     abs_auto 
-    abs_cc 
     abs_consumer 
-    abs_corp 
-    abs_lease 
     abs_other 
     abs_sme 
-    abs_sme_corp 
-    abs_sme_retail 
-    abs_trade_rec 
-    abs_wholesale 
     acceptance 
     bill_of_exchange 
     bond 
@@ -25,7 +18,6 @@ enum security_type {
     cash_ratio_deposit 
     cb_facility 
     cb_reserve 
-    cb_restricted_reserve 
     cd 
     cmbs 
     cmbs_income 
@@ -43,7 +35,6 @@ enum security_type {
     index 
     index_linked 
     letter_of_credit 
-    main_index_equity 
     mbs 
     mtn 
     nha_mbs 

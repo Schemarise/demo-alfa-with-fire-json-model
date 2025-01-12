@@ -112,9 +112,7 @@
     },
     "lgd_irb": {
       "description": "The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.",
-      "type": "number",
-      "minimum": 0.0,
-      "maximum": 1.0
+      "type": "number"
     },
     "moodys_lt": {
       "description": "Moody's long term credit ratings",
@@ -190,12 +188,6 @@
         "S.96.03", "S.96.04", "S.96.09", "T.97.00", "T.98.10", "T.98.20", "U.99.00"
       ]
     },
-    "naics_code": {
-      "description": "North American Industry Classification System - NAICS Code",
-      "type": "integer",
-      "minimum": 10,
-      "maximum": 999999
-    },
     "name": {
       "description": "The name of the person or legal entity to be used for display and reference purposes.",
       "type": "string"
@@ -235,13 +227,6 @@
     "risk_group_id_2":{
       "description": "The secondary identifier for the secondary group representing a single risk entity where no relationship of control exists",
       "type": "string"
-    },
-    "scra": {
-      "description": "Grade calculated using the Basel Standardised Credit Risk Assessment",
-      "type":"string",
-      "enum": [
-	      "a", "a_plus", "b", "c"  
-      ]
     },
     "sic_code": {
       "description": "The UK SIC 2007 standard industry and sector classification.",

@@ -75,10 +75,6 @@ record derivative {
   deal_id : string ?
   
   
-  /# The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations. #/
-  lgd_floored : double( 0.0, 1.0 ) ?
-  
-  
   /# Dates where this contract can be called (by the customer). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
   call_dates : list< datetime >(1,*) ?
   
@@ -145,10 +141,6 @@ record derivative {
   
   mic_code : string( 4, 4 ) ?
   
-  /# The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
-  pd_irb : double( 0.0, 1.0 ) ?
-  
-  
   /# Describe the payoff type of the derivative leg. #/
   leg_type : derivative_leg_type ?
   
@@ -207,10 +199,6 @@ record derivative {
   insolvency_rank : int( 1, * ) ?
   
   
-  /# Specifies the approved counterparty credit risk methodology for calculating exposures. #/
-  ccr_approach : derivative_ccr_approach ?
-  
-  
   /# Specifies the approved credit risk rwa calculation approach to be applied to the exposure. #/
   cr_approach : cr_approach ?
   
@@ -265,10 +253,6 @@ record derivative {
   
   /# The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
   trade_date : datetime ?
-  
-  
-  /# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
-  lgd_irb : double( 0.0, 1.0 ) ?
   
   
   /# The amount that is expected to be received at the next_receive_date. Monetary type represented as a naturally positive integer number of cents/pence. #/

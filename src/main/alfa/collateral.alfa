@@ -23,10 +23,6 @@ record collateral {
   charge : int( 0, * ) ?
   
   
-  /# The valuation as used by the bank for the collateral at the origination of the related loan or line of credit. Monetary type represented as a naturally positive integer number of cents/pence. #/
-  orig_value : int ?
-  
-  
   /# The type of the encumbrance causing the encumbrance_amount. #/
   encumbrance_type : collateral_encumbrance_type ?
   
