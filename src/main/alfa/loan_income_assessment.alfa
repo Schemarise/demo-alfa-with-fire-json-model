@@ -7,9 +7,7 @@ namespace fire.model
  #/
 enum loan_income_assessment {
     joint 
-    joint_not_evidenced 
     single 
-    single_not_evidenced 
 }
 
          

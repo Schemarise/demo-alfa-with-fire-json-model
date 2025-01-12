@@ -170,7 +170,7 @@
         "be_pf",
         "bg_dif",
         "ca_cdic",
-	      "cy_dps",
+	"cy_dps",
         "cz_dif",
         "de_edb",
         "de_edo",
@@ -242,18 +242,6 @@
       "description": "The internal ledger code or line item name.",
       "type": "string"
     },
-    "lgd_floored": {
-      "description": "The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations.",
-      "type": "number",
-      "minimum": 0.0,
-      "maximum": 1.0
-    },
-    "lgd_irb": {
-      "description": "The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.",
-      "type": "number",
-      "minimum": 0.0,
-      "maximum": 1.0
-    },
     "limit_amount": {
       "description": "The minimum balance the customer can go overdrawn in their account.",
       "type": "integer",
@@ -302,16 +290,6 @@
     "on_balance_sheet": {
       "description": "Is the account or deposit reported on the balance sheet of the financial institution?",
       "type": "boolean"
-    },
-    "orig_credit_score": {
-      "description": "The credit score of the customer at origination of the product using a commercially available credit bureau score.",
-      "type": "integer"
-    },
-    "pd_irb": {
-      "description": "The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.",
-      "type": "number",
-      "minimum": 0.0,
-      "maximum": 1.0
     },
     "prev_payment_date": {
       "description": "The most recent previous date at which interest was paid or accrued_interest balance returned to zero.",
@@ -369,8 +347,6 @@
 	"div_from_money_mkt",
 	"dividend",
 	"donation",
-  "econ_loss_retail",
-  "econ_loss_wholesale",
 	"employee",
 	"employee_stock_option",
 	"escrow",
@@ -378,7 +354,6 @@
 	"fine",
 	"firm_operating_expenses",
 	"firm_operations",
-  "fraud_loss_retail",
 	"furniture",
 	"fut_prof",
 	"fut_prof_temp_diff",
@@ -505,7 +480,7 @@
     "status": {
       "description": "Describes if the Account is active or been cancelled.",
       "type": "string",
-      "enum": ["active","audited" , "cancelled", "cancelled_payout_agreed", "other", "pending", "transactional", "unaudited"]
+      "enum": ["active","audited" , "cancelled", "cancelled_payout_agreed", "other", "transactional", "unaudited"]
     },
     "trade_date": {
       "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",

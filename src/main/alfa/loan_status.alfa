@@ -11,7 +11,6 @@ enum loan_status {
     cancelled 
     committed 
     defaulted 
-    revolving 
 }
 
          

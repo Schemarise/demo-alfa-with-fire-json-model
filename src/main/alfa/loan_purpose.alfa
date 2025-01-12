@@ -17,20 +17,13 @@ enum loan_purpose {
     commodities_finance 
     construction 
     consumer_buy_to_let 
-    econ_loss_retail 
-    econ_loss_wholesale 
     first_time_buyer 
-    first_time_buyer_cstr 
-    fraud_loss_retail 
     further_advance 
-    further_advance_cstr 
     house_purchase 
-    house_purchase_cstr 
     ips 
     lifetime_mortgage 
     non_b20 
     object_finance 
-    object_finance_hq 
     operational 
     other 
     project_finance 
@@ -39,9 +32,7 @@ enum loan_purpose {
     promotional 
     reference 
     remortgage 
-    remortgage_construct 
     remortgage_other 
-    remortgage_othr_cstr 
     speculative_property 
 }
 
