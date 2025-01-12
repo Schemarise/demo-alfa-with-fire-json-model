@@ -22,10 +22,10 @@ As part of the Maven build (`mvn clean install -P gen-docs`) of this project, th
 1. Data Model Documentation - https://schemarise.github.io/demo-alfa-with-fire-json-model 
 
 2. Data Model Changes - differences between versions;
-   - Between v24.01 and v24.04 - https://schemarise.github.io/demo-alfa-with-fire-json-model/report-24.01-to-24.04.html 
-   - Between v24.04 and v24.07 - https://schemarise.github.io/demo-alfa-with-fire-json-model/report-24.04-to-24.07.html
-   - Between v24.07 and v24.10 - https://schemarise.github.io/demo-alfa-with-fire-json-model/report-24.07-to-24.10.html
-   - Between v24.10 and main - https://schemarise.github.io/demo-alfa-with-fire-json-model/report.html
+    - [v24.01 and v24.04](https://schemarise.github.io/demo-alfa-with-fire-json-model/report-24.01-to-24.04.html)
+    - [v24.04 and v24.07](https://schemarise.github.io/demo-alfa-with-fire-json-model/report-24.04-to-24.07.html)
+    - [v24.07 and v24.10](https://schemarise.github.io/demo-alfa-with-fire-json-model/report-24.07-to-24.10.html)
+    - [v24.10 and main](https://schemarise.github.io/demo-alfa-with-fire-json-model/report.html)
 
 
 Source Details
