@@ -1,0 +1,29 @@
+name: Build Docs and Deploy
+
+on: workflow_dispatch
+
+permissions:
+  contents: write
+jobs:
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3  
+        
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'maven'
+    
+      - name: Build HTML docs
+        run: 
+          mvn -P gen-docs install
+
+      - name: Deploy github pages  🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: target/generated-sources/website 
