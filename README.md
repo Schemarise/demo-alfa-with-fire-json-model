@@ -1,8 +1,7 @@
-Demo ALFA and JSON Schema Model Integration Project
-===================================================
+# Demo ALFA and JSON Schema Model Integration Project
 
-Introduction
-------------
+## Introduction
+
 This project shows how easy it is to:
 - Write type-safe Java code against JSON Schema imported into ALFA
 - Validate and create clean JSON conforming to the model
@@ -12,8 +11,7 @@ This project shows how easy it is to:
 [Suade Fire](http://github.com/SuadeLabs/fire) is used as the example JSON Schema model.  
 
 
-Published Documentation 
------------------------
+## Published Documentation 
 
 This project publishes documentation generated from ALFA.
 
@@ -28,8 +26,7 @@ As part of the Maven build (`mvn clean install -P gen-docs`) of this project, th
     - [v24.10 and main](https://schemarise.github.io/demo-alfa-with-fire-json-model/report.html)
 
 
-Source Details
---------------
+## Source Details
 
 - `src/main/alfa` contains ALFA definitions imported from Fire models
 
@@ -47,3 +44,11 @@ Source Details
   - `target/generated-sources/markdown` - contains Markdown documentation for the model, and deployed to < site >
 
 - `src/main/resources/fire` contains the JSON models and test JSON file snapshot from `github.com/SuadeLabs/fire` used to build ALFA models
+
+
+### Next steps
+
+Having the model in ALFA opens the door to many possibilities.
+
+Interested to learn more? Get in touch with us at info@schemarise.com.
+
