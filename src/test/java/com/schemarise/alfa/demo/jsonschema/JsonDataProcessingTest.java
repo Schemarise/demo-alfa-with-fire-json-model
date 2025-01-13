@@ -26,8 +26,7 @@ public class JsonDataProcessingTest {
      */
     @Test
     public void testReadLoan() throws IOException {
-        String pathStr = getClass().getResource("/").getPath() + "../../src/main/resources/fire/examples/bbl_loans.json";
-        InputStream is = Files.newInputStream(Paths.get(pathStr));
+        InputStream is = getClass().getResourceAsStream("/fire/examples/bbl_loans.json");
 
         // Set the class type we are expecting
         JsonCodecConfig dc = Alfa.jsonCodecConfigBuilder().setAssignableToClass(example.class).build();
