@@ -135,6 +135,10 @@ record account {
   risk_country_code : country_code ?
   
   
+  /# The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment. #/
+  fraud_loss : int ?
+  
+  
   /# Fair value hierarchy category according to IFRS 13.93 (b) #/
   fvh_level : int( 1, 3 ) ?
   
@@ -195,6 +199,10 @@ record account {
   
   /# Specifies the approved credit risk rwa calculation approach to be applied to the exposure. #/
   cr_approach : cr_approach ?
+  
+  
+  /# The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss #/
+  economic_loss : int ?
   
   
   /# The amount of the account that is guaranteed under a Government Deposit Guarantee Scheme. Monetary type represented as a naturally positive integer number of cents/pence. #/
