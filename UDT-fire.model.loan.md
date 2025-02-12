@@ -171,6 +171,12 @@
 </td>
     </tr>
     <tr>
+        <td>fraud_loss</td>
+        <td><i>int</i> <b>?</b></td>
+        <td><p>The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment.</p>
+</td>
+    </tr>
+    <tr>
         <td>encumbrance_type</td>
         <td><i><a href='UDT-fire.model.loan_encumbrance_type.html'><img src='images/enumType.svg'/>&nbsp;fire.model.loan_encumbrance_type</a></i> <b>?</b></td>
         <td><p>The type of the encumbrance causing the encumbrance_amount.</p>
@@ -232,6 +238,12 @@
         <td>cr_approach</td>
         <td><i><a href='UDT-fire.model.cr_approach.html'><img src='images/enumType.svg'/>&nbsp;fire.model.cr_approach</a></i> <b>?</b></td>
         <td><p>Specifies the approved credit risk rwa calculation approach to be applied to the exposure.</p>
+</td>
+    </tr>
+    <tr>
+        <td>economic_loss</td>
+        <td><i>int</i> <b>?</b></td>
+        <td><p>The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss</p>
 </td>
     </tr>
     <tr>

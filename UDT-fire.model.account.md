@@ -218,6 +218,12 @@
 </td>
     </tr>
     <tr>
+        <td>fraud_loss</td>
+        <td><i>int</i> <b>?</b></td>
+        <td><p>The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment.</p>
+</td>
+    </tr>
+    <tr>
         <td>fvh_level</td>
         <td><i>int(1, 3)</i> <b>?</b></td>
         <td><p>Fair value hierarchy category according to IFRS 13.93 (b)</p>
@@ -310,6 +316,12 @@
         <td>cr_approach</td>
         <td><i><a href='UDT-fire.model.cr_approach.html'><img src='images/enumType.svg'/>&nbsp;fire.model.cr_approach</a></i> <b>?</b></td>
         <td><p>Specifies the approved credit risk rwa calculation approach to be applied to the exposure.</p>
+</td>
+    </tr>
+    <tr>
+        <td>economic_loss</td>
+        <td><i>int</i> <b>?</b></td>
+        <td><p>The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss</p>
 </td>
     </tr>
     <tr>
