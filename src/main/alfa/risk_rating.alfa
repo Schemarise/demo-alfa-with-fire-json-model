@@ -1,0 +1,52 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+/#
+    A risk rating entry for a risk rating system
+ #/
+
+record risk_rating {
+  /# The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  `date` : datetime
+  
+  
+  /# Maximum Probability of Default #/
+  pd_max : double( 0.0, 1.0 ) ?
+  
+  
+  /# The name or classification of the risk rating, used for reporting and segmentation. #/
+  name : string
+  
+  
+  /# Unique identifier for the risk rating #/
+  id : string
+  
+  
+  /# Minimum Probability of Default #/
+  pd_min : double( 0.0, 1.0 ) ?
+  
+  
+  /# The source where this data originated. #/
+  source : string ?
+  
+  
+  /# The version identifier of the data such as the firm's internal batch identifier. #/
+  version_id : string ?
+  
+  
+  /# Maximum Loss Given Default, representing the highest expected loss as a percentage of exposure at default. #/
+  lgd_max : double( 0.0, 1.0 ) ?
+  
+  
+  /# Minimum Loss Given Default, representing the lowest expected loss as a percentage of exposure at default. #/
+  lgd_min : double( 0.0, 1.0 ) ?
+  
+  
+  /# Reference to the risk rating system that this Internal Risk Rating belongs to #/
+  risk_rating_system_id : string
+  
+  
+}
+
+         

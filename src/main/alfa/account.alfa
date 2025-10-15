@@ -11,6 +11,10 @@ record account {
   `date` : datetime
   
   
+  /# Date of most recent recovery in the reporting quarter. #/
+  last_recovery_date : datetime ?
+  
+  
   /# The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015. #/
   risk_weight_std : double ?
   
@@ -61,6 +65,14 @@ record account {
   limit_amount : int ?
   
   
+  /# Date of resolution of the defaulted facility. #/
+  resolution_date : datetime ?
+  
+  
+  /# The code assigned by the financial institution to identify a facility. #/
+  facility_id : string ?
+  
+  
   /# The unique identifier for the record within the firm. #/
   id : string
   
@@ -101,6 +113,10 @@ record account {
   base_rate : account_base_rate ?
   
   
+  /# Date of Financial Institution's most recent Write Off in the reporting quarter. #/
+  last_write_off_date : datetime ?
+  
+  
   asset_liability : asset_liability ?
   
   /# The first payment date for interest payments. #/
@@ -137,6 +153,10 @@ record account {
   
   /# The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment. #/
   fraud_loss : int ?
+  
+  
+  /# The EAD field allows users to input monetary exposure-at-default values across the loan's lifecycle. Upon default, this field must be updated to reflect the final realised EAD value — that is, the actual exposure outstanding at the moment of default. #/
+  ead : int ?
   
   
   /# Fair value hierarchy category according to IFRS 13.93 (b) #/
@@ -213,6 +233,10 @@ record account {
   prev_payment_date : datetime ?
   
   
+  /# Date of default. #/
+  default_date : datetime ?
+  
+  
   /# The date on which the first forbearance measure was granted to this product.  Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601 #/
   forbearance_date : datetime ?
   
@@ -223,6 +247,14 @@ record account {
   
   /# Dates where this contract can be broken (by either party). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
   break_dates : list< datetime >(1,*) ?
+  
+  
+  /# The internal facility risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority. #/
+  frr_id : string ?
+  
+  
+  /# The parent code assigned by the financial institution to identify a facility. #/
+  parent_facility_id : string ?
   
   
   /# The timestamp that the trade or financial product commences. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
@@ -237,6 +269,10 @@ record account {
   
   /# Month to date amount deposited within the account as a naturally positive integer number of cents/pence. #/
   mtd_deposits : int ?
+  
+  
+  /# Behavioral end date (as opposed to contractual). YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601 #/
+  behavioral_end_date : datetime ?
   
   
   /# The date upon which the product became considered impaired. Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601 #/
@@ -289,6 +325,10 @@ record account {
   
   /# The date on which the interest rate of the account will be re-calculated. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
   next_repricing_date : datetime ?
+  
+  
+  /# The seniority of the security in the event of sale or bankruptcy of the issuer. #/
+  seniority : account_seniority ?
   
   
 }

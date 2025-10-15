@@ -235,6 +235,10 @@ record derivative {
   last_exercise_date : datetime ?
   
   
+  /# The internal risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority. #/
+  frr_id : string ?
+  
+  
   /# Contract effective or commencement date; security issue date. Format YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
   start_date : datetime ?
   

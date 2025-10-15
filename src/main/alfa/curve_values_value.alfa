@@ -1,0 +1,9 @@
+
+namespace fire.model
+
+@alfa.rt.SkipUnknownFields
+record curve_values_value {
+  
+}
+
+         

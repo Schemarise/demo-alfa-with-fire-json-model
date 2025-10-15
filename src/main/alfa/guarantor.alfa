@@ -91,6 +91,14 @@ record guarantor {
   lei_code : string( 20, 20 ) ?
   
   
+  /# The unique identifier of the Borrower Internal Risk Rating (BIRR), representing an internally assigned risk assessment for a customer based on their creditworthiness and financial stability. #/
+  birr_id : string ?
+  
+  
+  /# The ID of the curve containing historical Borrower Internal Risk Ratings (BIRR) for this entity. The curve must be of type 'risk_rating'. #/
+  birr_curve_id : string ?
+  
+  
   /# The credit quality step for standardised approach. #/
   cqs_standardised : int( 1, 17 ) ?
   

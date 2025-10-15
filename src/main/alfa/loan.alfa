@@ -51,6 +51,10 @@ record loan {
   limit_amount : int( 0, * ) ?
   
   
+  /# Date of resolution of the defaulted facility. #/
+  resolution_date : datetime ?
+  
+  
   /# The unique identifier for the record within the firm. #/
   id : string
   
@@ -109,6 +113,10 @@ record loan {
   fraud_loss : int ?
   
   
+  /# The EAD field allows users to input monetary exposure-at-default values across the loan's lifecycle. Upon default, this field must be updated to reflect the final realised EAD value — that is, the actual exposure outstanding at the moment of default. #/
+  ead : int ?
+  
+  
   /# The type of the encumbrance causing the encumbrance_amount. #/
   encumbrance_type : loan_encumbrance_type ?
   
@@ -161,6 +169,10 @@ record loan {
   customers : set< loan_customers >(1,*) ?
   
   
+  /# The internal facility risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority. #/
+  frr_id : string ?
+  
+  
   /# The method by which the loan shall be repaid #/
   servicing : loan_servicing ?
   
@@ -179,6 +191,10 @@ record loan {
   
   /# The last date on which this loan was in arrears. #/
   last_arrears_date : datetime ?
+  
+  
+  /# Behavioral end date (as opposed to contractual). YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601 #/
+  behavioral_end_date : datetime ?
   
   
   /# The amount of reserves that is provisioned by the financial institution to cover the potential loss on the loan. Monetary type represented as a naturally positive integer number of cents/pence. #/
@@ -229,12 +245,20 @@ record loan {
   movement : loan_movement ?
   
   
+  /# The seniority of the security in the event of sale or bankruptcy of the issuer. #/
+  seniority : loan_seniority ?
+  
+  
   /# The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
   `date` : datetime
   
   
   /# The fees associated with the loan. #/
   fees : int ?
+  
+  
+  /# Date of most recent recovery in the reporting quarter. #/
+  last_recovery_date : datetime ?
   
   
   /# The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015. #/
@@ -271,6 +295,10 @@ record loan {
   encumbrance_end_date : datetime ?
   
   
+  /# The code assigned by the financial institution to identify a facility. #/
+  facility_id : string ?
+  
+  
   /# The volatility adjustment appropriate to the exposure. #/
   vol_adj : double ?
   
@@ -301,6 +329,10 @@ record loan {
   
   /# Two-letter country code for product location/jurisdiction. In accordance with ISO 3166-1. #/
   country_code : country_code ?
+  
+  
+  /# Date of Financial Institution's most recent Write Off in the reporting quarter. #/
+  last_write_off_date : datetime ?
   
   
   /# The best estimate of expected loss when in default. #/
@@ -363,8 +395,16 @@ record loan {
   prev_payment_date : datetime ?
   
   
+  /# Date of default. #/
+  default_date : datetime ?
+  
+  
   /# The amount of the loan that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence. #/
   encumbrance_amount : int( 0, * ) ?
+  
+  
+  /# The parent code assigned by the financial institution to identify a facility. #/
+  parent_facility_id : string ?
   
   
   /# Identifier for how a loan is credit assessed during the underwriting process #/

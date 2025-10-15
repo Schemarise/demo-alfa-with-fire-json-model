@@ -11,8 +11,16 @@ enum curve_values_reference {
     `1m` 
     `3m` 
     `6m` 
+    `9m` 
     `12m` 
+    `15m` 
+    `18m` 
+    `21m` 
     `24m` 
+    `27m` 
+    `30m` 
+    `33m` 
+    `36m` 
     `60m` 
     `120m` 
 }

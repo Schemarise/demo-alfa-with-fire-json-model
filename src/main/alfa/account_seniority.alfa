@@ -1,0 +1,17 @@
+
+namespace fire.model
+
+
+/#
+ The seniority of the security in the event of sale or bankruptcy of the issuer.
+ #/
+enum account_seniority {
+    mezzanine 
+    pari_passu 
+    senior_secured 
+    senior_unsecured 
+    subordinated_secured 
+    subordinated_unsecured 
+}
+
+         
