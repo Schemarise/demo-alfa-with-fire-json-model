@@ -30,6 +30,12 @@
 </td>
     </tr>
     <tr>
+        <td>street_address</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The street address associated with the property. Must include street direction prefixes, direction suffixes, and unit number for condos and co-ops. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.</p>
+</td>
+    </tr>
+    <tr>
         <td>account_ids</td>
         <td><i>list< string ></i> <b>?</b></td>
         <td><p>The unique identifier/s for the account/s within the financial institution.</p>
@@ -45,6 +51,12 @@
         <td>orig_value</td>
         <td><i>int</i> <b>?</b></td>
         <td><p>The valuation as used by the bank for the collateral at the origination of the related loan or line of credit. Monetary type represented as a naturally positive integer number of cents/pence.</p>
+</td>
+    </tr>
+    <tr>
+        <td>city</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The city in which the property is located.</p>
 </td>
     </tr>
     <tr>
@@ -82,6 +94,12 @@
         <td></td>
     </tr>
     <tr>
+        <td>country_code</td>
+        <td><i><a href='UDT-fire.model.country_code.html'><img src='images/enumType.svg'/>&nbsp;fire.model.country_code</a></i> <b>?</b></td>
+        <td><p>The country of collateral. Two-letter country code as defined according to ISO 3166-1.</p>
+</td>
+    </tr>
+    <tr>
         <td>vol_adj_fx</td>
         <td><i>double</i> <b>?</b></td>
         <td><p>The volatility adjustment appropriate to currency mismatch.</p>
@@ -101,8 +119,14 @@
     </tr>
     <tr>
         <td>encumbrance_amount</td>
-        <td><i>int</i> <b>?</b></td>
+        <td><i>int(0, *)</i> <b>?</b></td>
         <td><p>The amount of the collateral that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.</p>
+</td>
+    </tr>
+    <tr>
+        <td>postal_code</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The zip code in which the property is located. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.</p>
 </td>
     </tr>
     <tr>

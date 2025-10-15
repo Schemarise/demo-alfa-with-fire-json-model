@@ -88,6 +88,14 @@
 </td>
     </tr>
     <tr>
+        <td>hedged_risk</td>
+        <td><i><a href='UDT-fire.model.derivative_hedged_risk.html'><img src='images/enumType.svg'/>&nbsp;fire.model.derivative_hedged_risk</a></i> <b>?</b></td>
+        <td><p>The risk being hedged, among the potential hedged risks described under ASC 815-20-25-12 and ASC 815-20-25-15.</p>
+<p>()
+()</p>
+</td>
+    </tr>
+    <tr>
         <td>underlying_issuer_id</td>
         <td><i>string</i> <b>?</b></td>
         <td><p>The unique identifier used by the financial institution to identify the underlying reference issuer for this derivative.</p>
@@ -103,6 +111,12 @@
         <td>balance</td>
         <td><i>int</i> <b>?</b></td>
         <td><p>Outstanding amount including accrued interest. Monetary type represented as a naturally positive integer number of cents/pence.</p>
+</td>
+    </tr>
+    <tr>
+        <td>resolution_date</td>
+        <td><i>datetime</i> <b>?</b></td>
+        <td><p>Date of resolution of the defaulted facility.</p>
 </td>
     </tr>
     <tr>
@@ -127,6 +141,15 @@
         <td>lgd_floored</td>
         <td><i>double(0.0, 1.0)</i> <b>?</b></td>
         <td><p>The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations.</p>
+</td>
+    </tr>
+    <tr>
+        <td>hedge_type</td>
+        <td><i><a href='UDT-fire.model.derivative_hedge_type.html'><img src='images/enumType.svg'/>&nbsp;fire.model.derivative_hedge_type</a></i> <b>?</b></td>
+        <td><p>The type of hedge (fair value or cash flow hedge) associated with the holding. Whether it is hedging individually or is hedging as part of a portfolio of assets with similar risk that are hedged as a group in line with ASC 815-20-25-12 (b), ASC 815-20-2512A, or ASC 815-10-25-15.</p>
+<p>()
+()
+()</p>
 </td>
     </tr>
     <tr>
@@ -177,15 +200,35 @@
 </td>
     </tr>
     <tr>
+        <td>hedge_designation</td>
+        <td><i><a href='UDT-fire.model.derivative_hedge_designation.html'><img src='images/enumType.svg'/>&nbsp;fire.model.derivative_hedge_designation</a></i> <b>?</b></td>
+        <td><p>ASU 2017-12 hedge designations allowed in conjunction with partial-term hedging election in ASC 815-20-25-12b(2)(ii). These designations are described in ASC 815-20-25-12A and 815-25-35-13B.</p>
+<p>()
+()</p>
+</td>
+    </tr>
+    <tr>
         <td>underlying_security_id</td>
         <td><i>string</i> <b>?</b></td>
         <td><p>The unique identifier used by the financial institution to identify the underlying reference security for this derivative.</p>
 </td>
     </tr>
     <tr>
+        <td>hedged_cf_type</td>
+        <td><i><a href='UDT-fire.model.derivative_hedged_cf_type.html'><img src='images/enumType.svg'/>&nbsp;fire.model.derivative_hedged_cf_type</a></i> <b>?</b></td>
+        <td><p>The type of cash flow associated with the hedge if it is a cash flow hedge. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.</p>
+</td>
+    </tr>
+    <tr>
         <td>asset_liability</td>
         <td><i><a href='UDT-fire.model.asset_liability.html'><img src='images/enumType.svg'/>&nbsp;fire.model.asset_liability</a></i> <b>?</b></td>
         <td></td>
+    </tr>
+    <tr>
+        <td>hedge_id</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>Unique identifier that establishes a relational link between a security and its associated derivative hedge. Enables consistent tracking, aggregation, and reconciliation of hedged positions across systems and datasets.</p>
+</td>
     </tr>
     <tr>
         <td>position</td>
@@ -237,7 +280,7 @@
     <tr>
         <td>pd_irb</td>
         <td><i>double(0.0, 1.0)</i> <b>?</b></td>
-        <td><p>The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.</p>
+        <td><p>The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.</p>
 </td>
     </tr>
     <tr>
@@ -256,6 +299,12 @@
         <td>risk_country_code</td>
         <td><i><a href='UDT-fire.model.country_code.html'><img src='images/enumType.svg'/>&nbsp;fire.model.country_code</a></i> <b>?</b></td>
         <td><p>Two-letter country code describing where the risk for the derivative product resides. In accordance with ISO 3166-1</p>
+</td>
+    </tr>
+    <tr>
+        <td>ead</td>
+        <td><i>int</i> <b>?</b></td>
+        <td><p>The EAD field allows users to input monetary exposure-at-default values across the derivative's lifecycle. Upon default, this field must be updated to reflect the final realised EAD value — that is, the actual exposure outstanding at the moment of default.</p>
 </td>
     </tr>
     <tr>
@@ -348,9 +397,21 @@
 </td>
     </tr>
     <tr>
+        <td>economic_loss</td>
+        <td><i>int</i> <b>?</b></td>
+        <td><p>The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss</p>
+</td>
+    </tr>
+    <tr>
         <td>prev_payment_date</td>
         <td><i>datetime</i> <b>?</b></td>
         <td><p>The most recent previous date at which interest was paid or accrued_interest balance returned to zero.</p>
+</td>
+    </tr>
+    <tr>
+        <td>default_date</td>
+        <td><i>datetime</i> <b>?</b></td>
+        <td><p>Date of default.</p>
 </td>
     </tr>
     <tr>
@@ -369,6 +430,12 @@
         <td>last_exercise_date</td>
         <td><i>datetime</i> <b>?</b></td>
         <td><p>The last date on which an option can be exercised. For European options, it is the option exercise date</p>
+</td>
+    </tr>
+    <tr>
+        <td>frr_id</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The internal risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority.</p>
 </td>
     </tr>
     <tr>
@@ -422,7 +489,14 @@
     <tr>
         <td>lgd_irb</td>
         <td><i>double(0.0, 1.0)</i> <b>?</b></td>
-        <td><p>The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.</p>
+        <td><p>The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.</p>
+</td>
+    </tr>
+    <tr>
+        <td>hedge_sidedness</td>
+        <td><i><a href='UDT-fire.model.derivative_hedge_sidedness.html'><img src='images/enumType.svg'/>&nbsp;fire.model.derivative_hedge_sidedness</a></i> <b>?</b></td>
+        <td><p>Whether the hedging instrument provides a one-sided effective offset of the hedged risk, as permitted under ASC 815-20-25-76.</p>
+<p>()</p>
 </td>
     </tr>
     <tr>
@@ -447,6 +521,12 @@
         <td>rho</td>
         <td><i>double</i> <b>?</b></td>
         <td><p>Price sensitivity to interest rates.</p>
+</td>
+    </tr>
+    <tr>
+        <td>acc_fv_change_before_taxes</td>
+        <td><i>int</i> <b>?</b></td>
+        <td><p>Accumulated change in fair value before taxes.</p>
 </td>
     </tr>
     <tr>

@@ -70,6 +70,12 @@
 </td>
     </tr>
     <tr>
+        <td>resolution_date</td>
+        <td><i>datetime</i> <b>?</b></td>
+        <td><p>Date of resolution of the defaulted facility.</p>
+</td>
+    </tr>
+    <tr>
         <td>id</td>
         <td>string</td>
         <td><p>The unique identifier for the record within the firm.</p>
@@ -109,6 +115,12 @@
         <td>moodys_lt</td>
         <td><i><a href='UDT-fire.model.security_moodys_lt.html'><img src='images/enumType.svg'/>&nbsp;fire.model.security_moodys_lt</a></i> <b>?</b></td>
         <td><p>Moody's long term credit ratings</p>
+</td>
+    </tr>
+    <tr>
+        <td>sedol</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The stock exchange daily official list (SEDOL) is a seven-character identification code assigned to securities that trade on the London Stock Exchange and various smaller exchanges in the United Kingdom. SEDOL codes are used for unit trusts, investment trusts, insurance-linked securities, and domestic and foreign stocks.</p>
 </td>
     </tr>
     <tr>
@@ -173,13 +185,19 @@
     <tr>
         <td>pd_irb</td>
         <td><i>double(0.0, 1.0)</i> <b>?</b></td>
-        <td><p>The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.</p>
+        <td><p>The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.</p>
 </td>
     </tr>
     <tr>
         <td>kbra_lt</td>
         <td><i><a href='UDT-fire.model.security_kbra_lt.html'><img src='images/enumType.svg'/>&nbsp;fire.model.security_kbra_lt</a></i> <b>?</b></td>
         <td><p>KBRA long term credit ratings</p>
+</td>
+    </tr>
+    <tr>
+        <td>ead</td>
+        <td><i>int</i> <b>?</b></td>
+        <td><p>The EAD field allows users to input monetary exposure-at-default values across the security's lifecycle. Upon default, this field must be updated to reflect the final realised EAD value — that is, the actual exposure outstanding at the moment of default.</p>
 </td>
     </tr>
     <tr>
@@ -260,6 +278,12 @@
 </td>
     </tr>
     <tr>
+        <td>economic_loss</td>
+        <td><i>int</i> <b>?</b></td>
+        <td><p>The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss</p>
+</td>
+    </tr>
+    <tr>
         <td>cqs_standardised</td>
         <td><i>int(1, 17)</i> <b>?</b></td>
         <td><p>The credit quality step for standardised approach.</p>
@@ -275,6 +299,18 @@
         <td>detachment_point</td>
         <td><i>double(0.0, 1.0)</i> <b>?</b></td>
         <td><p>The threshold at which losses within the pool of underlying exposures would result in a complete loss of principal for the tranche containing the relevant securitisation position.</p>
+</td>
+    </tr>
+    <tr>
+        <td>frr_id</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The internal facility risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority.</p>
+</td>
+    </tr>
+    <tr>
+        <td>servicing</td>
+        <td><i><a href='UDT-fire.model.security_servicing.html'><img src='images/enumType.svg'/>&nbsp;fire.model.security_servicing</a></i> <b>?</b></td>
+        <td><p>The method by which the debt shall be repaid</p>
 </td>
     </tr>
     <tr>
@@ -317,6 +353,12 @@
         <td>first_arrears_date</td>
         <td><i>datetime</i> <b>?</b></td>
         <td><p>The first date on which this security was in arrears.</p>
+</td>
+    </tr>
+    <tr>
+        <td>hedged_percentage</td>
+        <td><i>double(0.0, 1.0)</i> <b>?</b></td>
+        <td><p>In the case of a designated fair value hedge, the portion of the asset being hedged, as determined according to ASC 815-20-25-12 (b) and ASC 815-20-25-12A.</p>
 </td>
     </tr>
     <tr>
@@ -365,6 +407,12 @@
         <td>cqs_irb</td>
         <td><i>int(1, 12)</i> <b>?</b></td>
         <td><p>The credit quality step for internal ratings based approach.</p>
+</td>
+    </tr>
+    <tr>
+        <td>fees</td>
+        <td><i>int</i> <b>?</b></td>
+        <td><p>The fees associated with the security.</p>
 </td>
     </tr>
     <tr>
@@ -475,6 +523,12 @@
 </td>
     </tr>
     <tr>
+        <td>hedge_id</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>Unique identifier that establishes a relational link between a security and its associated derivative hedge. Enables consistent tracking, aggregation, and reconciliation of hedged positions across systems and datasets.</p>
+</td>
+    </tr>
+    <tr>
         <td>first_payment_date</td>
         <td><i>datetime</i> <b>?</b></td>
         <td><p>The first payment date for interest payments.</p>
@@ -499,6 +553,12 @@
 </td>
     </tr>
     <tr>
+        <td>issuance_type</td>
+        <td><i><a href='UDT-fire.model.security_issuance_type.html'><img src='images/enumType.svg'/>&nbsp;fire.model.security_issuance_type</a></i> <b>?</b></td>
+        <td><p>Indicates the type of placement for issuances. For example, private placements, other non-publicly offered securites, publicly offered securities or direct purchase municipal securities. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.</p>
+</td>
+    </tr>
+    <tr>
         <td>purpose</td>
         <td><i><a href='UDT-fire.model.security_purpose.html'><img src='images/enumType.svg'/>&nbsp;fire.model.security_purpose</a></i> <b>?</b></td>
         <td><p>The purpose for which the security is being held.</p>
@@ -514,6 +574,12 @@
         <td>dbrs_st</td>
         <td><i><a href='UDT-fire.model.security_dbrs_st.html'><img src='images/enumType.svg'/>&nbsp;fire.model.security_dbrs_st</a></i> <b>?</b></td>
         <td><p>DBRS short term credit ratings</p>
+</td>
+    </tr>
+    <tr>
+        <td>description</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>A more user-friendly description of the security.</p>
 </td>
     </tr>
     <tr>
@@ -541,6 +607,12 @@
 </td>
     </tr>
     <tr>
+        <td>rate_type</td>
+        <td><i><a href='UDT-fire.model.security_rate_type.html'><img src='images/enumType.svg'/>&nbsp;fire.model.security_rate_type</a></i> <b>?</b></td>
+        <td><p>Describes the type of interest rate applied to the security.</p>
+</td>
+    </tr>
+    <tr>
         <td>rate</td>
         <td><i>double</i> <b>?</b></td>
         <td><p>The full interest rate applied to the security notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).</p>
@@ -562,6 +634,12 @@
         <td>prev_payment_date</td>
         <td><i>datetime</i> <b>?</b></td>
         <td><p>The most recent previous date at which interest was paid or accrued_interest balance returned to zero.</p>
+</td>
+    </tr>
+    <tr>
+        <td>default_date</td>
+        <td><i>datetime</i> <b>?</b></td>
+        <td><p>Date of default.</p>
 </td>
     </tr>
     <tr>
@@ -615,7 +693,13 @@
     <tr>
         <td>lgd_irb</td>
         <td><i>double(0.0, 1.0)</i> <b>?</b></td>
-        <td><p>The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.</p>
+        <td><p>The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.</p>
+</td>
+    </tr>
+    <tr>
+        <td>cum_write_offs</td>
+        <td><i>int(0, *)</i> <b>?</b></td>
+        <td><p>The portion of the security which has been written off.</p>
 </td>
     </tr>
     <tr>
@@ -628,6 +712,12 @@
         <td>acc_fv_change_before_taxes</td>
         <td><i>int</i> <b>?</b></td>
         <td><p>Accumulated change in fair value before taxes.</p>
+</td>
+    </tr>
+    <tr>
+        <td>distribution_type</td>
+        <td><i><a href='UDT-fire.model.security_distribution_type.html'><img src='images/enumType.svg'/>&nbsp;fire.model.security_distribution_type</a></i> <b>?</b></td>
+        <td><p>The instrument's coupon/dividend distribution type, such as cumulative or noncumulative. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.</p>
 </td>
     </tr>
     <tr>

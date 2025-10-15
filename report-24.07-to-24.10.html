@@ -24,7 +24,7 @@
     <img src="https://alfa-lang.io/_images/AlfaLogo4c4c4c.svg" alt="ALFA" width="88" style="vertical-align:baseline"/>
     Impact Analysis Report
 </h1>
-<p>Created: <span class="text-monospace">Wed Feb 12 22:17:12 UTC 2025</span></p>
+<p>Created: <span class="text-monospace">Wed Oct 15 21:28:56 UTC 2025</span></p>
 <h5>Between branch/tag version <span class="text-monospace text-secondary">v24.07</span> and <span class="text-monospace text-secondary">v24.10</span> </h5>
 <br/>
       
@@ -172,15 +172,15 @@
 <li class="list-group-item">
 <b>1.</b> 
 Record <code>fire.model.account</code>
-Field <code>lgd_irb</code> added
+Field <code>pd_irb</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>/# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/
-lgd_irb : double( 0.0, 1.0 ) ?
+        <span class="text-monospace"><pre>/# The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/
+pd_irb : double( 0.0, 1.0 ) ?
 </pre></span>
       </div>
     </div>
@@ -190,25 +190,6 @@ lgd_irb : double( 0.0, 1.0 ) ?
 
 <li class="list-group-item">
 <b>2.</b> 
-Record <code>fire.model.account</code>
-Field <code>orig_credit_score</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The credit score of the customer at origination of the product using a commercially available credit bureau score.  #/
-orig_credit_score : int ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>3.</b> 
 Record <code>fire.model.account</code>
 Field <code>lgd_floored</code> added
 
@@ -227,17 +208,36 @@ lgd_floored : double( 0.0, 1.0 ) ?
          </li><br/>
 
 <li class="list-group-item">
-<b>4.</b> 
+<b>3.</b> 
 Record <code>fire.model.account</code>
-Field <code>pd_irb</code> added
+Field <code>orig_credit_score</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>/# The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/
-pd_irb : double( 0.0, 1.0 ) ?
+        <span class="text-monospace"><pre>/# The credit score of the customer at origination of the product using a commercially available credit bureau score.  #/
+orig_credit_score : int ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>4.</b> 
+Record <code>fire.model.account</code>
+Field <code>lgd_irb</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/
+lgd_irb : double( 0.0, 1.0 ) ?
 </pre></span>
       </div>
     </div>
@@ -334,15 +334,15 @@ Field <code>lgd_irb</code> updated
 <li class="list-group-item">
 <b>9.</b> 
 Record <code>fire.model.derivative</code>
-Field <code>lgd_floored</code> added
+Field <code>lgd_irb</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>/# The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations.  #/
-lgd_floored : double( 0.0, 1.0 ) ?
+        <span class="text-monospace"><pre>/# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/
+lgd_irb : double( 0.0, 1.0 ) ?
 </pre></span>
       </div>
     </div>
@@ -372,15 +372,15 @@ pd_irb : double( 0.0, 1.0 ) ?
 <li class="list-group-item">
 <b>11.</b> 
 Record <code>fire.model.derivative</code>
-Field <code>lgd_irb</code> added
+Field <code>lgd_floored</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>/# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/
-lgd_irb : double( 0.0, 1.0 ) ?
+        <span class="text-monospace"><pre>/# The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations.  #/
+lgd_floored : double( 0.0, 1.0 ) ?
 </pre></span>
       </div>
     </div>
@@ -491,6 +491,25 @@ scra : fire.model.guarantor_scra ?
 <li class="list-group-item">
 <b>16.</b> 
 Record <code>fire.model.issuer</code>
+Field <code>scra</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# Grade calculated using the Basel Standardised Credit Risk Assessment  #/
+scra : fire.model.issuer_scra ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>17.</b> 
+Record <code>fire.model.issuer</code>
 Field <code>lgd_irb</code> updated
 
 <div class="ml-3"><font style="font-size:90%">
@@ -520,121 +539,7 @@ Field <code>lgd_irb</code> updated
          </li><br/>
 
 <li class="list-group-item">
-<b>17.</b> 
-Record <code>fire.model.issuer</code>
-Field <code>scra</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# Grade calculated using the Basel Standardised Credit Risk Assessment  #/
-scra : fire.model.issuer_scra ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
 <b>18.</b> 
-Record <code>fire.model.loan</code>
-Field <code>orig_limit_amount</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The original line of credit amount that was granted at the origination of the facility  #/
-orig_limit_amount : int ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>19.</b> 
-Record <code>fire.model.loan</code>
-Field <code>orig_notional</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The notional of the loan at origination.  #/
-orig_notional : int ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>20.</b> 
-Record <code>fire.model.loan</code>
-Field <code>servicing_currency_code</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# Identify the currency in which a loan shall be repaid.  #/
-servicing_currency_code : fire.model.currency_code ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>21.</b> 
-Record <code>fire.model.loan</code>
-Field <code>deferred_fees</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# Deferred fees are deferred payments subject to prepayment risk and not included in the balance.  #/
-deferred_fees : int ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>22.</b> 
-Record <code>fire.model.loan</code>
-Field <code>servicing</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The method by which the loan shall be repaid  #/
-servicing : fire.model.loan_servicing ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>23.</b> 
 Record <code>fire.model.loan</code>
 Field <code>orig_credit_score</code> added
 
@@ -653,75 +558,102 @@ orig_credit_score : int ?
          </li><br/>
 
 <li class="list-group-item">
+<b>19.</b> 
+Record <code>fire.model.loan</code>
+Field <code>servicing</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# The method by which the loan shall be repaid  #/
+servicing : fire.model.loan_servicing ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>20.</b> 
+Record <code>fire.model.loan</code>
+Field <code>orig_notional</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# The notional of the loan at origination.  #/
+orig_notional : int ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>21.</b> 
+Record <code>fire.model.loan</code>
+Field <code>servicing_currency_code</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# Identify the currency in which a loan shall be repaid.  #/
+servicing_currency_code : fire.model.currency_code ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>22.</b> 
+Record <code>fire.model.loan</code>
+Field <code>deferred_fees</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# Deferred fees are deferred payments subject to prepayment risk and not included in the balance.  #/
+deferred_fees : int ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>23.</b> 
+Record <code>fire.model.loan</code>
+Field <code>orig_limit_amount</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# The original line of credit amount that was granted at the origination of the facility  #/
+orig_limit_amount : int ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
 <b>24.</b> 
-Enum <code>fire.model.loan_purpose</code>
-Field <code>first_time_buyer_cstr</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>first_time_buyer_cstr</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>25.</b> 
-Enum <code>fire.model.loan_purpose</code>
-Field <code>remortgage_othr_cstr</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>remortgage_othr_cstr</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>26.</b> 
-Enum <code>fire.model.loan_purpose</code>
-Field <code>house_purchase_cstr</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>house_purchase_cstr</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>27.</b> 
-Enum <code>fire.model.loan_purpose</code>
-Field <code>object_finance_hq</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>object_finance_hq</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>28.</b> 
 Enum <code>fire.model.loan_purpose</code>
 Field <code>remortgage_construct</code> added
 
@@ -738,7 +670,24 @@ Field <code>remortgage_construct</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>29.</b> 
+<b>25.</b> 
+Enum <code>fire.model.loan_purpose</code>
+Field <code>object_finance_hq</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>object_finance_hq</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>26.</b> 
 Enum <code>fire.model.loan_purpose</code>
 Field <code>further_advance_cstr</code> added
 
@@ -748,6 +697,57 @@ Field <code>further_advance_cstr</code> added
         <b>Added snippet:</b>
         <br/>
         <span class="text-monospace"><pre>further_advance_cstr</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>27.</b> 
+Enum <code>fire.model.loan_purpose</code>
+Field <code>house_purchase_cstr</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>house_purchase_cstr</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>28.</b> 
+Enum <code>fire.model.loan_purpose</code>
+Field <code>first_time_buyer_cstr</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>first_time_buyer_cstr</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>29.</b> 
+Enum <code>fire.model.loan_purpose</code>
+Field <code>remortgage_othr_cstr</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>remortgage_othr_cstr</pre></span>
       </div>
     </div>
          </font></div>
@@ -774,23 +774,6 @@ Field <code>revolving</code> added
 <li class="list-group-item">
 <b>31.</b> 
 Enum <code>fire.model.loan_transaction_type</code>
-Field <code>acquisition</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>acquisition</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>32.</b> 
-Enum <code>fire.model.loan_transaction_type</code>
 Field <code>securitisation</code> added
 
 <div class="ml-3"><font style="font-size:90%">
@@ -806,7 +789,41 @@ Field <code>securitisation</code> added
          </li><br/>
 
 <li class="list-group-item">
+<b>32.</b> 
+Enum <code>fire.model.loan_transaction_type</code>
+Field <code>acquisition</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>acquisition</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
 <b>33.</b> 
+Enum <code>fire.model.loan_type</code>
+Field <code>charge_card</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>charge_card( "charge_card" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>34.</b> 
 Enum <code>fire.model.loan_type</code>
 Field <code>commercial_property_hr</code> added
 
@@ -823,7 +840,7 @@ Field <code>commercial_property_hr</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>34.</b> 
+<b>35.</b> 
 Enum <code>fire.model.loan_type</code>
 Field <code>education</code> added
 
@@ -840,7 +857,7 @@ Field <code>education</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>35.</b> 
+<b>36.</b> 
 Enum <code>fire.model.loan_type</code>
 Field <code>corporate_card</code> added
 
@@ -850,23 +867,6 @@ Field <code>corporate_card</code> added
         <b>Added snippet:</b>
         <br/>
         <span class="text-monospace"><pre>corporate_card( "corporate_card" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>36.</b> 
-Enum <code>fire.model.loan_type</code>
-Field <code>charge_card</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>charge_card( "charge_card" )</pre></span>
       </div>
     </div>
          </font></div>
@@ -893,6 +893,25 @@ Field <code>res_property_hr</code> added
 <li class="list-group-item">
 <b>38.</b> 
 Record <code>fire.model.security</code>
+Field <code>lgd_irb</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/
+lgd_irb : double( 0.0, 1.0 ) ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>39.</b> 
+Record <code>fire.model.security</code>
 Field <code>lgd_floored</code> added
 
 <div class="ml-3"><font style="font-size:90%">
@@ -910,7 +929,7 @@ lgd_floored : double( 0.0, 1.0 ) ?
          </li><br/>
 
 <li class="list-group-item">
-<b>39.</b> 
+<b>40.</b> 
 Record <code>fire.model.security</code>
 Field <code>pd_irb</code> added
 
@@ -921,25 +940,6 @@ Field <code>pd_irb</code> added
         <br/>
         <span class="text-monospace"><pre>/# The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/
 pd_irb : double( 0.0, 1.0 ) ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>40.</b> 
-Record <code>fire.model.security</code>
-Field <code>lgd_irb</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.  #/
-lgd_irb : double( 0.0, 1.0 ) ?
 </pre></span>
       </div>
     </div>

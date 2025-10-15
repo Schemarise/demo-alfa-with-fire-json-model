@@ -13,9 +13,14 @@
 | ----------- | ----------- |
 | bankruptcy_remote |   |
 | called_up |   |
+| conversion |   |
 | free_deliveries |   |
 | non_operational |   |
+| other |   |
 | paid_up |   |
+| redeemed |   |
+| refinanced |   |
+| replaced |   |
 | unsettled |   |
 
 <br/>

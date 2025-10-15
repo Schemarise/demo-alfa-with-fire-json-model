@@ -88,6 +88,18 @@
 </td>
     </tr>
     <tr>
+        <td>resolution_date</td>
+        <td><i>datetime</i> <b>?</b></td>
+        <td><p>Date of resolution of the defaulted facility.</p>
+</td>
+    </tr>
+    <tr>
+        <td>pd_irb_ec</td>
+        <td><i>double(0.0, 1.0)</i> <b>?</b></td>
+        <td><p>The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations.</p>
+</td>
+    </tr>
+    <tr>
         <td>id</td>
         <td>string</td>
         <td><p>The unique identifier for the record within the firm.</p>
@@ -101,7 +113,7 @@
     </tr>
     <tr>
         <td>lgd_floored</td>
-        <td><i>double</i> <b>?</b></td>
+        <td><i>double(0.0, 1.0)</i> <b>?</b></td>
         <td><p>The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations</p>
 </td>
     </tr>
@@ -118,6 +130,12 @@
 </td>
     </tr>
     <tr>
+        <td>servicer_id</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>This is the unique id to identify the servicer of a loan.</p>
+</td>
+    </tr>
+    <tr>
         <td>orig_limit_amount</td>
         <td><i>int</i> <b>?</b></td>
         <td><p>The original line of credit amount that was granted at the origination of the facility</p>
@@ -127,6 +145,18 @@
         <td>originator_id</td>
         <td><i>string</i> <b>?</b></td>
         <td><p>The unique identifier used by the financial institution to identify the originator of the loan product.</p>
+</td>
+    </tr>
+    <tr>
+        <td>participation_type</td>
+        <td><i><a href='UDT-fire.model.loan_participation_type.html'><img src='images/enumType.svg'/>&nbsp;fire.model.loan_participation_type</a></i> <b>?</b></td>
+        <td><p>For participated or syndicated credit facilities that have closed and settled, indicates the type of participation in the loan. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.</p>
+</td>
+    </tr>
+    <tr>
+        <td>review_date</td>
+        <td><i>datetime</i> <b>?</b></td>
+        <td><p>The currently scheduled review date for Counterparty exposure. This date should be set in the future. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.</p>
 </td>
     </tr>
     <tr>
@@ -166,14 +196,20 @@
     </tr>
     <tr>
         <td>pd_irb</td>
-        <td><i>double</i> <b>?</b></td>
-        <td><p>The probability of default as determined by internal rating-based methods. Percentage between 0 an 1.</p>
+        <td><i>double(0.0, 1.0)</i> <b>?</b></td>
+        <td><p>The probability of default as determined by internal rating-based methods. Percentage between 0 and 1.</p>
 </td>
     </tr>
     <tr>
         <td>fraud_loss</td>
         <td><i>int</i> <b>?</b></td>
         <td><p>The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment.</p>
+</td>
+    </tr>
+    <tr>
+        <td>ead</td>
+        <td><i>int</i> <b>?</b></td>
+        <td><p>The EAD field allows users to input monetary exposure-at-default values across the loan's lifecycle. Upon default, this field must be updated to reflect the final realised EAD value — that is, the actual exposure outstanding at the moment of default.</p>
 </td>
     </tr>
     <tr>
@@ -259,6 +295,12 @@
 </td>
     </tr>
     <tr>
+        <td>frr_id</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The internal facility risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority.</p>
+</td>
+    </tr>
+    <tr>
         <td>servicing</td>
         <td><i><a href='UDT-fire.model.loan_servicing.html'><img src='images/enumType.svg'/>&nbsp;fire.model.loan_servicing</a></i> <b>?</b></td>
         <td><p>The method by which the loan shall be repaid</p>
@@ -286,6 +328,12 @@
         <td>last_arrears_date</td>
         <td><i>datetime</i> <b>?</b></td>
         <td><p>The last date on which this loan was in arrears.</p>
+</td>
+    </tr>
+    <tr>
+        <td>behavioral_end_date</td>
+        <td><i>datetime</i> <b>?</b></td>
+        <td><p>Behavioral end date (as opposed to contractual). YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601</p>
 </td>
     </tr>
     <tr>
@@ -319,6 +367,12 @@
 </td>
     </tr>
     <tr>
+        <td>lgd_irb_ec</td>
+        <td><i>double(0.0, 1.0)</i> <b>?</b></td>
+        <td><p>The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations.</p>
+</td>
+    </tr>
+    <tr>
         <td>cb_haircut</td>
         <td><i>double(0.0, 1.0)</i> <b>?</b></td>
         <td><p>The haircut as determined by the firm's central bank</p>
@@ -343,6 +397,18 @@
 </td>
     </tr>
     <tr>
+        <td>accrual_status</td>
+        <td><i><a href='UDT-fire.model.loan_accrual_status.html'><img src='images/enumType.svg'/>&nbsp;fire.model.loan_accrual_status</a></i> <b>?</b></td>
+        <td><p>The accrual status of the loan or line of credit.</p>
+</td>
+    </tr>
+    <tr>
+        <td>repurchase_status</td>
+        <td><i><a href='UDT-fire.model.loan_repurchase_status.html'><img src='images/enumType.svg'/>&nbsp;fire.model.loan_repurchase_status</a></i> <b>?</b></td>
+        <td><p>The current status of the repurchase of the loan.</p>
+</td>
+    </tr>
+    <tr>
         <td>customer_id</td>
         <td><i>string</i> <b>?</b></td>
         <td><p>The unique identifier used by the financial institution to identify the customer.</p>
@@ -350,14 +416,20 @@
     </tr>
     <tr>
         <td>lgd_downturn</td>
-        <td><i>double</i> <b>?</b></td>
-        <td><p>The loss given default in the event of an economic downturn. Percentage between 0 an 1.</p>
+        <td><i>double(0.0, 1.0)</i> <b>?</b></td>
+        <td><p>The loss given default in the event of an economic downturn. Percentage between 0 and 1.</p>
 </td>
     </tr>
     <tr>
         <td>movement</td>
         <td><i><a href='UDT-fire.model.loan_movement.html'><img src='images/enumType.svg'/>&nbsp;fire.model.loan_movement</a></i> <b>?</b></td>
         <td><p>The movement parameter describes how the loan arrived to the firm.</p>
+</td>
+    </tr>
+    <tr>
+        <td>seniority</td>
+        <td><i><a href='UDT-fire.model.loan_seniority.html'><img src='images/enumType.svg'/>&nbsp;fire.model.loan_seniority</a></i> <b>?</b></td>
+        <td><p>The seniority of the security in the event of sale or bankruptcy of the issuer.</p>
 </td>
     </tr>
     <tr>
@@ -370,6 +442,12 @@
         <td>fees</td>
         <td><i>int</i> <b>?</b></td>
         <td><p>The fees associated with the loan.</p>
+</td>
+    </tr>
+    <tr>
+        <td>last_recovery_date</td>
+        <td><i>datetime</i> <b>?</b></td>
+        <td><p>Date of most recent recovery in the reporting quarter.</p>
 </td>
     </tr>
     <tr>
@@ -403,8 +481,8 @@
     </tr>
     <tr>
         <td>pd_retail_irb</td>
-        <td><i>double</i> <b>?</b></td>
-        <td><p>The retail probability of default as determined by internal rating-based methods. Percentage between 0 an 1.</p>
+        <td><i>double(0.0, 1.0)</i> <b>?</b></td>
+        <td><p>The retail probability of default as determined by internal rating-based methods. Percentage between 0 and 1.</p>
 </td>
     </tr>
     <tr>
@@ -423,6 +501,12 @@
         <td>encumbrance_end_date</td>
         <td><i>datetime</i> <b>?</b></td>
         <td><p>Date encumbrance amount goes to zero. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601</p>
+</td>
+    </tr>
+    <tr>
+        <td>facility_id</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The code assigned by the financial institution to identify a facility.</p>
 </td>
     </tr>
     <tr>
@@ -474,6 +558,12 @@
 </td>
     </tr>
     <tr>
+        <td>last_write_off_date</td>
+        <td><i>datetime</i> <b>?</b></td>
+        <td><p>Date of Financial Institution's most recent Write Off in the reporting quarter.</p>
+</td>
+    </tr>
+    <tr>
         <td>el_irb</td>
         <td><i>double</i> <b>?</b></td>
         <td><p>The best estimate of expected loss when in default.</p>
@@ -501,6 +591,12 @@
         <td>guarantor_id</td>
         <td><i>string</i> <b>?</b></td>
         <td><p>The unique identifier for the guarantor of the loan.</p>
+</td>
+    </tr>
+    <tr>
+        <td>participation_int</td>
+        <td><i>double</i> <b>?</b></td>
+        <td><p>For participated or syndicated credit facilities that have closed and settled, the percentage of the total loan commitment held by the reporting entity. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.</p>
 </td>
     </tr>
     <tr>
@@ -564,9 +660,21 @@
 </td>
     </tr>
     <tr>
+        <td>default_date</td>
+        <td><i>datetime</i> <b>?</b></td>
+        <td><p>Date of default.</p>
+</td>
+    </tr>
+    <tr>
         <td>encumbrance_amount</td>
         <td><i>int(0, *)</i> <b>?</b></td>
         <td><p>The amount of the loan that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.</p>
+</td>
+    </tr>
+    <tr>
+        <td>parent_facility_id</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The parent code assigned by the financial institution to identify a facility.</p>
 </td>
     </tr>
     <tr>
@@ -606,8 +714,8 @@
     </tr>
     <tr>
         <td>lgd_irb</td>
-        <td><i>double</i> <b>?</b></td>
-        <td><p>The loss given default as determined by internal rating-based methods.</p>
+        <td><i>double(0.0, 1.0)</i> <b>?</b></td>
+        <td><p>The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.</p>
 </td>
     </tr>
     <tr>
@@ -620,6 +728,12 @@
         <td>cum_write_offs</td>
         <td><i>int(0, *)</i> <b>?</b></td>
         <td><p>The portion of the loan which has been written off.</p>
+</td>
+    </tr>
+    <tr>
+        <td>ead_irb_ec</td>
+        <td><i>int</i> <b>?</b></td>
+        <td><p>The expected gross dollar exposure for each facility upon a borrower's default as determined by internal ratings-based approach. This value is used in economic capital calculations.</p>
 </td>
     </tr>
     <tr>

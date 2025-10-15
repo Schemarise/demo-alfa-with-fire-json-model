@@ -105,6 +105,18 @@
 </td>
     </tr>
     <tr>
+        <td>pd_irb_ec</td>
+        <td><i>double(0.0, 1.0)</i> <b>?</b></td>
+        <td><p>The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations.</p>
+</td>
+    </tr>
+    <tr>
+        <td>birr_curve_id</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The ID of the curve containing historical Borrower Internal Risk Ratings (BIRR) for this entity. The curve must be of type 'risk_rating'.</p>
+</td>
+    </tr>
+    <tr>
         <td>national_reporting_code</td>
         <td><i>string</i> <b>?</b></td>
         <td><p>Unique identifier established by the national reporting system</p>
@@ -132,6 +144,12 @@
         <td>boe_industry_code</td>
         <td><i>string</i> <b>?</b></td>
         <td><p>Bank of England industry code.</p>
+</td>
+    </tr>
+    <tr>
+        <td>bankruptcy_type</td>
+        <td><i><a href='UDT-fire.model.customer_bankruptcy_type.html'><img src='images/enumType.svg'/>&nbsp;fire.model.customer_bankruptcy_type</a></i> <b>?</b></td>
+        <td><p>The bankruptcy chapter of the borrower.</p>
 </td>
     </tr>
     <tr>
@@ -207,9 +225,15 @@
 </td>
     </tr>
     <tr>
+        <td>mic_code</td>
+        <td><i>string(4, 4)</i> <b>?</b></td>
+        <td><p>The Stock Exchange where the company's primary stock trades</p>
+</td>
+    </tr>
+    <tr>
         <td>pd_irb</td>
         <td><i>double(0.0, 1.0)</i> <b>?</b></td>
-        <td><p>The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.</p>
+        <td><p>The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.</p>
 </td>
     </tr>
     <tr>
@@ -255,6 +279,12 @@
 </td>
     </tr>
     <tr>
+        <td>birr_id</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The unique identifier of the Borrower Internal Risk Rating (BIRR), representing an internally assigned risk assessment for a customer based on their creditworthiness and financial stability.</p>
+</td>
+    </tr>
+    <tr>
         <td>cqs_standardised</td>
         <td><i>int(1, 17)</i> <b>?</b></td>
         <td><p>The credit quality step for standardised approach.</p>
@@ -293,7 +323,7 @@
     <tr>
         <td>incurred_cva</td>
         <td><i>int</i> <b>?</b></td>
-        <td><p>The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.</p>
+        <td><p>The amount of credit valuation adjustments being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.</p>
 </td>
     </tr>
     <tr>
@@ -317,7 +347,7 @@
     <tr>
         <td>lgd_irb</td>
         <td><i>double(0.0, 1.0)</i> <b>?</b></td>
-        <td><p>The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.</p>
+        <td><p>The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.</p>
 </td>
     </tr>
     <tr>
@@ -336,6 +366,12 @@
         <td>df_cm</td>
         <td><i>int</i> <b>?</b></td>
         <td><p>The sum of pre-funded contributions of all clearing members of the QCCP in accordance with Article 50c of Regulation (EU) No 648/2012.</p>
+</td>
+    </tr>
+    <tr>
+        <td>postal_code</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The post (zip) code in which the entity is domiciled.</p>
 </td>
     </tr>
     <tr>

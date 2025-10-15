@@ -1,0 +1,2188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Impact Analysis Report</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.js"></script>
+  
+</head>
+<div class="container-fluid" style="font-size:90%">
+    
+
+<body>
+<h1>
+    <img src="https://alfa-lang.io/_images/AlfaLogo4c4c4c.svg" alt="ALFA" width="88" style="vertical-align:baseline"/>
+    Impact Analysis Report
+</h1>
+<p>Created: <span class="text-monospace">Wed Oct 15 21:29:36 UTC 2025</span></p>
+<h5>Between branch/tag version <span class="text-monospace text-secondary">v25.07</span> and <span class="text-monospace text-secondary">v25.10</span> </h5>
+<br/>
+      
+
+<h4>Change Analysis Summary</h4>
+
+  <div class="progress" style="height: 20px;">
+
+
+
+
+    <div class="progress-bar" role="progressbar" style="width:1px; background-color:White;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+             <div class="progress-bar" role="progressbar" style="width:47%; background-color:MediumSeaGreen;" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100">47%</div>
+         
+
+
+
+    <div class="progress-bar" role="progressbar" style="width:1px; background-color:White;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+             <div class="progress-bar" role="progressbar" style="width:53%; background-color:Coral;" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100">53%</div>
+         
+
+  </div>
+
+<br/>
+
+<table class="table table-hover table-responsive table-sm">
+  <thead>
+    <tr>
+      <th scope="col">Change Type</th>
+      <th scope="col">Total Changes</th>
+      <th scope="col">Percentage</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td  class="text-secondary" >Breaking API Changes</a></td> 
+      <td  class="text-secondary" >0</td>
+      <td  class="text-secondary" >0%</td>
+      <td style="width:12px; background-color:White;"></td>
+    </tr>
+       
+
+    <tr>
+      <td  class="text-secondary" >Potential API Breaking Changes</a></td> 
+      <td  class="text-secondary" >0</td>
+      <td  class="text-secondary" >0%</td>
+      <td style="width:12px; background-color:White;"></td>
+    </tr>
+       
+
+    <tr>
+      <td  class="text-secondary" >Non-breaking API Changes</a></td> 
+      <td  class="text-secondary" >0</td>
+      <td  class="text-secondary" >0%</td>
+      <td style="width:12px; background-color:White;"></td>
+    </tr>
+       
+
+    <tr>
+      <td  class="text-secondary" >Breaking Data Structure Changes</a></td> 
+      <td  class="text-secondary" >0</td>
+      <td  class="text-secondary" >0%</td>
+      <td style="width:12px; background-color:White;"></td>
+    </tr>
+       
+
+    <tr>
+      <td ><a href="#DataStructureUpsert">Non-breaking Data Structure Changes</a></td> 
+      <td >60</td>
+      <td >47%</td>
+      <td style="width:12px; background-color:MediumSeaGreen;"></td>
+    </tr>
+       
+
+    <tr>
+      <td  class="text-secondary" >Metadata Changes</a></td> 
+      <td  class="text-secondary" >0</td>
+      <td  class="text-secondary" >0%</td>
+      <td style="width:12px; background-color:White;"></td>
+    </tr>
+       
+
+    <tr>
+      <td  class="text-secondary" >Implementation Logic Changes</a></td> 
+      <td  class="text-secondary" >0</td>
+      <td  class="text-secondary" >0%</td>
+      <td style="width:12px; background-color:White;"></td>
+    </tr>
+       
+
+    <tr>
+      <td  class="text-secondary" >Data Quality Changes</a></td> 
+      <td  class="text-secondary" >0</td>
+      <td  class="text-secondary" >0%</td>
+      <td style="width:12px; background-color:White;"></td>
+    </tr>
+       
+
+    <tr>
+      <td ><a href="#IndirectBreakingDataStructureChange">Indirect impact from other changes</a></td> 
+      <td >68</td>
+      <td >53%</td>
+      <td style="width:12px; background-color:Coral;"></td>
+    </tr>
+       
+
+    <tr>
+      <td  class="text-secondary" >Documentation Changes</a></td> 
+      <td  class="text-secondary" >0</td>
+      <td  class="text-secondary" >0%</td>
+      <td style="width:12px; background-color:White;"></td>
+    </tr>
+       
+    <tr>
+      <td></td>
+      <td><b>128</b></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr/>
+
+<h4>Change Analysis Details</h4>
+
+
+
+
+
+
+<button class="btn btn-light position-relative"  style="background-color:#f2f2f2">
+  <a name="DataStructureUpsert"><b>Non-breaking Data Structure Changes</b></a>
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning" >
+    60
+  </span>
+</button>
+<div class="card" style="background-color:#f2f2f2; border:0px; width: 90%;">
+  <div class="card-body">
+
+<ul class="list-group">
+
+<li class="list-group-item">
+<b>1.</b> 
+Record <code>fire.model.account</code>
+Field <code>orig_limit_amount</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# The original line of credit amount that was granted at the origination of the facility  #/
+orig_limit_amount : int ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>2.</b> 
+Record <code>fire.model.account</code>
+Field <code>cum_write_offs</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# The portion of the loan which has been written off.  #/
+cum_write_offs : int( 0, * ) ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>3.</b> 
+Enum <code>fire.model.account_purpose</code>
+Field <code>int_on_liability</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>int_on_liability( "int_on_liability" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>4.</b> 
+Enum <code>fire.model.account_purpose</code>
+Field <code>int_on_asset</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>int_on_asset( "int_on_asset" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>5.</b> 
+Enum <code>fire.model.account_purpose</code>
+Field <code>nol_carryback</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>nol_carryback( "nol_carryback" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>6.</b> 
+Enum <code>fire.model.account_purpose</code>
+Field <code>msr</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>msr( "msr" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>7.</b> 
+Enum <code>fire.model.account_type</code>
+Field <code>valuation_allowance</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>valuation_allowance</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>8.</b> 
+Enum <code>fire.model.currency_code</code>
+Field <code>XAD</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>XAD</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>9.</b> 
+Enum <code>fire.model.currency_code</code>
+Field <code>SLE</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>SLE</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>10.</b> 
+Enum <code>fire.model.currency_code</code>
+Field <code>ZWG</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>ZWG</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>11.</b> 
+Enum <code>fire.model.currency_code</code>
+Field <code>VED</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>VED</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>12.</b> 
+Enum <code>fire.model.currency_code</code>
+Field <code>XCG</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>XCG</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>13.</b> 
+Record <code>fire.model.derivative</code>
+Field <code>acc_fv_change_before_taxes</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# Accumulated change in fair value before taxes.  #/
+acc_fv_change_before_taxes : int ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>14.</b> 
+Enum <code>fire.model.derivative_base_rate</code>
+Field <code>other</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>other</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>15.</b> 
+Enum <code>fire.model.derivative_base_rate</code>
+Field <code>sofr_1m</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>sofr_1m</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>16.</b> 
+Enum <code>fire.model.derivative_base_rate</code>
+Field <code>euribor</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>euribor</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>17.</b> 
+Enum <code>fire.model.derivative_base_rate</code>
+Field <code>sofr_3m</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>sofr_3m</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>18.</b> 
+Enum <code>fire.model.derivative_base_rate</code>
+Field <code>bbsw_3m</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>bbsw_3m</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>19.</b> 
+Enum <code>fire.model.derivative_base_rate</code>
+Field <code>euribor_6m</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>euribor_6m</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>20.</b> 
+Enum <code>fire.model.derivative_base_rate</code>
+Field <code>bbsw</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>bbsw</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>21.</b> 
+Enum <code>fire.model.derivative_base_rate</code>
+Field <code>euribor_1m</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>euribor_1m</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>22.</b> 
+Enum <code>fire.model.derivative_base_rate</code>
+Field <code>euribor_3m</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>euribor_3m</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>23.</b> 
+Enum <code>fire.model.derivative_base_rate</code>
+Field <code>sofr_6m</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>sofr_6m</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>24.</b> 
+Enum <code>fire.model.derivative_base_rate</code>
+Field <code>sofr</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>sofr</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>25.</b> 
+Enum <code>fire.model.derivative_base_rate</code>
+Field <code>pboc</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>pboc</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>26.</b> 
+Enum <code>fire.model.loan_arrears_arrangement</code>
+Field <code>settlement</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>settlement</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>27.</b> 
+Enum <code>fire.model.loan_arrears_arrangement</code>
+Field <code>short_sale</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>short_sale</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>28.</b> 
+Enum <code>fire.model.loan_repayment_type</code>
+Field <code>option_arm</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>option_arm</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>29.</b> 
+Enum <code>fire.model.security_base_rate</code>
+Field <code>other</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>other</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>30.</b> 
+Enum <code>fire.model.security_base_rate</code>
+Field <code>sofr_3m</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>sofr_3m</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>31.</b> 
+Enum <code>fire.model.security_base_rate</code>
+Field <code>pboc</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>pboc</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>32.</b> 
+Enum <code>fire.model.security_base_rate</code>
+Field <code>sofr_6m</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>sofr_6m</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>33.</b> 
+Enum <code>fire.model.security_base_rate</code>
+Field <code>euribor_1m</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>euribor_1m</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>34.</b> 
+Enum <code>fire.model.security_base_rate</code>
+Field <code>euribor</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>euribor</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>35.</b> 
+Enum <code>fire.model.security_base_rate</code>
+Field <code>bbsw</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>bbsw</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>36.</b> 
+Enum <code>fire.model.security_base_rate</code>
+Field <code>bbsw_3m</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>bbsw_3m</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>37.</b> 
+Enum <code>fire.model.security_base_rate</code>
+Field <code>sofr</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>sofr</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>38.</b> 
+Enum <code>fire.model.security_base_rate</code>
+Field <code>euribor_6m</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>euribor_6m</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>39.</b> 
+Enum <code>fire.model.security_base_rate</code>
+Field <code>sofr_1m</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>sofr_1m</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>40.</b> 
+Enum <code>fire.model.security_base_rate</code>
+Field <code>euribor_3m</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>euribor_3m</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>41.</b> 
+Enum <code>fire.model.security_rate_type</code>
+Field <code>fixed_to_float</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>fixed_to_float( "fixed_to_float" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>42.</b> 
+Enum <code>fire.model.security_rate_type</code>
+Field <code>fixed_to_fixed</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>fixed_to_fixed( "fixed_to_fixed" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>43.</b> 
+Enum <code>fire.model.security_rate_type</code>
+Field <code>step_up</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>step_up( "step_up" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>44.</b> 
+Enum <code>fire.model.security_status</code>
+Field <code>conversion</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>conversion</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>45.</b> 
+Enum <code>fire.model.security_status</code>
+Field <code>redeemed</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>redeemed</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>46.</b> 
+Enum <code>fire.model.security_status</code>
+Field <code>replaced</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>replaced</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>47.</b> 
+Enum <code>fire.model.security_status</code>
+Field <code>refinanced</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>refinanced</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>48.</b> 
+Enum <code>fire.model.security_status</code>
+Field <code>other</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>other</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>49.</b> 
+Enum <code>fire.model.security_type</code>
+Field <code>reit_pref</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>reit_pref</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>50.</b> 
+Enum <code>fire.model.security_type</code>
+Field <code>cs_usg</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>cs_usg</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>51.</b> 
+Enum <code>fire.model.security_type</code>
+Field <code>trups_usg_pref</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>trups_usg_pref</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>52.</b> 
+Enum <code>fire.model.security_type</code>
+Field <code>cs_warrant</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>cs_warrant</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>53.</b> 
+Enum <code>fire.model.security_type</code>
+Field <code>cpp</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>cpp</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>54.</b> 
+Enum <code>fire.model.security_type</code>
+Field <code>cpp_tarp_pref</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>cpp_tarp_pref</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>55.</b> 
+Enum <code>fire.model.security_type</code>
+Field <code>common</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>common</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>56.</b> 
+Enum <code>fire.model.security_type</code>
+Field <code>ncpp_convertible</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>ncpp_convertible</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>57.</b> 
+Enum <code>fire.model.security_type</code>
+Field <code>trups</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>trups</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>58.</b> 
+Enum <code>fire.model.security_type</code>
+Field <code>mcp</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>mcp</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>59.</b> 
+Enum <code>fire.model.security_type</code>
+Field <code>mcp_usg</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>mcp_usg</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>60.</b> 
+Enum <code>fire.model.security_type</code>
+Field <code>ncpp</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>ncpp</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li>
+</ul>
+
+  </div>
+</div>
+
+    
+<br/>
+<br/>
+      
+
+
+
+
+
+<button class="btn btn-light position-relative"  style="background-color:#f2f2f2">
+  <a name="IndirectBreakingDataStructureChange"><b>Indirect impact from other changes</b></a>
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning" >
+    68
+  </span>
+</button>
+<div class="card" style="background-color:#f2f2f2; border:0px; width: 90%;">
+  <div class="card-body">
+
+<ul class="list-group">
+
+<li class="list-group-item">
+<b>1.</b> 
+Record <code>fire.model.adjustment</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.adjustment > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>2.</b> 
+Record <code>fire.model.agreement</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.agreement > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>3.</b> 
+Record <code>fire.model.batch</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch > fire.model.security > fire.model.security_type > fire.model.batch > fire.model.batch__data1 > fire.model.security > fire.model.security_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>4.</b> 
+Record <code>fire.model.batch</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch > fire.model.account > fire.model.account_purpose > fire.model.batch > fire.model.batch__data1 > fire.model.account > fire.model.account_purpose
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>5.</b> 
+Record <code>fire.model.batch</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch > fire.model.derivative > fire.model.batch > fire.model.batch__data1 > fire.model.derivative
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>6.</b> 
+Record <code>fire.model.batch</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch > fire.model.derivative > fire.model.derivative_base_rate > fire.model.batch > fire.model.batch__data1 > fire.model.derivative > fire.model.derivative_base_rate
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>7.</b> 
+Record <code>fire.model.batch</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch > fire.model.loan > fire.model.currency_code > fire.model.batch > fire.model.derivative_cash_flow > fire.model.currency_code > fire.model.batch > fire.model.collateral > fire.model.currency_code > fire.model.batch > fire.model.guarantor > fire.model.currency_code > fire.model.batch > fire.model.exchange_rate > fire.model.currency_code > fire.model.batch > fire.model.derivative > fire.model.currency_code > fire.model.batch > fire.model.security > fire.model.currency_code > fire.model.batch > fire.model.customer > fire.model.currency_code > fire.model.batch > fire.model.account > fire.model.currency_code > fire.model.batch > fire.model.issuer > fire.model.currency_code > fire.model.batch > fire.model.loan_transaction > fire.model.currency_code > fire.model.batch > fire.model.batch__data1 > fire.model.issuer > fire.model.currency_code > fire.model.batch > fire.model.batch__data1 > fire.model.collateral > fire.model.currency_code > fire.model.batch > fire.model.batch__data1 > fire.model.loan > fire.model.currency_code > fire.model.batch > fire.model.batch__data1 > fire.model.exchange_rate > fire.model.currency_code > fire.model.batch > fire.model.batch__data1 > fire.model.account > fire.model.currency_code > fire.model.batch > fire.model.batch__data1 > fire.model.derivative_cash_flow > fire.model.currency_code > fire.model.batch > fire.model.batch__data1 > fire.model.guarantor > fire.model.currency_code > fire.model.batch > fire.model.batch__data1 > fire.model.customer > fire.model.currency_code > fire.model.batch > fire.model.batch__data1 > fire.model.loan_transaction > fire.model.currency_code > fire.model.batch > fire.model.batch__data1 > fire.model.derivative > fire.model.currency_code > fire.model.batch > fire.model.batch__data1 > fire.model.security > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>8.</b> 
+Record <code>fire.model.batch</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch > fire.model.security > fire.model.security_base_rate > fire.model.batch > fire.model.batch__data1 > fire.model.security > fire.model.security_base_rate
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>9.</b> 
+Record <code>fire.model.batch</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch > fire.model.account > fire.model.batch > fire.model.batch__data1 > fire.model.account
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>10.</b> 
+Record <code>fire.model.batch</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch > fire.model.loan > fire.model.loan_arrears_arrangement > fire.model.batch > fire.model.batch__data1 > fire.model.loan > fire.model.loan_arrears_arrangement
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>11.</b> 
+Record <code>fire.model.batch</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch > fire.model.account > fire.model.account_type > fire.model.batch > fire.model.batch__data1 > fire.model.account > fire.model.account_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>12.</b> 
+Record <code>fire.model.batch</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch > fire.model.security > fire.model.security_status > fire.model.batch > fire.model.batch__data1 > fire.model.security > fire.model.security_status
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>13.</b> 
+Record <code>fire.model.batch</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch > fire.model.loan > fire.model.loan_repayment_type > fire.model.batch > fire.model.batch__data1 > fire.model.loan > fire.model.loan_repayment_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>14.</b> 
+Record <code>fire.model.batch</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch > fire.model.security > fire.model.security_rate_type > fire.model.batch > fire.model.batch__data1 > fire.model.security > fire.model.security_rate_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>15.</b> 
+Record <code>fire.model.batch__data1</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch__data1 > fire.model.security > fire.model.security_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>16.</b> 
+Record <code>fire.model.batch__data1</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch__data1 > fire.model.account > fire.model.account_purpose
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>17.</b> 
+Record <code>fire.model.batch__data1</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch__data1 > fire.model.derivative
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>18.</b> 
+Record <code>fire.model.batch__data1</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch__data1 > fire.model.derivative > fire.model.derivative_base_rate
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>19.</b> 
+Record <code>fire.model.batch__data1</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch__data1 > fire.model.loan > fire.model.currency_code > fire.model.batch__data1 > fire.model.derivative_cash_flow > fire.model.currency_code > fire.model.batch__data1 > fire.model.collateral > fire.model.currency_code > fire.model.batch__data1 > fire.model.guarantor > fire.model.currency_code > fire.model.batch__data1 > fire.model.exchange_rate > fire.model.currency_code > fire.model.batch__data1 > fire.model.customer > fire.model.currency_code > fire.model.batch__data1 > fire.model.derivative > fire.model.currency_code > fire.model.batch__data1 > fire.model.account > fire.model.currency_code > fire.model.batch__data1 > fire.model.issuer > fire.model.currency_code > fire.model.batch__data1 > fire.model.security > fire.model.currency_code > fire.model.batch__data1 > fire.model.loan_transaction > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>20.</b> 
+Record <code>fire.model.batch__data1</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch__data1 > fire.model.security > fire.model.security_base_rate
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>21.</b> 
+Record <code>fire.model.batch__data1</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch__data1 > fire.model.account
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>22.</b> 
+Record <code>fire.model.batch__data1</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch__data1 > fire.model.loan > fire.model.loan_arrears_arrangement
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>23.</b> 
+Record <code>fire.model.batch__data1</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch__data1 > fire.model.account > fire.model.account_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>24.</b> 
+Record <code>fire.model.batch__data1</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch__data1 > fire.model.security > fire.model.security_status
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>25.</b> 
+Record <code>fire.model.batch__data1</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch__data1 > fire.model.loan > fire.model.loan_repayment_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>26.</b> 
+Record <code>fire.model.batch__data1</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.batch__data1 > fire.model.security > fire.model.security_rate_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>27.</b> 
+Record <code>fire.model.collateral</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.collateral > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>28.</b> 
+Record <code>fire.model.curve</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.curve > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>29.</b> 
+Record <code>fire.model.customer</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.customer > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>30.</b> 
+Record <code>fire.model.derivative_cash_flow</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.derivative_cash_flow > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>31.</b> 
+Record <code>fire.model.entity</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.entity > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>32.</b> 
+Record <code>fire.model.example</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example > fire.model.example_data > fire.model.security > fire.model.security_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>33.</b> 
+Record <code>fire.model.example</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example > fire.model.example_data > fire.model.account > fire.model.account_purpose
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>34.</b> 
+Record <code>fire.model.example</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example > fire.model.example_data > fire.model.derivative
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>35.</b> 
+Record <code>fire.model.example</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example > fire.model.example_data > fire.model.derivative > fire.model.derivative_base_rate
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>36.</b> 
+Record <code>fire.model.example</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example > fire.model.example_data > fire.model.loan > fire.model.currency_code > fire.model.example > fire.model.example_data > fire.model.derivative_cash_flow > fire.model.currency_code > fire.model.example > fire.model.example_data > fire.model.collateral > fire.model.currency_code > fire.model.example > fire.model.example_data > fire.model.guarantor > fire.model.currency_code > fire.model.example > fire.model.example_data > fire.model.exchange_rate > fire.model.currency_code > fire.model.example > fire.model.example_data > fire.model.derivative > fire.model.currency_code > fire.model.example > fire.model.example_data > fire.model.security > fire.model.currency_code > fire.model.example > fire.model.example_data > fire.model.adjustment > fire.model.currency_code > fire.model.example > fire.model.example_data > fire.model.agreement > fire.model.currency_code > fire.model.example > fire.model.example_data > fire.model.customer > fire.model.currency_code > fire.model.example > fire.model.example_data > fire.model.account > fire.model.currency_code > fire.model.example > fire.model.example_data > fire.model.issuer > fire.model.currency_code > fire.model.example > fire.model.example_data > fire.model.loan_transaction > fire.model.currency_code > fire.model.example > fire.model.example_data > fire.model.curve > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>37.</b> 
+Record <code>fire.model.example</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example > fire.model.example_data > fire.model.security > fire.model.security_base_rate
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>38.</b> 
+Record <code>fire.model.example</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example > fire.model.example_data > fire.model.account
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>39.</b> 
+Record <code>fire.model.example</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example > fire.model.example_data > fire.model.loan > fire.model.loan_arrears_arrangement
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>40.</b> 
+Record <code>fire.model.example</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example > fire.model.example_data > fire.model.account > fire.model.account_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>41.</b> 
+Record <code>fire.model.example</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example > fire.model.example_data > fire.model.security > fire.model.security_status
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>42.</b> 
+Record <code>fire.model.example</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example > fire.model.example_data > fire.model.loan > fire.model.loan_repayment_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>43.</b> 
+Record <code>fire.model.example</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example > fire.model.example_data > fire.model.security > fire.model.security_rate_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>44.</b> 
+Record <code>fire.model.example_data</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example_data > fire.model.security > fire.model.security_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>45.</b> 
+Record <code>fire.model.example_data</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example_data > fire.model.account > fire.model.account_purpose
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>46.</b> 
+Record <code>fire.model.example_data</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example_data > fire.model.derivative
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>47.</b> 
+Record <code>fire.model.example_data</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example_data > fire.model.derivative > fire.model.derivative_base_rate
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>48.</b> 
+Record <code>fire.model.example_data</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example_data > fire.model.loan > fire.model.currency_code > fire.model.example_data > fire.model.derivative_cash_flow > fire.model.currency_code > fire.model.example_data > fire.model.collateral > fire.model.currency_code > fire.model.example_data > fire.model.guarantor > fire.model.currency_code > fire.model.example_data > fire.model.exchange_rate > fire.model.currency_code > fire.model.example_data > fire.model.derivative > fire.model.currency_code > fire.model.example_data > fire.model.security > fire.model.currency_code > fire.model.example_data > fire.model.adjustment > fire.model.currency_code > fire.model.example_data > fire.model.agreement > fire.model.currency_code > fire.model.example_data > fire.model.customer > fire.model.currency_code > fire.model.example_data > fire.model.account > fire.model.currency_code > fire.model.example_data > fire.model.issuer > fire.model.currency_code > fire.model.example_data > fire.model.loan_transaction > fire.model.currency_code > fire.model.example_data > fire.model.curve > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>49.</b> 
+Record <code>fire.model.example_data</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example_data > fire.model.security > fire.model.security_base_rate
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>50.</b> 
+Record <code>fire.model.example_data</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example_data > fire.model.account
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>51.</b> 
+Record <code>fire.model.example_data</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example_data > fire.model.loan > fire.model.loan_arrears_arrangement
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>52.</b> 
+Record <code>fire.model.example_data</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example_data > fire.model.account > fire.model.account_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>53.</b> 
+Record <code>fire.model.example_data</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example_data > fire.model.security > fire.model.security_status
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>54.</b> 
+Record <code>fire.model.example_data</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example_data > fire.model.loan > fire.model.loan_repayment_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>55.</b> 
+Record <code>fire.model.example_data</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.example_data > fire.model.security > fire.model.security_rate_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>56.</b> 
+Record <code>fire.model.exchange_rate</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.exchange_rate > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>57.</b> 
+Record <code>fire.model.guarantor</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.guarantor > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>58.</b> 
+Record <code>fire.model.issuer</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.issuer > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>59.</b> 
+Record <code>fire.model.loan</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.loan > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>60.</b> 
+Record <code>fire.model.loan</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.loan > fire.model.loan_arrears_arrangement
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>61.</b> 
+Record <code>fire.model.loan</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.loan > fire.model.loan_repayment_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>62.</b> 
+Record <code>fire.model.loan_cash_flow</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.loan_cash_flow > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>63.</b> 
+Record <code>fire.model.loan_transaction</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.loan_transaction > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>64.</b> 
+Record <code>fire.model.security</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.security > fire.model.security_type
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>65.</b> 
+Record <code>fire.model.security</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.security > fire.model.currency_code
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>66.</b> 
+Record <code>fire.model.security</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.security > fire.model.security_base_rate
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>67.</b> 
+Record <code>fire.model.security</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.security > fire.model.security_status
+    </div>
+  </div>
+     
+
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>68.</b> 
+Record <code>fire.model.security</code> updated
+<br/>
+    <div class="card ml-3" style="background-color:#ffffe6;">
+      <div class="card-body"  style="padding:2px">
+        fire.model.security > fire.model.security_rate_type
+    </div>
+  </div>
+     
+
+       
+         </li>
+</ul>
+
+  </div>
+</div>
+
+    
+<br/>
+<br/>
+      
+
+     
+
+</div>
+</body>
+</html>
+      

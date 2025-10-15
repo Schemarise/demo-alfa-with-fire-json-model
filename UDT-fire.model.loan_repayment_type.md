@@ -13,6 +13,7 @@
 | ----------- | ----------- |
 | combined |   |
 | interest_only |   |
+| option_arm |   |
 | other |   |
 | repayment |   |
 

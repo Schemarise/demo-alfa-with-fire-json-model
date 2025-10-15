@@ -39,12 +39,6 @@
 </td>
     </tr>
     <tr>
-        <td>pd_irb</td>
-        <td><i>double(0.0, 1.0)</i> <b>?</b></td>
-        <td><p>The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.</p>
-</td>
-    </tr>
-    <tr>
         <td>headcount</td>
         <td><i>int</i> <b>?</b></td>
         <td><p>The number of full time staff.</p>
@@ -54,36 +48,6 @@
         <td>total_assets</td>
         <td><i>int</i> <b>?</b></td>
         <td><p>The annual balance sheet total of the entity as at the last accounting reference date.</p>
-</td>
-    </tr>
-    <tr>
-        <td>risk_country_code</td>
-        <td><i><a href='UDT-fire.model.country_code.html'><img src='images/enumType.svg'/>&nbsp;fire.model.country_code</a></i> <b>?</b></td>
-        <td><p>Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1</p>
-</td>
-    </tr>
-    <tr>
-        <td>internal_rating</td>
-        <td><i><a href='UDT-fire.model.guarantor_internal_rating.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_internal_rating</a></i> <b>?</b></td>
-        <td><p>Categorization of unrated exposure</p>
-</td>
-    </tr>
-    <tr>
-        <td>dbrs_st</td>
-        <td><i><a href='UDT-fire.model.guarantor_dbrs_st.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_dbrs_st</a></i> <b>?</b></td>
-        <td><p>DBRS short term credit ratings</p>
-</td>
-    </tr>
-    <tr>
-        <td>kbra_lt</td>
-        <td><i><a href='UDT-fire.model.guarantor_kbra_lt.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_kbra_lt</a></i> <b>?</b></td>
-        <td><p>KBRA long term credit ratings</p>
-</td>
-    </tr>
-    <tr>
-        <td>scra</td>
-        <td><i><a href='UDT-fire.model.guarantor_scra.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_scra</a></i> <b>?</b></td>
-        <td><p>Grade calculated using the Basel Standardised Credit Risk Assessment</p>
 </td>
     </tr>
     <tr>
@@ -102,12 +66,6 @@
         <td>fitch_lt</td>
         <td><i><a href='UDT-fire.model.guarantor_fitch_lt.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_fitch_lt</a></i> <b>?</b></td>
         <td><p>Fitch long term credit ratings</p>
-</td>
-    </tr>
-    <tr>
-        <td>currency_code</td>
-        <td><i><a href='UDT-fire.model.currency_code.html'><img src='images/enumType.svg'/>&nbsp;fire.model.currency_code</a></i> <b>?</b></td>
-        <td><p>Currency in accordance with ISO 4217. It should be consistent with the figures for turnover and total assets.</p>
 </td>
     </tr>
     <tr>
@@ -141,15 +99,15 @@
 </td>
     </tr>
     <tr>
-        <td>lei_code</td>
-        <td><i>string(20, 20)</i> <b>?</b></td>
-        <td><p>The LEI code for the legal entity (for corporates).</p>
+        <td>pd_irb_ec</td>
+        <td><i>double(0.0, 1.0)</i> <b>?</b></td>
+        <td><p>The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations.</p>
 </td>
     </tr>
     <tr>
-        <td>cqs_standardised</td>
-        <td><i>int(1, 17)</i> <b>?</b></td>
-        <td><p>The credit quality step for standardised approach.</p>
+        <td>birr_curve_id</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The ID of the curve containing historical Borrower Internal Risk Ratings (BIRR) for this entity. The curve must be of type 'risk_rating'.</p>
 </td>
     </tr>
     <tr>
@@ -162,6 +120,132 @@
         <td>id</td>
         <td>string</td>
         <td><p>The unique identifier for the record within the firm.</p>
+</td>
+    </tr>
+    <tr>
+        <td>count</td>
+        <td><i>int(1, *)</i> <b>?</b></td>
+        <td><p>Describes the number of entities represented by this record. eg. joint customers should have a count &gt; 1.</p>
+</td>
+    </tr>
+    <tr>
+        <td>boe_industry_code</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>Bank of England industry code.</p>
+</td>
+    </tr>
+    <tr>
+        <td>bankruptcy_type</td>
+        <td><i><a href='UDT-fire.model.guarantor_bankruptcy_type.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_bankruptcy_type</a></i> <b>?</b></td>
+        <td><p>The bankruptcy chapter of the borrower.</p>
+</td>
+    </tr>
+    <tr>
+        <td>moodys_lt</td>
+        <td><i><a href='UDT-fire.model.guarantor_moodys_lt.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_moodys_lt</a></i> <b>?</b></td>
+        <td><p>Moody's long term credit ratings</p>
+</td>
+    </tr>
+    <tr>
+        <td>risk_group_id_2</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The secondary identifier for the secondary group representing a single risk entity where no relationship of control exists</p>
+</td>
+    </tr>
+    <tr>
+        <td>dbrs_lt</td>
+        <td><i><a href='UDT-fire.model.guarantor_dbrs_lt.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_dbrs_lt</a></i> <b>?</b></td>
+        <td><p>DBRS long term credit ratings</p>
+</td>
+    </tr>
+    <tr>
+        <td>country_code</td>
+        <td><i><a href='UDT-fire.model.country_code.html'><img src='images/enumType.svg'/>&nbsp;fire.model.country_code</a></i> <b>?</b></td>
+        <td><p>The person or entity country of residence. Two-letter country code as defined according to ISO 3166-1.</p>
+</td>
+    </tr>
+    <tr>
+        <td>fitch_st</td>
+        <td><i><a href='UDT-fire.model.guarantor_fitch_st.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_fitch_st</a></i> <b>?</b></td>
+        <td><p>Fitch short term credit ratings</p>
+</td>
+    </tr>
+    <tr>
+        <td>parent_id</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The unique identifier for the ultimate parent of the person or legal entity.</p>
+</td>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The name of the person or legal entity to be used for display and reference purposes.</p>
+</td>
+    </tr>
+    <tr>
+        <td>ssic_code</td>
+        <td><i>int(0, 99999)</i> <b>?</b></td>
+        <td><p>The Singaporean standard industry and sector classification.</p>
+</td>
+    </tr>
+    <tr>
+        <td>pd_irb</td>
+        <td><i>double(0.0, 1.0)</i> <b>?</b></td>
+        <td><p>The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.</p>
+</td>
+    </tr>
+    <tr>
+        <td>risk_country_code</td>
+        <td><i><a href='UDT-fire.model.country_code.html'><img src='images/enumType.svg'/>&nbsp;fire.model.country_code</a></i> <b>?</b></td>
+        <td><p>Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1</p>
+</td>
+    </tr>
+    <tr>
+        <td>internal_rating</td>
+        <td><i><a href='UDT-fire.model.guarantor_internal_rating.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_internal_rating</a></i> <b>?</b></td>
+        <td><p>Categorization of unrated exposure</p>
+</td>
+    </tr>
+    <tr>
+        <td>dbrs_st</td>
+        <td><i><a href='UDT-fire.model.guarantor_dbrs_st.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_dbrs_st</a></i> <b>?</b></td>
+        <td><p>DBRS short term credit ratings</p>
+</td>
+    </tr>
+    <tr>
+        <td>kbra_lt</td>
+        <td><i><a href='UDT-fire.model.guarantor_kbra_lt.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_kbra_lt</a></i> <b>?</b></td>
+        <td><p>KBRA long term credit ratings</p>
+</td>
+    </tr>
+    <tr>
+        <td>scra</td>
+        <td><i><a href='UDT-fire.model.guarantor_scra.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_scra</a></i> <b>?</b></td>
+        <td><p>Grade calculated using the Basel Standardised Credit Risk Assessment</p>
+</td>
+    </tr>
+    <tr>
+        <td>currency_code</td>
+        <td><i><a href='UDT-fire.model.currency_code.html'><img src='images/enumType.svg'/>&nbsp;fire.model.currency_code</a></i> <b>?</b></td>
+        <td><p>Currency in accordance with ISO 4217. It should be consistent with the figures for turnover and total assets.</p>
+</td>
+    </tr>
+    <tr>
+        <td>lei_code</td>
+        <td><i>string(20, 20)</i> <b>?</b></td>
+        <td><p>The LEI code for the legal entity (for corporates).</p>
+</td>
+    </tr>
+    <tr>
+        <td>birr_id</td>
+        <td><i>string</i> <b>?</b></td>
+        <td><p>The unique identifier of the Borrower Internal Risk Rating (BIRR), representing an internally assigned risk assessment for a customer based on their creditworthiness and financial stability.</p>
+</td>
+    </tr>
+    <tr>
+        <td>cqs_standardised</td>
+        <td><i>int(1, 17)</i> <b>?</b></td>
+        <td><p>The credit quality step for standardised approach.</p>
 </td>
     </tr>
     <tr>
@@ -183,33 +267,9 @@
 </td>
     </tr>
     <tr>
-        <td>count</td>
-        <td><i>int(1, *)</i> <b>?</b></td>
-        <td><p>Describes the number of entities represented by this record. eg. joint customers should have a count &gt; 1.</p>
-</td>
-    </tr>
-    <tr>
-        <td>boe_industry_code</td>
-        <td><i>string</i> <b>?</b></td>
-        <td><p>Bank of England industry code.</p>
-</td>
-    </tr>
-    <tr>
-        <td>moodys_lt</td>
-        <td><i><a href='UDT-fire.model.guarantor_moodys_lt.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_moodys_lt</a></i> <b>?</b></td>
-        <td><p>Moody's long term credit ratings</p>
-</td>
-    </tr>
-    <tr>
         <td>version_id</td>
         <td><i>string</i> <b>?</b></td>
         <td><p>The version identifier of the data such as the firm's internal batch identifier.</p>
-</td>
-    </tr>
-    <tr>
-        <td>risk_group_id_2</td>
-        <td><i>string</i> <b>?</b></td>
-        <td><p>The secondary identifier for the secondary group representing a single risk entity where no relationship of control exists</p>
 </td>
     </tr>
     <tr>
@@ -219,27 +279,15 @@
 </td>
     </tr>
     <tr>
-        <td>dbrs_lt</td>
-        <td><i><a href='UDT-fire.model.guarantor_dbrs_lt.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_dbrs_lt</a></i> <b>?</b></td>
-        <td><p>DBRS long term credit ratings</p>
-</td>
-    </tr>
-    <tr>
         <td>address_city</td>
         <td><i>string</i> <b>?</b></td>
         <td><p>City, town or village.</p>
 </td>
     </tr>
     <tr>
-        <td>country_code</td>
-        <td><i><a href='UDT-fire.model.country_code.html'><img src='images/enumType.svg'/>&nbsp;fire.model.country_code</a></i> <b>?</b></td>
-        <td><p>The person or entity country of residence. Two-letter country code as defined according to ISO 3166-1.</p>
-</td>
-    </tr>
-    <tr>
         <td>lgd_irb</td>
         <td><i>double(0.0, 1.0)</i> <b>?</b></td>
-        <td><p>The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.</p>
+        <td><p>The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.</p>
 </td>
     </tr>
     <tr>
@@ -249,27 +297,15 @@
 </td>
     </tr>
     <tr>
-        <td>fitch_st</td>
-        <td><i><a href='UDT-fire.model.guarantor_fitch_st.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_fitch_st</a></i> <b>?</b></td>
-        <td><p>Fitch short term credit ratings</p>
-</td>
-    </tr>
-    <tr>
-        <td>parent_id</td>
-        <td><i>string</i> <b>?</b></td>
-        <td><p>The unique identifier for the ultimate parent of the person or legal entity.</p>
-</td>
-    </tr>
-    <tr>
         <td>reporting_relationship</td>
         <td><i><a href='UDT-fire.model.guarantor_reporting_relationship.html'><img src='images/enumType.svg'/>&nbsp;fire.model.guarantor_reporting_relationship</a></i> <b>?</b></td>
         <td><p>Relationship to reporting entity. See: relationship.</p>
 </td>
     </tr>
     <tr>
-        <td>name</td>
+        <td>postal_code</td>
         <td><i>string</i> <b>?</b></td>
-        <td><p>The name of the person or legal entity to be used for display and reference purposes.</p>
+        <td><p>The post (zip) code in which the entity is domiciled.</p>
 </td>
     </tr>
     <tr>
@@ -282,12 +318,6 @@
         <td>legal_entity_name</td>
         <td><i>string</i> <b>?</b></td>
         <td><p>The official legal name of the entity.</p>
-</td>
-    </tr>
-    <tr>
-        <td>ssic_code</td>
-        <td><i>int(0, 99999)</i> <b>?</b></td>
-        <td><p>The Singaporean standard industry and sector classification.</p>
 </td>
     </tr>
 

@@ -24,7 +24,7 @@
     <img src="https://alfa-lang.io/_images/AlfaLogo4c4c4c.svg" alt="ALFA" width="88" style="vertical-align:baseline"/>
     Impact Analysis Report
 </h1>
-<p>Created: <span class="text-monospace">Wed Feb 12 22:17:19 UTC 2025</span></p>
+<p>Created: <span class="text-monospace">Wed Oct 15 21:29:03 UTC 2025</span></p>
 <h5>Between branch/tag version <span class="text-monospace text-secondary">v24.10</span> and <span class="text-monospace text-secondary">v25.01</span> </h5>
 <br/>
       
@@ -218,15 +218,15 @@ Deleted snippet:<br/>
 <li class="list-group-item">
 <b>1.</b> 
 Record <code>fire.model.account</code>
-Field <code>economic_loss</code> added
+Field <code>fraud_loss</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>/# The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss  #/
-economic_loss : int ?
+        <span class="text-monospace"><pre>/# The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment.  #/
+fraud_loss : int ?
 </pre></span>
       </div>
     </div>
@@ -237,15 +237,15 @@ economic_loss : int ?
 <li class="list-group-item">
 <b>2.</b> 
 Record <code>fire.model.account</code>
-Field <code>fraud_loss</code> added
+Field <code>economic_loss</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>/# The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment.  #/
-fraud_loss : int ?
+        <span class="text-monospace"><pre>/# The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss  #/
+economic_loss : int ?
 </pre></span>
       </div>
     </div>
@@ -307,14 +307,14 @@ Field <code>auto</code> added
 <li class="list-group-item">
 <b>6.</b> 
 Enum <code>fire.model.country_code</code>
-Field <code>US-MA</code> added
+Field <code>US-DE</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>US-MA( "US-MA" )</pre></span>
+        <span class="text-monospace"><pre>US-DE( "US-DE" )</pre></span>
       </div>
     </div>
          </font></div>
@@ -324,14 +324,14 @@ Field <code>US-MA</code> added
 <li class="list-group-item">
 <b>7.</b> 
 Enum <code>fire.model.country_code</code>
-Field <code>US-AR</code> added
+Field <code>US-IL</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>US-AR( "US-AR" )</pre></span>
+        <span class="text-monospace"><pre>US-IL( "US-IL" )</pre></span>
       </div>
     </div>
          </font></div>
@@ -340,176 +340,6 @@ Field <code>US-AR</code> added
 
 <li class="list-group-item">
 <b>8.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-NY</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-NY( "US-NY" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>9.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-MI</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-MI( "US-MI" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>10.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-NH</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-NH( "US-NH" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>11.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-SD</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-SD( "US-SD" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>12.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-IN</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-IN( "US-IN" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>13.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-VA</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-VA( "US-VA" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>14.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-OK</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-OK( "US-OK" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>15.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-RI</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-RI( "US-RI" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>16.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-OH</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-OH( "US-OH" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>17.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-IA</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-IA( "US-IA" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>18.</b> 
 Enum <code>fire.model.country_code</code>
 Field <code>US-ND</code> added
 
@@ -526,41 +356,177 @@ Field <code>US-ND</code> added
          </li><br/>
 
 <li class="list-group-item">
+<b>9.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-MO</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-MO( "US-MO" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>10.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-RI</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-RI( "US-RI" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>11.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-MN</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-MN( "US-MN" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>12.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-NE</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-NE( "US-NE" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>13.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-DC</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-DC( "US-DC" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>14.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-UT</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-UT( "US-UT" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>15.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-MT</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-MT( "US-MT" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>16.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-VT</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-VT( "US-VT" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>17.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-KS</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-KS( "US-KS" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>18.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-CT</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-CT( "US-CT" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
 <b>19.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-WV</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-WV( "US-WV" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>20.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-AK</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-AK( "US-AK" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>21.</b> 
 Enum <code>fire.model.country_code</code>
 Field <code>US-SC</code> added
 
@@ -577,16 +543,50 @@ Field <code>US-SC</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>22.</b> 
+<b>20.</b> 
 Enum <code>fire.model.country_code</code>
-Field <code>US-TX</code> added
+Field <code>US-LA</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>US-TX( "US-TX" )</pre></span>
+        <span class="text-monospace"><pre>US-LA( "US-LA" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>21.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-CO</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-CO( "US-CO" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>22.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-GA</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-GA( "US-GA" )</pre></span>
       </div>
     </div>
          </font></div>
@@ -596,14 +596,14 @@ Field <code>US-TX</code> added
 <li class="list-group-item">
 <b>23.</b> 
 Enum <code>fire.model.country_code</code>
-Field <code>US-NC</code> added
+Field <code>US-NH</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>US-NC( "US-NC" )</pre></span>
+        <span class="text-monospace"><pre>US-NH( "US-NH" )</pre></span>
       </div>
     </div>
          </font></div>
@@ -613,14 +613,14 @@ Field <code>US-NC</code> added
 <li class="list-group-item">
 <b>24.</b> 
 Enum <code>fire.model.country_code</code>
-Field <code>US-MD</code> added
+Field <code>US-VA</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>US-MD( "US-MD" )</pre></span>
+        <span class="text-monospace"><pre>US-VA( "US-VA" )</pre></span>
       </div>
     </div>
          </font></div>
@@ -630,14 +630,14 @@ Field <code>US-MD</code> added
 <li class="list-group-item">
 <b>25.</b> 
 Enum <code>fire.model.country_code</code>
-Field <code>US-PA</code> added
+Field <code>US-OK</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>US-PA( "US-PA" )</pre></span>
+        <span class="text-monospace"><pre>US-OK( "US-OK" )</pre></span>
       </div>
     </div>
          </font></div>
@@ -664,14 +664,14 @@ Field <code>US-HI</code> added
 <li class="list-group-item">
 <b>27.</b> 
 Enum <code>fire.model.country_code</code>
-Field <code>US-CO</code> added
+Field <code>US-WV</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>US-CO( "US-CO" )</pre></span>
+        <span class="text-monospace"><pre>US-WV( "US-WV" )</pre></span>
       </div>
     </div>
          </font></div>
@@ -681,14 +681,14 @@ Field <code>US-CO</code> added
 <li class="list-group-item">
 <b>28.</b> 
 Enum <code>fire.model.country_code</code>
-Field <code>US-MT</code> added
+Field <code>US-AK</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>US-MT( "US-MT" )</pre></span>
+        <span class="text-monospace"><pre>US-AK( "US-AK" )</pre></span>
       </div>
     </div>
          </font></div>
@@ -698,14 +698,14 @@ Field <code>US-MT</code> added
 <li class="list-group-item">
 <b>29.</b> 
 Enum <code>fire.model.country_code</code>
-Field <code>US-NV</code> added
+Field <code>US-SD</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>US-NV( "US-NV" )</pre></span>
+        <span class="text-monospace"><pre>US-SD( "US-SD" )</pre></span>
       </div>
     </div>
          </font></div>
@@ -714,227 +714,6 @@ Field <code>US-NV</code> added
 
 <li class="list-group-item">
 <b>30.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-OR</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-OR( "US-OR" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>31.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-TN</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-TN( "US-TN" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>32.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-KY</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-KY( "US-KY" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>33.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-VT</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-VT( "US-VT" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>34.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-WI</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-WI( "US-WI" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>35.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-NJ</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-NJ( "US-NJ" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>36.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-DE</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-DE( "US-DE" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>37.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-AL</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-AL( "US-AL" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>38.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-MO</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-MO( "US-MO" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>39.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-MS</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-MS( "US-MS" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>40.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-AZ</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-AZ( "US-AZ" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>41.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-ID</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-ID( "US-ID" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>42.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-LA</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-LA( "US-LA" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>43.</b> 
 Enum <code>fire.model.country_code</code>
 Field <code>US-NM</code> added
 
@@ -951,177 +730,7 @@ Field <code>US-NM</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>44.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-WA</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-WA( "US-WA" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>45.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-KS</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-KS( "US-KS" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>46.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-CT</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-CT( "US-CT" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>47.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-CA</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-CA( "US-CA" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>48.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-MN</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-MN( "US-MN" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>49.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-GA</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-GA( "US-GA" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>50.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-NE</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-NE( "US-NE" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>51.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-WY</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-WY( "US-WY" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>52.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-UT</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-UT( "US-UT" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>53.</b> 
-Enum <code>fire.model.country_code</code>
-Field <code>US-IL</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>US-IL( "US-IL" )</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>54.</b> 
+<b>31.</b> 
 Enum <code>fire.model.country_code</code>
 Field <code>US-FL</code> added
 
@@ -1138,7 +747,109 @@ Field <code>US-FL</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>55.</b> 
+<b>32.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-MS</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-MS( "US-MS" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>33.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-TN</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-TN( "US-TN" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>34.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-MA</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-MA( "US-MA" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>35.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-TX</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-TX( "US-TX" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>36.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-WA</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-WA( "US-WA" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>37.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-AR</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-AR( "US-AR" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>38.</b> 
 Enum <code>fire.model.country_code</code>
 Field <code>US-ME</code> added
 
@@ -1155,16 +866,305 @@ Field <code>US-ME</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>56.</b> 
+<b>39.</b> 
 Enum <code>fire.model.country_code</code>
-Field <code>US-DC</code> added
+Field <code>US-AZ</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>US-DC( "US-DC" )</pre></span>
+        <span class="text-monospace"><pre>US-AZ( "US-AZ" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>40.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-NY</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-NY( "US-NY" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>41.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-MI</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-MI( "US-MI" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>42.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-CA</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-CA( "US-CA" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>43.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-MD</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-MD( "US-MD" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>44.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-WY</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-WY( "US-WY" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>45.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-OR</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-OR( "US-OR" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>46.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-KY</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-KY( "US-KY" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>47.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-ID</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-ID( "US-ID" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>48.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-PA</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-PA( "US-PA" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>49.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-OH</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-OH( "US-OH" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>50.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-IA</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-IA( "US-IA" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>51.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-WI</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-WI( "US-WI" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>52.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-IN</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-IN( "US-IN" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>53.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-NV</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-NV( "US-NV" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>54.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-AL</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-AL( "US-AL" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>55.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-NJ</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-NJ( "US-NJ" )</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>56.</b> 
+Enum <code>fire.model.country_code</code>
+Field <code>US-NC</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>US-NC( "US-NC" )</pre></span>
       </div>
     </div>
          </font></div>
@@ -1193,15 +1193,15 @@ credit_process : fire.model.loan_credit_process ?
 <li class="list-group-item">
 <b>58.</b> 
 Record <code>fire.model.loan</code>
-Field <code>fraud_loss</code> added
+Field <code>economic_loss</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>/# The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment.  #/
-fraud_loss : int ?
+        <span class="text-monospace"><pre>/# The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss  #/
+economic_loss : int ?
 </pre></span>
       </div>
     </div>
@@ -1212,15 +1212,15 @@ fraud_loss : int ?
 <li class="list-group-item">
 <b>59.</b> 
 Record <code>fire.model.loan</code>
-Field <code>economic_loss</code> added
+Field <code>fraud_loss</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>/# The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss  #/
-economic_loss : int ?
+        <span class="text-monospace"><pre>/# The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment.  #/
+fraud_loss : int ?
 </pre></span>
       </div>
     </div>

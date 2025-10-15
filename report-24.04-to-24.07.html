@@ -24,7 +24,7 @@
     <img src="https://alfa-lang.io/_images/AlfaLogo4c4c4c.svg" alt="ALFA" width="88" style="vertical-align:baseline"/>
     Impact Analysis Report
 </h1>
-<p>Created: <span class="text-monospace">Wed Feb 12 22:17:02 UTC 2025</span></p>
+<p>Created: <span class="text-monospace">Wed Oct 15 21:28:45 UTC 2025</span></p>
 <h5>Between branch/tag version <span class="text-monospace text-secondary">v24.04</span> and <span class="text-monospace text-secondary">v24.07</span> </h5>
 <br/>
       
@@ -312,15 +312,15 @@ Field <code>held_for_sale</code> added
 <li class="list-group-item">
 <b>5.</b> 
 Record <code>fire.model.loan</code>
-Field <code>cum_write_offs</code> added
+Field <code>minimum_balance</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>/# The portion of the loan which has been written off.  #/
-cum_write_offs : int( 0, * ) ?
+        <span class="text-monospace"><pre>/# Indicates the minimum balance of each loan within the aggregate.  #/
+minimum_balance : int ?
 </pre></span>
       </div>
     </div>
@@ -331,15 +331,15 @@ cum_write_offs : int( 0, * ) ?
 <li class="list-group-item">
 <b>6.</b> 
 Record <code>fire.model.loan</code>
-Field <code>minimum_balance</code> added
+Field <code>cum_write_offs</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>/# Indicates the minimum balance of each loan within the aggregate.  #/
-minimum_balance : int ?
+        <span class="text-monospace"><pre>/# The portion of the loan which has been written off.  #/
+cum_write_offs : int( 0, * ) ?
 </pre></span>
       </div>
     </div>

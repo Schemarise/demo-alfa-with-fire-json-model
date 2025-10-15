@@ -22,7 +22,7 @@
     </tr>
     <tr>
         <td>value</td>
-        <td>double</td>
+        <td><a href='UDT-fire.model.curve_values_value.html'><img src='images/recordType.svg'/>&nbsp;fire.model.curve_values_value</a></td>
         <td><p>The reference value for this rate. (y-axis)</p>
 </td>
     </tr>

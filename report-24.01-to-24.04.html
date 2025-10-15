@@ -24,7 +24,7 @@
     <img src="https://alfa-lang.io/_images/AlfaLogo4c4c4c.svg" alt="ALFA" width="88" style="vertical-align:baseline"/>
     Impact Analysis Report
 </h1>
-<p>Created: <span class="text-monospace">Wed Feb 12 22:16:56 UTC 2025</span></p>
+<p>Created: <span class="text-monospace">Wed Oct 15 21:28:40 UTC 2025</span></p>
 <h5>Between branch/tag version <span class="text-monospace text-secondary">v24.01</span> and <span class="text-monospace text-secondary">v24.04</span> </h5>
 <br/>
       
@@ -189,14 +189,14 @@ Field <code>ca_cdic</code> added
 <li class="list-group-item">
 <b>2.</b> 
 Enum <code>fire.model.account_status</code>
-Field <code>unaudited</code> added
+Field <code>audited</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>unaudited</pre></span>
+        <span class="text-monospace"><pre>audited</pre></span>
       </div>
     </div>
          </font></div>
@@ -206,14 +206,14 @@ Field <code>unaudited</code> added
 <li class="list-group-item">
 <b>3.</b> 
 Enum <code>fire.model.account_status</code>
-Field <code>audited</code> added
+Field <code>unaudited</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>audited</pre></span>
+        <span class="text-monospace"><pre>unaudited</pre></span>
       </div>
     </div>
          </font></div>
@@ -274,14 +274,14 @@ Field <code>ema</code> added
 <li class="list-group-item">
 <b>7.</b> 
 Enum <code>fire.model.agreement_type</code>
-Field <code>afb</code> added
+Field <code>gmsla</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>afb</pre></span>
+        <span class="text-monospace"><pre>gmsla</pre></span>
       </div>
     </div>
          </font></div>
@@ -291,14 +291,14 @@ Field <code>afb</code> added
 <li class="list-group-item">
 <b>8.</b> 
 Enum <code>fire.model.agreement_type</code>
-Field <code>gmsla</code> added
+Field <code>afb</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>gmsla</pre></span>
+        <span class="text-monospace"><pre>afb</pre></span>
       </div>
     </div>
          </font></div>
@@ -380,14 +380,14 @@ Field <code>24m</code> added
 <li class="list-group-item">
 <b>13.</b> 
 Enum <code>fire.model.derivative_underlying_index_tenor</code>
-Field <code>60m</code> added
+Field <code>360m</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>`60m`( "60m" )</pre></span>
+        <span class="text-monospace"><pre>`360m`( "360m" )</pre></span>
       </div>
     </div>
          </font></div>
@@ -397,14 +397,14 @@ Field <code>60m</code> added
 <li class="list-group-item">
 <b>14.</b> 
 Enum <code>fire.model.derivative_underlying_index_tenor</code>
-Field <code>360m</code> added
+Field <code>60m</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>`360m`( "360m" )</pre></span>
+        <span class="text-monospace"><pre>`60m`( "60m" )</pre></span>
       </div>
     </div>
          </font></div>
@@ -488,15 +488,15 @@ naics_code : int( 10, 999999 ) ?
 <li class="list-group-item">
 <b>19.</b> 
 Record <code>fire.model.security</code>
-Field <code>retention_pct</code> added
+Field <code>repayment_type</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>/# The percentage of the issuance retained by the issuer. e.g. 0.05 is 5%.  #/
-retention_pct : double ?
+        <span class="text-monospace"><pre>/# The repayment or amortisation mechanism of the security or securitisation.  #/
+repayment_type : fire.model.security_repayment_type ?
 </pre></span>
       </div>
     </div>
@@ -526,6 +526,44 @@ reversion_rate : double ?
 <li class="list-group-item">
 <b>21.</b> 
 Record <code>fire.model.security</code>
+Field <code>reversion_date</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# The timestamp that indicates the end of an initial period where the 'rate' is applied to a security. After this the interest is calculated using the 'reversion_rate'. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.  #/
+reversion_date : datetime ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>22.</b> 
+Record <code>fire.model.security</code>
+Field <code>retention_pct</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>/# The percentage of the issuance retained by the issuer. e.g. 0.05 is 5%.  #/
+retention_pct : double ?
+</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>23.</b> 
+Record <code>fire.model.security</code>
 Field <code>originator_id</code> added
 
 <div class="ml-3"><font style="font-size:90%">
@@ -543,7 +581,7 @@ originator_id : string ?
          </li><br/>
 
 <li class="list-group-item">
-<b>22.</b> 
+<b>24.</b> 
 Record <code>fire.model.security</code>
 Field <code>excess_spread_type</code> added
 
@@ -562,7 +600,7 @@ excess_spread_type : fire.model.security_excess_spread_type ?
          </li><br/>
 
 <li class="list-group-item">
-<b>23.</b> 
+<b>25.</b> 
 Record <code>fire.model.security</code>
 Field <code>retention_type</code> added
 
@@ -581,26 +619,7 @@ retention_type : fire.model.security_retention_type ?
          </li><br/>
 
 <li class="list-group-item">
-<b>24.</b> 
-Record <code>fire.model.security</code>
-Field <code>repayment_type</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The repayment or amortisation mechanism of the security or securitisation.  #/
-repayment_type : fire.model.security_repayment_type ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>25.</b> 
+<b>26.</b> 
 Record <code>fire.model.security</code>
 Field <code>call_type</code> added
 
@@ -611,25 +630,6 @@ Field <code>call_type</code> added
         <br/>
         <span class="text-monospace"><pre>/# The call mechanism, if present, for the issuance. For securitisations and other callable securities.  #/
 call_type : fire.model.security_call_type ?
-</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>26.</b> 
-Record <code>fire.model.security</code>
-Field <code>reversion_date</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>/# The timestamp that indicates the end of an initial period where the 'rate' is applied to a security. After this the interest is calculated using the 'reversion_rate'. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.  #/
-reversion_date : datetime ?
 </pre></span>
       </div>
     </div>
@@ -693,23 +693,6 @@ Field <code>free_deliveries</code> added
 <li class="list-group-item">
 <b>30.</b> 
 Enum <code>fire.model.security_type</code>
-Field <code>abs_trade_rec</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>abs_trade_rec</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>31.</b> 
-Enum <code>fire.model.security_type</code>
 Field <code>abs_corp</code> added
 
 <div class="ml-3"><font style="font-size:90%">
@@ -725,41 +708,24 @@ Field <code>abs_corp</code> added
          </li><br/>
 
 <li class="list-group-item">
+<b>31.</b> 
+Enum <code>fire.model.security_type</code>
+Field <code>abs_lease</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>abs_lease</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
 <b>32.</b> 
-Enum <code>fire.model.security_type</code>
-Field <code>abs_sme_corp</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>abs_sme_corp</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>33.</b> 
-Enum <code>fire.model.security_type</code>
-Field <code>abs_cc</code> added
-
-<div class="ml-3"><font style="font-size:90%">
-    <div class="card" style="background-color:HoneyDew;">
-      <div class="card-body" style="padding:2px">
-        <b>Added snippet:</b>
-        <br/>
-        <span class="text-monospace"><pre>abs_cc</pre></span>
-      </div>
-    </div>
-         </font></div>
-       
-         </li><br/>
-
-<li class="list-group-item">
-<b>34.</b> 
 Enum <code>fire.model.security_type</code>
 Field <code>abs_sme_retail</code> added
 
@@ -776,16 +742,50 @@ Field <code>abs_sme_retail</code> added
          </li><br/>
 
 <li class="list-group-item">
-<b>35.</b> 
+<b>33.</b> 
 Enum <code>fire.model.security_type</code>
-Field <code>abs_lease</code> added
+Field <code>abs_trade_rec</code> added
 
 <div class="ml-3"><font style="font-size:90%">
     <div class="card" style="background-color:HoneyDew;">
       <div class="card-body" style="padding:2px">
         <b>Added snippet:</b>
         <br/>
-        <span class="text-monospace"><pre>abs_lease</pre></span>
+        <span class="text-monospace"><pre>abs_trade_rec</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>34.</b> 
+Enum <code>fire.model.security_type</code>
+Field <code>abs_sme_corp</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>abs_sme_corp</pre></span>
+      </div>
+    </div>
+         </font></div>
+       
+         </li><br/>
+
+<li class="list-group-item">
+<b>35.</b> 
+Enum <code>fire.model.security_type</code>
+Field <code>abs_cc</code> added
+
+<div class="ml-3"><font style="font-size:90%">
+    <div class="card" style="background-color:HoneyDew;">
+      <div class="card-body" style="padding:2px">
+        <b>Added snippet:</b>
+        <br/>
+        <span class="text-monospace"><pre>abs_cc</pre></span>
       </div>
     </div>
          </font></div>

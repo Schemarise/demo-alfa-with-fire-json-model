@@ -13,11 +13,29 @@
 | ----------- | ----------- |
 | formal |   |
 | interest_grace_period |   |
+| mi_claim_adv |   |
 | modified_tnc |   |
 | none |   |
 | possessed |   |
+| prin_def_rate |   |
+| prin_def_rate_term |   |
+| prin_def_term |   |
+| principal_defer |   |
+| principal_forgive |   |
+| rate_prin_forgive |   |
+| rate_red_frozen |   |
+| rate_term |   |
+| rate_term_prin_forgive |   |
+| recap |   |
 | refinancing |   |
+| renewal |   |
+| reo |   |
+| settlement |   |
+| short_sale |   |
 | temporary |   |
+| term_ext |   |
+| term_prin_forgive |   |
+| term_recap |   |
 
 <br/>
 

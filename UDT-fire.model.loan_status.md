@@ -14,8 +14,10 @@
 | actual |   |
 | cancellable |   |
 | cancelled |   |
+| closed |   |
 | committed |   |
 | defaulted |   |
+| frozen |   |
 | revolving |   |
 
 <br/>

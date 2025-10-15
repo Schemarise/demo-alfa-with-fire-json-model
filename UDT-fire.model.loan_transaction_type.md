@@ -15,15 +15,18 @@
 | advance |   |
 | capital_repayment |   |
 | capitalisation |   |
+| commitment |   |
 | due |   |
 | further_advance |   |
 | interest |   |
 | interest_repayment |   |
 | other |   |
 | received |   |
+| recovery |   |
 | sale |   |
 | securitisation |   |
 | write_off |   |
+| write_off_bankruptcy |   |
 
 <br/>
 

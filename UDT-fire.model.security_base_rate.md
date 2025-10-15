@@ -14,6 +14,18 @@
 | FDTR |   |
 | UKBRBASE |   |
 | ZERO |   |
+| bbsw |   |
+| bbsw_3m |   |
+| euribor |   |
+| euribor_1m |   |
+| euribor_3m |   |
+| euribor_6m |   |
+| other |   |
+| pboc |   |
+| sofr |   |
+| sofr_1m |   |
+| sofr_3m |   |
+| sofr_6m |   |
 
 <br/>
 

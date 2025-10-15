@@ -25,7 +25,7 @@
     </tr>
     <tr>
         <td>count</td>
-        <td><i>int</i> <b>?</b></td>
+        <td><i>int(0, *)</i> <b>?</b></td>
         <td><p>Number of records in this batch</p>
 </td>
     </tr>

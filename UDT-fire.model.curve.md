@@ -1,8 +1,5 @@
 <sub>&lt;&nbsp; [Namespace](index.md)</sub>
 # <img src='images/recordType-lg.svg'/> fire.model.curve
->  
->A Curve represents a series of points on a plot. Typically, interest rates, volatility or forward prices.
-> 
 <img src='images/fire.model.curve.svg'/>
 
 

@@ -379,6 +379,7 @@
 ### Referenced from fields in:
 - <img src='images/recordType.svg'/> [fire.model.account](UDT-fire.model.account.md)
 - <img src='images/recordType.svg'/> [fire.model.agreement](UDT-fire.model.agreement.md)
+- <img src='images/recordType.svg'/> [fire.model.collateral](UDT-fire.model.collateral.md)
 - <img src='images/recordType.svg'/> [fire.model.customer](UDT-fire.model.customer.md)
 - <img src='images/recordType.svg'/> [fire.model.derivative](UDT-fire.model.derivative.md)
 - <img src='images/recordType.svg'/> [fire.model.entity](UDT-fire.model.entity.md)

@@ -13,6 +13,7 @@
 | ----------- | ----------- |
 | behavioral |   |
 | rate |   |
+| risk_rating |   |
 | volatility |   |
 
 <br/>
