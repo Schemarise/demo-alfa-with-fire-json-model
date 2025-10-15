@@ -52,7 +52,19 @@
       "enum": [
         "FDTR",
         "UKBRBASE",
-        "ZERO"
+        "ZERO",
+        "bbsw",
+        "bbsw_3m",
+        "euribor",
+        "euribor_1m",
+        "euribor_3m",
+        "euribor_6m",
+        "other",
+        "pboc",
+        "sofr",
+        "sofr_1m",
+        "sofr_3m",
+        "sofr_6m"
       ]
     },
     "break_dates": {
@@ -678,6 +690,9 @@
       "enum": [
         "combined",
         "fixed",
+        "fixed_to_fixed",
+        "fixed_to_float",
+        "step_up",
         "tracker",
         "variable"
       ]
@@ -874,9 +889,14 @@
       "enum": [
         "bankruptcy_remote",
         "called_up",
+        "conversion",
         "free_deliveries",
         "non_operational",
+        "other",
         "paid_up",
+        "redeemed",
+        "refinanced",
+        "replaced",
         "unsettled"
       ]
     },
@@ -926,8 +946,13 @@
         "cmbs",
         "cmbs_income",
         "commercial_paper",
+        "common",
         "convertible_bond",
         "covered_bond",
+        "cpp",
+        "cpp_tarp_pref",
+        "cs_usg",
+        "cs_warrant",
         "debt",
         "dividend",
         "documentary",
@@ -944,7 +969,11 @@
         "loan_pool",
         "main_index_equity",
         "mbs",
+        "mcp",
+        "mcp_usg",
         "mtn",
+        "ncpp",
+        "ncpp_convertible",
         "nha_mbs",
         "other",
         "performance",
@@ -953,6 +982,7 @@
         "performance_sloc",
         "pibs",
         "pref_share",
+        "reit_pref",
         "rmbs",
         "rmbs_income",
         "rmbs_trans",
@@ -964,6 +994,8 @@
         "standby",
         "struct_note",
         "treasury",
+        "trups",
+        "trups_usg_pref",
         "urp",
         "warranty"
       ]

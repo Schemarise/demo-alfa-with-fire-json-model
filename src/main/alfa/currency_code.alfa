@@ -136,6 +136,7 @@ enum currency_code {
     SEK 
     SGD 
     SHP 
+    SLE 
     SLL 
     SOS 
     SRD 
@@ -161,10 +162,12 @@ enum currency_code {
     UYU 
     UYW 
     UZS 
+    VED 
     VES 
     VND 
     VUV 
     WST 
+    XAD 
     XAF 
     XAG 
     XAU 
@@ -173,6 +176,7 @@ enum currency_code {
     XBC 
     XBD 
     XCD 
+    XCG 
     XDR 
     XOF 
     XPD 
@@ -185,6 +189,7 @@ enum currency_code {
     YER 
     ZAR 
     ZMW 
+    ZWG 
 }
 
          

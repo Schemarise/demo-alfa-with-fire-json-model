@@ -34,8 +34,13 @@ enum security_type {
     cmbs 
     cmbs_income 
     commercial_paper 
+    common 
     convertible_bond 
     covered_bond 
+    cpp 
+    cpp_tarp_pref 
+    cs_usg 
+    cs_warrant 
     debt 
     dividend 
     documentary 
@@ -52,7 +57,11 @@ enum security_type {
     loan_pool 
     main_index_equity 
     mbs 
+    mcp 
+    mcp_usg 
     mtn 
+    ncpp 
+    ncpp_convertible 
     nha_mbs 
     other 
     performance 
@@ -61,6 +70,7 @@ enum security_type {
     performance_sloc 
     pibs 
     pref_share 
+    reit_pref 
     rmbs 
     rmbs_income 
     rmbs_trans 
@@ -72,6 +82,8 @@ enum security_type {
     standby 
     struct_note 
     treasury 
+    trups 
+    trups_usg_pref 
     urp 
     warranty 
 }

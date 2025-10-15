@@ -13,6 +13,11 @@
       "type": "string",
       "format": "date-time"
     },
+    "acc_fv_change_before_taxes": {
+      "description": "Accumulated change in fair value before taxes.",
+      "type": "integer",
+      "monetary": true
+    },
     "accounting_treatment": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/accounting_treatment"
     },
@@ -40,7 +45,19 @@
         "FESR",
         "UKBRBASE",
         "USTSR",
-        "ZERO"
+        "ZERO",
+        "bbsw",
+        "bbsw_3m",
+        "euribor",
+        "euribor_1m",
+        "euribor_3m",
+        "euribor_6m",
+        "other",
+        "pboc",
+        "sofr",
+        "sofr_1m",
+        "sofr_3m",
+        "sofr_6m"
       ]
     },
     "break_dates": {

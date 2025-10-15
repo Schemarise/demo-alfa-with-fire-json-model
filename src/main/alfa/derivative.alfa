@@ -343,6 +343,10 @@ record derivative {
   rho : double ?
   
   
+  /# Accumulated change in fair value before taxes. #/
+  acc_fv_change_before_taxes : int ?
+  
+  
   /# The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence. #/
   accrued_interest : int ?
   

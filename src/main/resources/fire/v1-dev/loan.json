@@ -77,6 +77,8 @@
         "refinancing",
         "renewal",
         "reo",
+        "settlement",
+        "short_sale",
         "temporary",
         "term_ext",
         "term_prin_forgive",
@@ -680,6 +682,7 @@
       "enum": [
         "combined",
         "interest_only",
+        "option_arm",
         "other",
         "repayment"
       ]

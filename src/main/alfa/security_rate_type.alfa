@@ -8,6 +8,9 @@ namespace fire.model
 enum security_rate_type {
     combined( "combined" ) 
     `fixed`( "fixed" ) 
+    fixed_to_fixed( "fixed_to_fixed" ) 
+    fixed_to_float( "fixed_to_float" ) 
+    step_up( "step_up" ) 
     tracker( "tracker" ) 
     variable( "variable" ) 
 }

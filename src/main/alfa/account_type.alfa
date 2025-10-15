@@ -44,6 +44,7 @@ enum account_type {
     third_party_savings 
     time_deposit 
     time_deposit_io 
+    valuation_allowance 
     vostro 
 }
 

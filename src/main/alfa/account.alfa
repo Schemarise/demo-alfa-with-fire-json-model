@@ -93,6 +93,10 @@ record account {
   call_dates : list< datetime >(1,*) ?
   
   
+  /# The original line of credit amount that was granted at the origination of the facility #/
+  orig_limit_amount : int ?
+  
+  
   /# Month to date interest added to account as a naturally positive integer number of cents/pence. #/
   mtd_interest_paid : int ?
   
@@ -313,6 +317,10 @@ record account {
   
   /# Indicates the minimum balance, in Euros, of each account within the aggregate. Monetary type represented as a naturally positive integer number of cents/pence. #/
   minimum_balance_eur : int ?
+  
+  
+  /# The portion of the loan which has been written off. #/
+  cum_write_offs : int( 0, * ) ?
   
   
   /# The expected gross dollar exposure for each facility upon a borrower's default as determined by internal ratings-based approach. This value is used in economic capital calculations. #/
