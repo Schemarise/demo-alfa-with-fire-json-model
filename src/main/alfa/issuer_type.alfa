@@ -18,6 +18,7 @@ enum issuer_type {
     credit_union 
     deposit_broker 
     export_credit_agency 
+    federal_credit_union 
     financial 
     financial_holding 
     fund 
@@ -29,7 +30,9 @@ enum issuer_type {
     local_authority 
     mdb 
     mmkt_fund 
+    national_bank 
     natural_person 
+    non_member_bank 
     other 
     other_financial 
     other_pse 
@@ -51,6 +54,8 @@ enum issuer_type {
     social_security_fund 
     sovereign 
     sspe 
+    state_credit_union 
+    state_member_bank 
     state_owned_bank 
     statutory_board 
     supported_sme 

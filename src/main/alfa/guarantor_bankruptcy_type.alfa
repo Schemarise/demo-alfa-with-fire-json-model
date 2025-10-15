@@ -1,0 +1,17 @@
+
+namespace fire.model
+
+
+/#
+ The bankruptcy chapter of the borrower.
+ #/
+enum guarantor_bankruptcy_type {
+    chapter_11 
+    chapter_12 
+    chapter_13 
+    chapter_7 
+    chapter_9 
+    other 
+}
+
+         

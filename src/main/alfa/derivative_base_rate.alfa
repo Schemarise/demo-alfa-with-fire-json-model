@@ -7,7 +7,9 @@ namespace fire.model
  #/
 enum derivative_base_rate {
     FDTR 
+    FESR 
     UKBRBASE 
+    USTSR 
     ZERO 
 }
 

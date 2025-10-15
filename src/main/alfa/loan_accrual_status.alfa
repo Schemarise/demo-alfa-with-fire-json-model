@@ -1,0 +1,15 @@
+
+namespace fire.model
+
+
+/#
+ The accrual status of the loan or line of credit.
+ #/
+enum loan_accrual_status {
+    accrual 
+    non_accrual 
+    securitised 
+    serviced_for_others 
+}
+
+         

@@ -1,0 +1,16 @@
+
+namespace fire.model
+
+
+/#
+ For participated or syndicated credit facilities that have closed and settled, indicates the type of participation in the loan. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.
+ #/
+enum loan_participation_type {
+    agent_non_snc 
+    agent_snc 
+    `none` 
+    participant_non_snc 
+    participant_snc 
+}
+
+         

@@ -1,0 +1,16 @@
+
+namespace fire.model
+
+
+/#
+ The type of cash flow associated with the hedge if it is a cash flow hedge. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.
+ #/
+enum derivative_hedged_cf_type {
+    interest_only( "interest_only" ) 
+    other( "other" ) 
+    `partial`( "partial" ) 
+    principal_interest( "principal_interest" ) 
+    principal_only( "principal_only" ) 
+}
+
+         

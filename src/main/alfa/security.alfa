@@ -39,6 +39,10 @@ record security {
   snp_st : security_snp_st ?
   
   
+  /# Date of resolution of the defaulted facility. #/
+  resolution_date : datetime ?
+  
+  
   /# The unique identifier for the record within the firm. #/
   id : string
   
@@ -65,6 +69,10 @@ record security {
   
   /# Moody's long term credit ratings #/
   moodys_lt : security_moodys_lt ?
+  
+  
+  /# The stock exchange daily official list (SEDOL) is a seven-character identification code assigned to securities that trade on the London Stock Exchange and various smaller exchanges in the United Kingdom. SEDOL codes are used for unit trusts, investment trusts, insurance-linked securities, and domestic and foreign stocks. #/
+  sedol : string ?
   
   
   /# DBRS long term credit ratings #/
@@ -105,12 +113,16 @@ record security {
   
   mic_code : string( 4, 4 ) ?
   
-  /# The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
+  /# The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations. #/
   pd_irb : double( 0.0, 1.0 ) ?
   
   
   /# KBRA long term credit ratings #/
   kbra_lt : security_kbra_lt ?
+  
+  
+  /# The EAD field allows users to input monetary exposure-at-default values across the security's lifecycle. Upon default, this field must be updated to reflect the final realised EAD value — that is, the actual exposure outstanding at the moment of default. #/
+  ead : int ?
   
   
   /# Repayment frequency of the interest. #/
@@ -163,6 +175,10 @@ record security {
   index_composition : set< security_index_composition >(1,*) ?
   
   
+  /# The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss #/
+  economic_loss : int ?
+  
+  
   /# The credit quality step for standardised approach. #/
   cqs_standardised : int( 1, 17 ) ?
   
@@ -177,6 +193,10 @@ record security {
   
   /# The internal facility risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority. #/
   frr_id : string ?
+  
+  
+  /# The method by which the debt shall be repaid #/
+  servicing : security_servicing ?
   
   
   /# The timestamp that the trade or financial product commences. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
@@ -205,6 +225,10 @@ record security {
   
   /# The first date on which this security was in arrears. #/
   first_arrears_date : datetime ?
+  
+  
+  /# In the case of a designated fair value hedge, the portion of the asset being hedged, as determined according to ASC 815-20-25-12 (b) and ASC 815-20-25-12A. #/
+  hedged_percentage : double( 0.0, 1.0 ) ?
   
   
   /# The accrued interest since the last payment date and due at the next payment date. Monetary type represented as an integer number of cents/pence. #/
@@ -237,6 +261,10 @@ record security {
   
   /# The credit quality step for internal ratings based approach. #/
   cqs_irb : int( 1, 12 ) ?
+  
+  
+  /# The fees associated with the security. #/
+  fees : int ?
   
   
   /# The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015. #/
@@ -309,6 +337,10 @@ record security {
   fitch_st : security_fitch_st ?
   
   
+  /# Unique identifier that establishes a relational link between a security and its associated derivative hedge. Enables consistent tracking, aggregation, and reconciliation of hedged positions across systems and datasets. #/
+  hedge_id : string ?
+  
+  
   /# The first payment date for interest payments. #/
   first_payment_date : datetime ?
   
@@ -325,6 +357,10 @@ record security {
   stress_change : double( 0.0, * ) ?
   
   
+  /# Indicates the type of placement for issuances. For example, private placements, other non-publicly offered securites, publicly offered securities or direct purchase municipal securities. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information. #/
+  issuance_type : security_issuance_type ?
+  
+  
   /# The purpose for which the security is being held. #/
   purpose : security_purpose ?
   
@@ -335,6 +371,10 @@ record security {
   
   /# DBRS short term credit ratings #/
   dbrs_st : security_dbrs_st ?
+  
+  
+  /# A more user-friendly description of the security. #/
+  description : string ?
   
   
   /# Fair value hierarchy category according to IFRS 13.93 (b) #/
@@ -353,6 +393,10 @@ record security {
   next_payment_date : datetime ?
   
   
+  /# Describes the type of interest rate applied to the security. #/
+  rate_type : security_rate_type ?
+  
+  
   /# The full interest rate applied to the security notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread). #/
   rate : double ?
   
@@ -367,6 +411,10 @@ record security {
   
   /# The most recent previous date at which interest was paid or accrued_interest balance returned to zero. #/
   prev_payment_date : datetime ?
+  
+  
+  /# Date of default. #/
+  default_date : datetime ?
   
   
   /# The amount of the security that is encumbered by potential future commitments or legal liabilities such as within a repo pool. Monetary type represented as a naturally positive integer number of cents/pence. #/
@@ -401,8 +449,12 @@ record security {
   acc_fv_change_credit_risk : int ?
   
   
-  /# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
+  /# The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations. #/
   lgd_irb : double( 0.0, 1.0 ) ?
+  
+  
+  /# The portion of the security which has been written off. #/
+  cum_write_offs : int( 0, * ) ?
   
   
   /# The mark-to-market value of the security including interest. Monetary number of cents/pence. #/
@@ -411,6 +463,10 @@ record security {
   
   /# Accumulated change in fair value before taxes. #/
   acc_fv_change_before_taxes : int ?
+  
+  
+  /# The instrument's coupon/dividend distribution type, such as cumulative or noncumulative. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information. #/
+  distribution_type : security_distribution_type ?
   
   
   /# The date on which the interest rate of the security will be re-calculated. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/

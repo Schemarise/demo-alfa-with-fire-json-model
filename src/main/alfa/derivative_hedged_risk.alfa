@@ -1,0 +1,24 @@
+
+namespace fire.model
+
+
+/#
+ The risk being hedged, among the potential hedged risks described under ASC 815-20-25-12 and ASC 815-20-25-15.
+
+https://asc.fasb.org/1943274/2147480682/815-20-25-12
+https://asc.fasb.org/1943274/2147480682/815-20-25-15
+ #/
+enum derivative_hedged_risk {
+    cr 
+    fv_option 
+    fx 
+    fx_cr 
+    ir 
+    ir_cr 
+    ir_fx 
+    ir_fx_cr 
+    other 
+    overall_fv_cf 
+}
+
+         

@@ -1,0 +1,15 @@
+
+namespace fire.model
+
+
+/#
+ The current status of the repurchase of the loan.
+ #/
+enum loan_repurchase_status {
+    complete_no_repurchase 
+    complete_repurchased 
+    in_process 
+    initiated 
+}
+
+         

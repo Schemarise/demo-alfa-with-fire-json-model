@@ -1,0 +1,13 @@
+
+namespace fire.model
+
+
+/#
+ The instrument's coupon/dividend distribution type, such as cumulative or noncumulative. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.
+ #/
+enum security_distribution_type {
+    cumulative 
+    non_cumulative 
+}
+
+         

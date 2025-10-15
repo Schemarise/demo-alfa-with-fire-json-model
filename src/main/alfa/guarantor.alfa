@@ -19,36 +19,12 @@ record guarantor {
   cqs_irb : int( 1, 12 ) ?
   
   
-  /# The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
-  pd_irb : double( 0.0, 1.0 ) ?
-  
-  
   /# The number of full time staff. #/
   headcount : int ?
   
   
   /# The annual balance sheet total of the entity as at the last accounting reference date. #/
   total_assets : int ?
-  
-  
-  /# Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1 #/
-  risk_country_code : country_code ?
-  
-  
-  /# Categorization of unrated exposure #/
-  internal_rating : guarantor_internal_rating ?
-  
-  
-  /# DBRS short term credit ratings #/
-  dbrs_st : guarantor_dbrs_st ?
-  
-  
-  /# KBRA long term credit ratings #/
-  kbra_lt : guarantor_kbra_lt ?
-  
-  
-  /# Grade calculated using the Basel Standardised Credit Risk Assessment #/
-  scra : guarantor_scra ?
   
   
   /# The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2 #/
@@ -61,10 +37,6 @@ record guarantor {
   
   /# Fitch long term credit ratings #/
   fitch_lt : guarantor_fitch_lt ?
-  
-  
-  /# Currency in accordance with ISO 4217. It should be consistent with the figures for turnover and total assets. #/
-  currency_code : currency_code ?
   
   
   /# The EU NACE economic activity classification. #/
@@ -87,20 +59,12 @@ record guarantor {
   snp_st : guarantor_snp_st ?
   
   
-  /# The LEI code for the legal entity (for corporates). #/
-  lei_code : string( 20, 20 ) ?
-  
-  
-  /# The unique identifier of the Borrower Internal Risk Rating (BIRR), representing an internally assigned risk assessment for a customer based on their creditworthiness and financial stability. #/
-  birr_id : string ?
+  /# The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations. #/
+  pd_irb_ec : double( 0.0, 1.0 ) ?
   
   
   /# The ID of the curve containing historical Borrower Internal Risk Ratings (BIRR) for this entity. The curve must be of type 'risk_rating'. #/
   birr_curve_id : string ?
-  
-  
-  /# The credit quality step for standardised approach. #/
-  cqs_standardised : int( 1, 17 ) ?
   
   
   /# Unique identifier established by the national reporting system #/
@@ -109,6 +73,90 @@ record guarantor {
   
   /# The unique identifier for the record within the firm. #/
   id : string
+  
+  
+  /# Describes the number of entities represented by this record. eg. joint customers should have a count > 1. #/
+  count : int( 1, * ) ?
+  
+  
+  /# Bank of England industry code. #/
+  boe_industry_code : string ?
+  
+  
+  /# The bankruptcy chapter of the borrower. #/
+  bankruptcy_type : guarantor_bankruptcy_type ?
+  
+  
+  /# Moody's long term credit ratings #/
+  moodys_lt : guarantor_moodys_lt ?
+  
+  
+  /# The secondary identifier for the secondary group representing a single risk entity where no relationship of control exists #/
+  risk_group_id_2 : string ?
+  
+  
+  /# DBRS long term credit ratings #/
+  dbrs_lt : guarantor_dbrs_lt ?
+  
+  
+  /# The person or entity country of residence. Two-letter country code as defined according to ISO 3166-1. #/
+  country_code : country_code ?
+  
+  
+  /# Fitch short term credit ratings #/
+  fitch_st : guarantor_fitch_st ?
+  
+  
+  /# The unique identifier for the ultimate parent of the person or legal entity. #/
+  parent_id : string ?
+  
+  
+  /# The name of the person or legal entity to be used for display and reference purposes. #/
+  name : string ?
+  
+  
+  /# The Singaporean standard industry and sector classification. #/
+  ssic_code : int( 0, 99999 ) ?
+  
+  
+  /# The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations. #/
+  pd_irb : double( 0.0, 1.0 ) ?
+  
+  
+  /# Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1 #/
+  risk_country_code : country_code ?
+  
+  
+  /# Categorization of unrated exposure #/
+  internal_rating : guarantor_internal_rating ?
+  
+  
+  /# DBRS short term credit ratings #/
+  dbrs_st : guarantor_dbrs_st ?
+  
+  
+  /# KBRA long term credit ratings #/
+  kbra_lt : guarantor_kbra_lt ?
+  
+  
+  /# Grade calculated using the Basel Standardised Credit Risk Assessment #/
+  scra : guarantor_scra ?
+  
+  
+  /# Currency in accordance with ISO 4217. It should be consistent with the figures for turnover and total assets. #/
+  currency_code : currency_code ?
+  
+  
+  /# The LEI code for the legal entity (for corporates). #/
+  lei_code : string( 20, 20 ) ?
+  
+  
+  /# The unique identifier of the Borrower Internal Risk Rating (BIRR), representing an internally assigned risk assessment for a customer based on their creditworthiness and financial stability. #/
+  birr_id : string ?
+  
+  
+  /# The credit quality step for standardised approach. #/
+  cqs_standardised : int( 1, 17 ) ?
   
   
   /# Relationship to parent. #/
@@ -123,43 +171,19 @@ record guarantor {
   boe_sector_code : string ?
   
   
-  /# Describes the number of entities represented by this record. eg. joint customers should have a count > 1. #/
-  count : int( 1, * ) ?
-  
-  
-  /# Bank of England industry code. #/
-  boe_industry_code : string ?
-  
-  
-  /# Moody's long term credit ratings #/
-  moodys_lt : guarantor_moodys_lt ?
-  
-  
   /# The version identifier of the data such as the firm's internal batch identifier. #/
   version_id : string ?
-  
-  
-  /# The secondary identifier for the secondary group representing a single risk entity where no relationship of control exists #/
-  risk_group_id_2 : string ?
   
   
   /# S&P long term credit ratings #/
   snp_lt : guarantor_snp_lt ?
   
   
-  /# DBRS long term credit ratings #/
-  dbrs_lt : guarantor_dbrs_lt ?
-  
-  
   /# City, town or village. #/
   address_city : string ?
   
   
-  /# The person or entity country of residence. Two-letter country code as defined according to ISO 3166-1. #/
-  country_code : country_code ?
-  
-  
-  /# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
+  /# The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations. #/
   lgd_irb : double( 0.0, 1.0 ) ?
   
   
@@ -167,20 +191,12 @@ record guarantor {
   sic_code : int( 0, 99999 ) ?
   
   
-  /# Fitch short term credit ratings #/
-  fitch_st : guarantor_fitch_st ?
-  
-  
-  /# The unique identifier for the ultimate parent of the person or legal entity. #/
-  parent_id : string ?
-  
-  
   /# Relationship to reporting entity. See: relationship. #/
   reporting_relationship : guarantor_reporting_relationship ?
   
   
-  /# The name of the person or legal entity to be used for display and reference purposes. #/
-  name : string ?
+  /# The post (zip) code in which the entity is domiciled. #/
+  postal_code : string ?
   
   
   /# The unique identifier for the group representing a single risk entity where no relationship of control exists #/
@@ -189,10 +205,6 @@ record guarantor {
   
   /# The official legal name of the entity. #/
   legal_entity_name : string ?
-  
-  
-  /# The Singaporean standard industry and sector classification. #/
-  ssic_code : int( 0, 99999 ) ?
   
   
 }

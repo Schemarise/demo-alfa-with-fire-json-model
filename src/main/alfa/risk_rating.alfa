@@ -19,6 +19,10 @@ record risk_rating {
   name : string
   
   
+  /# A description of the internal risk rating. #/
+  description : string ?
+  
+  
   /# Unique identifier for the risk rating #/
   id : string
   

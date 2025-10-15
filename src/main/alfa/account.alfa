@@ -69,6 +69,10 @@ record account {
   resolution_date : datetime ?
   
   
+  /# The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations. #/
+  pd_irb_ec : double( 0.0, 1.0 ) ?
+  
+  
   /# The code assigned by the financial institution to identify a facility. #/
   facility_id : string ?
   
@@ -109,6 +113,10 @@ record account {
   country_code : country_code ?
   
   
+  /# The currently scheduled review date for Counterparty exposure. This date should be set in the future. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. #/
+  review_date : datetime ?
+  
+  
   /# The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the account. #/
   base_rate : account_base_rate ?
   
@@ -139,7 +147,7 @@ record account {
   end_date : datetime ?
   
   
-  /# The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
+  /# The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations. #/
   pd_irb : double( 0.0, 1.0 ) ?
   
   
@@ -295,12 +303,20 @@ record account {
   trade_date : datetime ?
   
   
-  /# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
+  /# The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations. #/
   lgd_irb : double( 0.0, 1.0 ) ?
+  
+  
+  /# The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations. #/
+  lgd_irb_ec : double( 0.0, 1.0 ) ?
   
   
   /# Indicates the minimum balance, in Euros, of each account within the aggregate. Monetary type represented as a naturally positive integer number of cents/pence. #/
   minimum_balance_eur : int ?
+  
+  
+  /# The expected gross dollar exposure for each facility upon a borrower's default as determined by internal ratings-based approach. This value is used in economic capital calculations. #/
+  ead_irb_ec : int ?
   
   
   /# The first date on which this account was in arrears. #/

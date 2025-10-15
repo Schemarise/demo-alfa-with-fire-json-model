@@ -63,6 +63,10 @@ record customer {
   snp_st : customer_snp_st ?
   
   
+  /# The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations. #/
+  pd_irb_ec : double( 0.0, 1.0 ) ?
+  
+  
   /# The ID of the curve containing historical Borrower Internal Risk Ratings (BIRR) for this entity. The curve must be of type 'risk_rating'. #/
   birr_curve_id : string ?
   
@@ -85,6 +89,10 @@ record customer {
   
   /# Bank of England industry code. #/
   boe_industry_code : string ?
+  
+  
+  /# The bankruptcy chapter of the borrower. #/
+  bankruptcy_type : customer_bankruptcy_type ?
   
   
   /# Moody's long term credit ratings #/
@@ -135,7 +143,11 @@ record customer {
   status : customer_status ?
   
   
-  /# The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
+  /# The Stock Exchange where the company's primary stock trades #/
+  mic_code : string( 4, 4 ) ?
+  
+  
+  /# The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations. #/
   pd_irb : double( 0.0, 1.0 ) ?
   
   
@@ -195,7 +207,7 @@ record customer {
   clearing_threshold : customer_clearing_threshold ?
   
   
-  /# The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds. #/
+  /# The amount of credit valuation adjustments being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds. #/
   incurred_cva : int ?
   
   
@@ -211,7 +223,7 @@ record customer {
   address_city : string ?
   
   
-  /# The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1. #/
+  /# The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations. #/
   lgd_irb : double( 0.0, 1.0 ) ?
   
   
@@ -225,6 +237,10 @@ record customer {
   
   /# The sum of pre-funded contributions of all clearing members of the QCCP in accordance with Article 50c of Regulation (EU) No 648/2012. #/
   df_cm : int ?
+  
+  
+  /# The post (zip) code in which the entity is domiciled. #/
+  postal_code : string ?
   
   
   /# The unique identifier for the group representing a single risk entity where no relationship of control exists #/

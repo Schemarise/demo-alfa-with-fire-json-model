@@ -76,6 +76,7 @@ enum account_purpose {
     int_on_mortgage( "int_on_mortgage" ) 
     int_on_sft( "int_on_sft" ) 
     int_unallocated( "int_unallocated" ) 
+    intangible( "intangible" ) 
     interest( "interest" ) 
     intra_group_fee( "intra_group_fee" ) 
     inv_in_subsidiary( "inv_in_subsidiary" ) 

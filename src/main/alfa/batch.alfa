@@ -24,7 +24,7 @@ record batch {
   
   
   /# Number of records in this batch #/
-  count : int ?
+  count : int( 0, * ) ?
   
   
   /# A unique identifier for the data batch #/

@@ -1,0 +1,15 @@
+
+namespace fire.model
+
+
+/#
+ Whether the hedging instrument provides a one-sided effective offset of the hedged risk, as permitted under ASC 815-20-25-76.
+
+https://asc.fasb.org/1943274/2147480682/815-20-25-76
+ #/
+enum derivative_hedge_sidedness {
+    one_sided 
+    two_sided 
+}
+
+         

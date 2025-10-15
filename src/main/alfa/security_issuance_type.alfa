@@ -1,0 +1,15 @@
+
+namespace fire.model
+
+
+/#
+ Indicates the type of placement for issuances. For example, private placements, other non-publicly offered securites, publicly offered securities or direct purchase municipal securities. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.
+ #/
+enum security_issuance_type {
+    direct_purch_municipal 
+    non_public 
+    private_placement 
+    public_offering 
+}
+
+         

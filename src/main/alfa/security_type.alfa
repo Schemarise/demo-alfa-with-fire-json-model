@@ -16,9 +16,11 @@ enum security_type {
     abs_sme 
     abs_sme_corp 
     abs_sme_retail 
+    abs_student 
     abs_trade_rec 
     abs_wholesale 
     acceptance 
+    ars 
     bill_of_exchange 
     bond 
     cash 
@@ -27,6 +29,8 @@ enum security_type {
     cb_reserve 
     cb_restricted_reserve 
     cd 
+    cdo 
+    clo 
     cmbs 
     cmbs_income 
     commercial_paper 
@@ -34,8 +38,10 @@ enum security_type {
     covered_bond 
     debt 
     dividend 
+    documentary 
     emtn 
     equity 
+    financial 
     financial_guarantee 
     financial_sloc 
     frn 
@@ -43,11 +49,13 @@ enum security_type {
     index 
     index_linked 
     letter_of_credit 
+    loan_pool 
     main_index_equity 
     mbs 
     mtn 
     nha_mbs 
     other 
+    performance 
     performance_bond 
     performance_guarantee 
     performance_sloc 
@@ -61,6 +69,7 @@ enum security_type {
     speculative_unlisted 
     spv_mortgages 
     spv_other 
+    standby 
     struct_note 
     treasury 
     urp 

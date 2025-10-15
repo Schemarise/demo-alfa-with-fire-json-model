@@ -15,6 +15,10 @@ record collateral {
   end_date : datetime ?
   
   
+  /# The street address associated with the property. Must include street direction prefixes, direction suffixes, and unit number for condos and co-ops. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information. #/
+  street_address : string ?
+  
+  
   /# The unique identifier/s for the account/s within the financial institution. #/
   account_ids : list< string >(1,*) ?
   
@@ -25,6 +29,10 @@ record collateral {
   
   /# The valuation as used by the bank for the collateral at the origination of the related loan or line of credit. Monetary type represented as a naturally positive integer number of cents/pence. #/
   orig_value : int ?
+  
+  
+  /# The city in which the property is located. #/
+  city : string ?
   
   
   /# The type of the encumbrance causing the encumbrance_amount. #/
@@ -47,6 +55,10 @@ record collateral {
   
   currency_code : currency_code ?
   
+  /# The country of collateral. Two-letter country code as defined according to ISO 3166-1. #/
+  country_code : country_code ?
+  
+  
   /# The volatility adjustment appropriate to currency mismatch. #/
   vol_adj_fx : double ?
   
@@ -60,7 +72,11 @@ record collateral {
   
   
   /# The amount of the collateral that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence. #/
-  encumbrance_amount : int ?
+  encumbrance_amount : int( 0, * ) ?
+  
+  
+  /# The zip code in which the property is located. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information. #/
+  postal_code : string ?
   
   
   /# The volatility adjustment appropriate to the collateral. #/
