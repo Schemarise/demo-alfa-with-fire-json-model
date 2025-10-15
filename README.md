@@ -24,7 +24,10 @@ As part of the Maven build (`mvn clean install -P gen-docs`) of this project, th
     - [v24.04 and v24.07](https://schemarise.github.io/demo-alfa-with-fire-json-model/report-24.04-to-24.07.html)
     - [v24.07 and v24.10](https://schemarise.github.io/demo-alfa-with-fire-json-model/report-24.07-to-24.10.html)
     - [v24.10 and v25.01](https://schemarise.github.io/demo-alfa-with-fire-json-model/report-24.10-to-25.01.html)
-    - [v25.01 and main](https://schemarise.github.io/demo-alfa-with-fire-json-model/report.html)
+    - [v25.01 and v25.04](https://schemarise.github.io/demo-alfa-with-fire-json-model/report-25.01-to-25.04.html)
+    - [v25.04 and v25.07](https://schemarise.github.io/demo-alfa-with-fire-json-model/report-25.04-to-25.07.html)
+    - [v25.07 and v25.10](https://schemarise.github.io/demo-alfa-with-fire-json-model/report-25.07-to-25.10.html)
+    - [v25.10 and main](https://schemarise.github.io/demo-alfa-with-fire-json-model/report.html)
 
 
 ## Source Details

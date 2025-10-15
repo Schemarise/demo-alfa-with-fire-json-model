@@ -154,7 +154,7 @@
                                         <exportSetting>
                                             <exportType>changeanalyzer</exportType>
                                             <config>
-                                                <startVersion>v25.01</startVersion>
+                                                <startVersion>v25.10</startVersion>
                                                 <baseDir>${basedir}</baseDir>
                                             </config>
                                         </exportSetting>
@@ -226,7 +226,6 @@
                                 </configuration>
                             </execution>
 
-
                             <execution>
                                 <id>change-analysis-24.10-to-25.01</id>
                                 <goals>
@@ -241,6 +240,69 @@
                                                 <startVersion>v24.10</startVersion>
                                                 <endVersion>v25.01</endVersion>
                                                 <reportFile>report-24.10-to-25.01</reportFile>
+                                                <baseDir>${basedir}</baseDir>
+                                            </config>
+                                        </exportSetting>
+                                    </exportSettings>
+                                </configuration>
+                            </execution>
+
+                            <execution>
+                                <id>change-analysis-25.01-to-25.04</id>
+                                <goals>
+                                    <goal>compile</goal>
+                                </goals>
+                                <configuration>
+                                    <srcPath>${basedir}/src/main/alfa</srcPath>
+                                    <exportSettings>
+                                        <exportSetting>
+                                            <exportType>changeanalyzer</exportType>
+                                            <config>
+                                                <startVersion>v25.01</startVersion>
+                                                <endVersion>v25.04</endVersion>
+                                                <reportFile>report-25.01-to-25.04</reportFile>
+                                                <baseDir>${basedir}</baseDir>
+                                            </config>
+                                        </exportSetting>
+                                    </exportSettings>
+                                </configuration>
+                            </execution>
+
+                            <execution>
+                                <id>change-analysis-25.04-to-25.07</id>
+                                <goals>
+                                    <goal>compile</goal>
+                                </goals>
+                                <configuration>
+                                    <srcPath>${basedir}/src/main/alfa</srcPath>
+                                    <exportSettings>
+                                        <exportSetting>
+                                            <exportType>changeanalyzer</exportType>
+                                            <config>
+                                                <startVersion>v25.04</startVersion>
+                                                <endVersion>v25.07</endVersion>
+                                                <reportFile>report-25.04-to-25.07</reportFile>
+                                                <baseDir>${basedir}</baseDir>
+                                            </config>
+                                        </exportSetting>
+                                    </exportSettings>
+                                </configuration>
+                            </execution>
+
+                            <execution>
+                                <id>change-analysis-25.07-to-25.10</id>
+                                <goals>
+                                    <goal>compile</goal>
+                                </goals>
+                                <configuration>
+                                    <srcPath>${basedir}/src/main/alfa</srcPath>
+                                    <exportSettings>
+                                        <exportSetting>
+                                            <exportType>changeanalyzer</exportType>
+                                            <config>
+                                                <startVersion>v25.07</startVersion>
+                                                <endVersion>v25.10</endVersion>
+                                                <reportFile>report-25.07-to-25.10</reportFile>
                                                 <baseDir>${basedir}</baseDir>
                                             </config>
                                         </exportSetting>
